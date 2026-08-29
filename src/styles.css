@@ -63,6 +63,13 @@
   --color-primary-glow: var(--primary-glow);
   --color-accent-yellow: var(--accent-yellow);
   --color-accent-yellow-foreground: var(--accent-yellow-foreground);
+  --color-isic: var(--isic);
+  --color-isic-deep: var(--isic-deep);
+  --color-isic-light: var(--isic-light);
+  --color-itic: var(--itic);
+  --color-itic-deep: var(--itic-deep);
+  --color-eyca: var(--eyca);
+  --color-eyca-pink: var(--eyca-pink);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
   --shadow-card: var(--shadow-card);
