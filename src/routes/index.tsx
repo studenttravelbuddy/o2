@@ -252,8 +252,8 @@ function Index() {
             {[
               {
                 n: "01",
-                t: "Preukaz platí ďalej",
-                d: "Nič nemusíš riešiť. Platnosť ani ostatné zľavy sa nemenia.",
+                t: "Nový operátor ",
+                d: "Nič nemusíš riešiť. Buď necháš dobehnúť pôvodný paušál alebo prejdeš na nový. \n\n",
               },
               {
                 n: "02",
@@ -263,7 +263,7 @@ function Index() {
               {
                 n: "03",
                 t: "Je to benefit",
-                d: "Nie povinnosť. Voľba operátora je vždy na tebe.",
+                d: "Voľba operátora je vždy na tebe, s O2 prinášame to najlepšie pre našich držiteľov. ",
               },
             ].map((item) => (
               <div
