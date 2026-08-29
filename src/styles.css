@@ -124,11 +124,11 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 
-  --gradient-hero: linear-gradient(155deg, var(--primary-deep), var(--primary) 45%, var(--primary-glow));
-  --shadow-card: 0 12px 32px -14px oklch(0.482 0.286 265.5 / 0.28);
-  --shadow-card-hover: 0 20px 44px -16px oklch(0.482 0.286 265.5 / 0.4);
-  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --gradient-hero: linear-gradient(150deg, var(--primary-deep), var(--primary) 48%, var(--isic));
+  --shadow-card: 0 12px 32px -14px oklch(0.462 0.0789 194.8 / 0.3);
+  --shadow-card-hover: 0 20px 44px -16px oklch(0.462 0.0789 194.8 / 0.42);
+  --font-display: "Roboto Slab", ui-serif, Georgia, serif;
+  --font-body: "Roboto", ui-sans-serif, system-ui, sans-serif;
 }
 
 
