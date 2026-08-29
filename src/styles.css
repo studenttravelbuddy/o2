@@ -5,27 +5,18 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ * Design system — ISIC / ITIC / EURO<26 kampaň "Ready for more?".
+ * Playful flat style: plné farebné pásy, hrubé obrysy, tvrdé tiene.
+ * Farby výhradne z brand manuálu (teal, yellow, orange, pink).
  */
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 0.5rem);
+  --radius-md: calc(var(--radius) - 0.25rem);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+  --radius-xl: calc(var(--radius) + 0.25rem);
+  --radius-2xl: calc(var(--radius) + 0.5rem);
+  --radius-3xl: calc(var(--radius) + 0.75rem);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -46,11 +37,16 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
+  --color-brand-teal: var(--brand-teal);
+  --color-brand-teal-deep: var(--brand-teal-deep);
+  --color-brand-teal-light: var(--brand-teal-light);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-dark: var(--brand-orange-dark);
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-pink-dark: var(--brand-pink-dark);
+  --color-brand-gray: var(--brand-gray);
+  --color-card-accent: var(--card-accent);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -59,112 +55,56 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-primary-deep: var(--primary-deep);
-  --color-primary-glow: var(--primary-glow);
-  --color-accent-yellow: var(--accent-yellow);
-  --color-accent-yellow-foreground: var(--accent-yellow-foreground);
-  --color-isic: var(--isic);
-  --color-isic-deep: var(--isic-deep);
-  --color-isic-light: var(--isic-light);
-  --color-itic: var(--itic);
-  --color-itic-deep: var(--itic-deep);
-  --color-eyca: var(--eyca);
-  --color-eyca-pink: var(--eyca-pink);
-  --font-display: var(--font-display);
-  --font-sans: var(--font-body);
-  --shadow-card: var(--shadow-card);
-  --shadow-card-hover: var(--shadow-card-hover);
+  --font-display: var(--font-display-stack);
+  --font-sans: var(--font-sans-stack);
 }
-
 
 :root {
-  --radius: 1.25rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.2 0.03 195);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.03 195);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.03 195);
-  /* ISIC brand: Shadow Green #006666 + ISIC Green #40B8B8 */
-  --primary: oklch(0.462 0.0789 194.8);
-  --primary-foreground: oklch(1 0 0);
-  --primary-deep: oklch(0.3218 0.0491 195);
-  --primary-glow: oklch(0.7174 0.1044 195.1);
-  --isic: oklch(0.7174 0.1044 195.1);
-  --isic-deep: oklch(0.462 0.0789 194.8);
-  --isic-light: oklch(0.9406 0.0252 196.7);
-  --itic: oklch(0.7135 0.1926 46.7);
-  --itic-deep: oklch(0.4957 0.1872 32.1);
-  --eyca: oklch(0.8575 0.1747 88.4);
-  --eyca-pink: oklch(0.6083 0.2442 1.7);
-  --accent-yellow: oklch(0.9342 0.1982 105);
-  --accent-yellow-foreground: oklch(0.2 0.03 195);
-  --secondary: oklch(0.9732 0.0127 196.9);
-  --secondary-foreground: oklch(0.3218 0.0491 195);
-  --muted: oklch(0.9732 0.0127 196.9);
-  --muted-foreground: oklch(0.5103 0.008 195);
-  --accent: oklch(0.9406 0.0252 196.7);
-  --accent-foreground: oklch(0.3218 0.0491 195);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.915 0.012 196);
-  --input: oklch(0.915 0.012 196);
-  --ring: oklch(0.462 0.0789 194.8);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --radius: 1rem;
 
-  --gradient-hero: linear-gradient(150deg, var(--primary-deep), var(--primary) 48%, var(--isic));
-  --shadow-card: 0 12px 32px -14px oklch(0.462 0.0789 194.8 / 0.3);
-  --shadow-card-hover: 0 20px 44px -16px oklch(0.462 0.0789 194.8 / 0.42);
-  --font-display: "Roboto Slab", ui-serif, Georgia, serif;
-  --font-body: "Roboto", ui-sans-serif, system-ui, sans-serif;
-}
+  /* Brand manuál ISIC / ITIC / EYCA */
+  --brand-teal: #40b8b8;
+  --brand-teal-deep: #006666;
+  --brand-teal-light: #e8f5f5;
+  --brand-yellow: #ffc805;
+  --brand-orange: #ff7314;
+  --brand-orange-dark: #8c2f0d;
+  --brand-pink: #ec0578;
+  --brand-pink-dark: #a80355;
+  --brand-gray: #6e6e6e;
 
+  --background: #ffffff;
+  --foreground: #143333;
+  --card: #ffffff;
+  --card-foreground: #143333;
+  --card-accent: var(--brand-teal-deep);
+  --popover: #ffffff;
+  --popover-foreground: #143333;
+  --primary: var(--brand-teal-deep);
+  --primary-foreground: #ffffff;
+  --secondary: var(--brand-teal-light);
+  --secondary-foreground: var(--brand-teal-deep);
+  --muted: #f2f9f9;
+  --muted-foreground: #587373;
+  --accent: var(--brand-teal);
+  --accent-foreground: #143333;
+  --destructive: #ec0578;
+  --destructive-foreground: #ffffff;
+  --border: #d5e9e9;
+  --input: #c7e0e0;
+  --ring: var(--brand-teal);
 
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #143333;
+  --sidebar-primary: var(--brand-teal-deep);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--brand-teal-light);
+  --sidebar-accent-foreground: #143333;
+  --sidebar-border: #d5e9e9;
+  --sidebar-ring: var(--brand-teal);
+
+  --font-display-stack: "Roboto Slab", ui-serif, Georgia, serif;
+  --font-sans-stack: "Roboto", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -175,12 +115,7 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-  }
-}
-
-@layer base {
-  body {
-    font-family: var(--font-body);
+    font-family: var(--font-sans-stack);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -188,36 +123,42 @@
   h2,
   h3,
   h4 {
-    font-family: var(--font-display);
-    font-weight: 700;
+    font-family: var(--font-display-stack);
+    font-weight: 900;
     letter-spacing: -0.01em;
   }
 }
 
+/* Eyebrow nad každým nadpisom */
 @utility eyebrow {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-@utility dot-grid {
-  background-image: radial-gradient(var(--isic) 1.5px, transparent 1.5px);
-  background-size: 18px 18px;
+/* Tvrdé tiene v štýle kampane */
+@utility shadow-hard-pink {
+  box-shadow: 8px 8px 0 var(--brand-pink);
 }
 
-@utility hero-surface {
-  background-image: var(--gradient-hero);
+@utility shadow-hard-teal {
+  box-shadow: 8px 8px 0 var(--brand-teal-deep);
 }
 
-@utility bubble {
-  position: absolute;
-  border-radius: 9999px;
-  background: radial-gradient(
-    circle at 32% 28%,
-    oklch(1 0 0 / 0.42),
-    oklch(1 0 0 / 0.06) 55%,
-    oklch(1 0 0 / 0.14)
-  );
-  pointer-events: none;
+@utility shadow-hard-yellow {
+  box-shadow: 8px 8px 0 var(--brand-yellow);
+}
+
+/* Akcenty jednotlivých preukazov */
+@utility card-isic {
+  --card-accent: var(--brand-teal-deep);
+}
+
+@utility card-itic {
+  --card-accent: var(--brand-orange-dark);
+}
+
+@utility card-euro26 {
+  --card-accent: var(--brand-pink);
 }
