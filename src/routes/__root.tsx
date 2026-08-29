@@ -77,11 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "O2 × CKM SYTS — nová ponuka pre ISIC, ITIC a EURO<26" },
+      { title: "Ready for more? — kampaň 2026 pre ISIC, ITIC a EURO<26" },
       {
         name: "description",
         content:
-          "Nová ponuka telekomunikačných výhod pre držiteľov ISIC, ITIC a EURO<26 v spolupráci s O2.",
+          "Tento rok štartujeme kampaň vo veľkom. Nová spolupráca s operátorom prináša držiteľom ISIC, ITIC a EURO<26 viac dát, volaní a digitálneho obsahu.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -95,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Figtree:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700;800&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap",
       },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
