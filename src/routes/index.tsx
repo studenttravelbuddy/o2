@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { SavingsCalculator } from "@/components/SavingsCalculator";
@@ -88,6 +89,33 @@ const whyCards = [
   {
     title: "Smart value",
     text: "Nový telekomunikačný benefit robí preukaz praktickejším a hodnotnejším.",
+  },
+];
+
+const segments = [
+  {
+    href: "#maxx",
+    bg: "bg-brand-teal",
+    arrowBg: "bg-background",
+    eyebrow: "ISIC · EURO<26",
+    title: "Som študent",
+    text: "100 GB dát a výhody na Maxx.",
+  },
+  {
+    href: "#pausaly",
+    bg: "bg-brand-orange",
+    arrowBg: "bg-brand-yellow",
+    eyebrow: "ITIC",
+    title: "Som učiteľ",
+    text: "Zľavnené paušály pre pedagógov.",
+  },
+  {
+    href: "#junior",
+    bg: "bg-brand-pink",
+    arrowBg: "bg-background",
+    eyebrow: "Pre rodičov",
+    title: "Som rodič",
+    text: "Donekonečna piatim pre deti.",
   },
 ];
 
@@ -211,6 +239,41 @@ function Index() {
           <p className="eyebrow relative z-10">ISIC · ITIC · EURO&lt;26</p>
         </div>
       </header>
+
+      {/* BIELA — segmentový rozdeľovač „Kto si?" */}
+      <section className="bg-background px-5 py-16 sm:px-8">
+        <div className="mx-auto max-w-6xl">
+          <p className="eyebrow text-brand-pink">Vyber si svoju výhodu</p>
+          <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl">Kto si?</h2>
+          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+            {segments.map((s) => (
+              <a key={s.href} href={s.href} className="group relative block">
+                <div className="absolute inset-0 translate-x-2 translate-y-2 bg-foreground transition-transform group-hover:translate-x-3 group-hover:translate-y-3" />
+                <div
+                  className={`relative flex h-full min-h-[220px] flex-col justify-between border-4 border-foreground p-8 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 group-active:translate-x-0 group-active:translate-y-0 ${s.bg}`}
+                >
+                  <div className="space-y-2">
+                    <span className="block text-xs font-bold uppercase tracking-widest text-foreground/60">
+                      {s.eyebrow}
+                    </span>
+                    <h3 className="font-display text-4xl font-black uppercase leading-tight text-background lg:text-5xl">
+                      {s.title}
+                    </h3>
+                    <p className="pt-2 text-sm font-bold text-background/90">{s.text}</p>
+                  </div>
+                  <div className="mt-8 flex justify-end">
+                    <div
+                      className={`flex h-12 w-12 items-center justify-center border-4 border-foreground transition-transform group-hover:rotate-45 ${s.arrowBg}`}
+                    >
+                      <ArrowRight className="h-6 w-6" strokeWidth={3} />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ŽLTÝ PÁS — kampaňový vizuál */}
       <section className="bg-brand-yellow px-5 py-12 sm:px-8 sm:py-16">
