@@ -12,28 +12,27 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          "border-2 border-foreground bg-background text-foreground font-bold rounded-lg hover:bg-brand-teal-light",
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        onBrand:
-          "bg-background text-primary font-bold shadow-card hover:bg-secondary rounded-full",
-        brand:
-          "bg-primary text-primary-foreground font-bold rounded-full shadow-card hover:bg-primary-deep",
-        isic: "bg-isic text-primary-deep font-bold rounded-full shadow-card hover:brightness-95",
-        itic: "bg-itic text-primary-foreground font-bold rounded-full shadow-card hover:brightness-95",
+        teal: "bg-brand-teal-deep text-primary-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-teal hover:text-foreground",
         yellow:
-          "bg-accent-yellow text-accent-yellow-foreground font-bold rounded-full hover:brightness-105",
-        softOutline:
-          "border-2 border-primary/25 bg-background text-primary font-bold rounded-full hover:bg-accent",
+          "bg-brand-yellow text-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-yellow/85",
+        pink: "bg-brand-pink text-primary-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-pink-dark",
+        orange:
+          "bg-brand-orange text-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-orange/85",
+        white:
+          "bg-background text-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-teal-light",
       },
       size: {
-        default: "h-9 px-4 py-2",
+        default: "h-10 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-11 rounded-md px-8",
-        xl: "h-14 px-9 text-base",
+        lg: "h-12 px-6",
+        xl: "h-14 px-8 text-base",
         icon: "h-9 w-9",
       },
+
 
     },
     defaultVariants: {
