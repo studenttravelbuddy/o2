@@ -49,4 +49,4 @@ Rovnaký rytmus ako náš ambasádorský web: malý farebný „eyebrow“ nadpi
 - `src/routes/index.tsx`: prepísať hero copy na „Ready for more?“, odstrániť Orange zo všetkých sekcií okrem FAQ, pridať farebné vetvenie segmentov, stepper prerobiť do štýlu KROK 01/02/03.
 - `src/components/O2Faq.tsx` → `src/components/CampaignFaq.tsx`, `SavingsCalculator` prefarbiť.
 - O2 logo zostáva len v endorsement komponente (hlavička + footer + karta ponuky), v malej veľkosti podľa brand guideline.
-- Logá ISIC/ITIC/EURO<26 zatiaľ ako typografický wordmark; keď dodáte súbory, nasadím ich do hlavičky a sekcie preukazov.
+- Nahrané logá (ISIC, ITIC, EYCA/EURO<26) nasadím ako CDN assety a použijem v hlavičke, v segmentových dlaždiciach a v sekcii „Na ktorý preukaz máš nárok“. Favicon nastavím z ISIC loga.
