@@ -62,26 +62,31 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 1rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.21 0.03 265);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.21 0.03 265);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.21 0.03 265);
+  /* O2 Beyond Blue ~#0032FF */
+  --primary: oklch(0.482 0.286 265.5);
+  --primary-foreground: oklch(1 0 0);
+  --primary-deep: oklch(0.34 0.24 266);
+  --primary-glow: oklch(0.62 0.23 261);
+  --accent-yellow: oklch(0.9 0.185 100);
+  --accent-yellow-foreground: oklch(0.28 0.06 266);
+  --secondary: oklch(0.965 0.012 262);
+  --secondary-foreground: oklch(0.32 0.12 265);
+  --muted: oklch(0.965 0.012 262);
+  --muted-foreground: oklch(0.52 0.04 262);
+  --accent: oklch(0.95 0.03 262);
+  --accent-foreground: oklch(0.34 0.24 266);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.915 0.015 258);
+  --input: oklch(0.915 0.015 258);
+  --ring: oklch(0.482 0.286 265.5);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -95,7 +100,14 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  --gradient-hero: linear-gradient(155deg, var(--primary-deep), var(--primary) 45%, var(--primary-glow));
+  --shadow-card: 0 12px 32px -14px oklch(0.482 0.286 265.5 / 0.28);
+  --shadow-card-hover: 0 20px 44px -16px oklch(0.482 0.286 265.5 / 0.4);
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
 }
+
 
 .dark {
   --background: oklch(0.129 0.042 264.695);
