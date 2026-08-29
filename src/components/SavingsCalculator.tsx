@@ -51,9 +51,9 @@ export function SavingsCalculator() {
                 </div>
               </label>
 
-              <div className="rounded-2xl bg-accent p-5">
+              <div className="rounded-2xl bg-isic-light p-5">
                 <p className="text-sm text-accent-foreground/80">Odhadovaná ročná úspora</p>
-                <p className="font-display text-4xl font-bold text-primary">
+                <p className="font-display text-4xl font-bold text-isic-deep">
                   {yearlySaving.toFixed(0)} €
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">

@@ -63,6 +63,13 @@
   --color-primary-glow: var(--primary-glow);
   --color-accent-yellow: var(--accent-yellow);
   --color-accent-yellow-foreground: var(--accent-yellow-foreground);
+  --color-isic: var(--isic);
+  --color-isic-deep: var(--isic-deep);
+  --color-isic-light: var(--isic-light);
+  --color-itic: var(--itic);
+  --color-itic-deep: var(--itic-deep);
+  --color-eyca: var(--eyca);
+  --color-eyca-pink: var(--eyca-pink);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
   --shadow-card: var(--shadow-card);
@@ -71,31 +78,38 @@
 
 
 :root {
-  --radius: 1rem;
+  --radius: 1.25rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.21 0.03 265);
+  --foreground: oklch(0.2 0.03 195);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.21 0.03 265);
+  --card-foreground: oklch(0.2 0.03 195);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.21 0.03 265);
-  /* O2 Beyond Blue ~#0032FF */
-  --primary: oklch(0.482 0.286 265.5);
+  --popover-foreground: oklch(0.2 0.03 195);
+  /* ISIC brand: Shadow Green #006666 + ISIC Green #40B8B8 */
+  --primary: oklch(0.462 0.0789 194.8);
   --primary-foreground: oklch(1 0 0);
-  --primary-deep: oklch(0.34 0.24 266);
-  --primary-glow: oklch(0.62 0.23 261);
-  --accent-yellow: oklch(0.9 0.185 100);
-  --accent-yellow-foreground: oklch(0.28 0.06 266);
-  --secondary: oklch(0.965 0.012 262);
-  --secondary-foreground: oklch(0.32 0.12 265);
-  --muted: oklch(0.965 0.012 262);
-  --muted-foreground: oklch(0.52 0.04 262);
-  --accent: oklch(0.95 0.03 262);
-  --accent-foreground: oklch(0.34 0.24 266);
+  --primary-deep: oklch(0.3218 0.0491 195);
+  --primary-glow: oklch(0.7174 0.1044 195.1);
+  --isic: oklch(0.7174 0.1044 195.1);
+  --isic-deep: oklch(0.462 0.0789 194.8);
+  --isic-light: oklch(0.9406 0.0252 196.7);
+  --itic: oklch(0.7135 0.1926 46.7);
+  --itic-deep: oklch(0.4957 0.1872 32.1);
+  --eyca: oklch(0.8575 0.1747 88.4);
+  --eyca-pink: oklch(0.6083 0.2442 1.7);
+  --accent-yellow: oklch(0.9342 0.1982 105);
+  --accent-yellow-foreground: oklch(0.2 0.03 195);
+  --secondary: oklch(0.9732 0.0127 196.9);
+  --secondary-foreground: oklch(0.3218 0.0491 195);
+  --muted: oklch(0.9732 0.0127 196.9);
+  --muted-foreground: oklch(0.5103 0.008 195);
+  --accent: oklch(0.9406 0.0252 196.7);
+  --accent-foreground: oklch(0.3218 0.0491 195);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.915 0.015 258);
-  --input: oklch(0.915 0.015 258);
-  --ring: oklch(0.482 0.286 265.5);
+  --border: oklch(0.915 0.012 196);
+  --input: oklch(0.915 0.012 196);
+  --ring: oklch(0.462 0.0789 194.8);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -110,11 +124,11 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 
-  --gradient-hero: linear-gradient(155deg, var(--primary-deep), var(--primary) 45%, var(--primary-glow));
-  --shadow-card: 0 12px 32px -14px oklch(0.482 0.286 265.5 / 0.28);
-  --shadow-card-hover: 0 20px 44px -16px oklch(0.482 0.286 265.5 / 0.4);
-  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --gradient-hero: linear-gradient(150deg, var(--primary-deep), var(--primary) 48%, var(--isic));
+  --shadow-card: 0 12px 32px -14px oklch(0.462 0.0789 194.8 / 0.3);
+  --shadow-card-hover: 0 20px 44px -16px oklch(0.462 0.0789 194.8 / 0.42);
+  --font-display: "Roboto Slab", ui-serif, Georgia, serif;
+  --font-body: "Roboto", ui-sans-serif, system-ui, sans-serif;
 }
 
 
@@ -175,8 +189,21 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.01em;
   }
+}
+
+@utility eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@utility dot-grid {
+  background-image: radial-gradient(var(--isic) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
 }
 
 @utility hero-surface {
