@@ -146,7 +146,7 @@ function O2Endorsement({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <span className="text-sm font-semibold">Spolu s</span>
-      <img src={o2Logo.url} alt="Logo O2" className="h-8 w-8 rounded-md" />
+      <img src={o2Logo.url} alt="Logo O2" className="h-9 w-9 rounded-lg shadow-card" />
     </div>
   );
 }
