@@ -16,14 +16,16 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        onBlue:
-          "bg-background text-primary font-semibold shadow-card hover:bg-secondary rounded-full",
+        onBrand:
+          "bg-background text-primary font-bold shadow-card hover:bg-secondary rounded-full",
         brand:
-          "bg-primary text-primary-foreground font-semibold rounded-full shadow-card hover:bg-primary-deep",
+          "bg-primary text-primary-foreground font-bold rounded-full shadow-card hover:bg-primary-deep",
+        isic: "bg-isic text-primary-deep font-bold rounded-full shadow-card hover:brightness-95",
+        itic: "bg-itic text-primary-foreground font-bold rounded-full shadow-card hover:brightness-95",
         yellow:
-          "bg-accent-yellow text-accent-yellow-foreground font-semibold rounded-full hover:brightness-105",
+          "bg-accent-yellow text-accent-yellow-foreground font-bold rounded-full hover:brightness-105",
         softOutline:
-          "border border-primary/25 bg-background text-primary font-semibold rounded-full hover:bg-accent",
+          "border-2 border-primary/25 bg-background text-primary font-bold rounded-full hover:bg-accent",
       },
       size: {
         default: "h-9 px-4 py-2",
