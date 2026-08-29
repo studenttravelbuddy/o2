@@ -1,44 +1,22 @@
-# Preukazy do samostatných blokov + správne rozlíšenie „kto hovorí“
+# Plán: Vrátiť segmentovú logiku (Študent / Učiteľ / Rodič)
 
-Dve úpravy: (1) ISIC, ITIC a EURO<26 dostanú každý svoj samostatný blok s logom namiesto troch malých kariet v jednej mriežke, (2) celý text sa prejde tak, aby sme ako CKM SYTS hovorili len za seba a všetko, čo robí operátor, bolo napísané v tretej osobe (operátor / O2).
+Cieľ: vrátiť na stránku jasné „kto si?" rozdelenie návštevníkov, ktoré ich pekne prepojí s relevantnou ponukou — v súčasnom neo-brutalist dizajne.
 
-## 1. Preukazy — samostatné bloky
+## 1. Segmentové dlaždice v hero sekcii
+Pod CTA tlačidlá v hero pridáme 3 veľké klikateľné karty (celá šírka, grid):
+- **Som študent** (ISIC teal, `#40B8B8`) → kotva `#maxx` (O2 Maxx, 100 GB)
+- **Som učiteľ** (ITIC orange, `#FF7314`) → kotva `#pausaly` (zľavnené paušály)
+- **Som rodič** (EURO<26 pink, `#EC0578`) → kotva `#junior` (O2 Junior)
 
-Sekcia „Na ktorý preukaz máš nárok?“ sa rozdelí na tri plnošírkové bloky, ktoré idú pod sebou a striedajú plochu (biela → svetlá teal → biela). Každý blok:
+Každá karta: ikona/číslo, nadpis Roboto Slab Black, krátky popis benefitu, šípka „→", hrubý čierny obrys + tvrdý tieň v danej brand farbe (rovnaký vizuálny jazyk ako zvyšok stránky). Klik = smooth scroll na príslušnú sekciu (existujúce `id` kotvy + `scroll-mt-20` už sú, pridáme `scroll-behavior: smooth`).
 
-- veľké logo preukazu vľavo (ISIC / ITIC / EURO<26), text vpravo — na mobile pod sebou
-- eyebrow s číslom `01 / 02 / 03` v akcentnej farbe preukazu (teal / oranžová / ružová)
-- nadpis (komu je určený), kto má nárok, čo z kampane preukaz odomyká
-- odkaz „Objednať preukaz“ / „Overiť platnosť“ v rámci bloku
-- rovnaké vizuálne pravidlá ako zvyšok webu: `border-2 border-foreground`, tvrdý tieň v akcentnej farbe
+## 2. Prepojenie sekcií so segmentmi
+- Ku každej produktovej sekcii (Maxx / Paušály / Junior) už existuje eyebrow „Pre študentov / Pre pedagógov / Pre rodičov" — zosúladíme farby eyebrow s farbou segmentu (teal / orange / pink).
+- V sekcii „Na ktorý preukaz máš nárok?" doplníme ku každému preukazu CTA odkaz na jeho ponuku: ISIC → #maxx, ITIC → #pausaly, EURO<26 → #maxx.
 
-Logá tak dostanú priestor a nebudú stlačené v 9px riadku vedľa čísla.
-
-## 2. Kto čo hovorí (tón a osoba)
-
-Pravidlo pre celý web:
-
-- **My = CKM SYTS** (vydávame preukazy, dohodli sme spoluprácu, informujeme, poradíme). Len tu môže byť „my / prinášame / poradíme“.
-- **Operátor = O2** — všetko o paušáloch, aktivácii, SIM karte, prenose čísla, fakturácii, SMS notifikáciách, cashbacku, vykúpení z viazanosti sa píše ako „operátor“ / „O2“ v tretej osobe, nikdy „my“.
-
-Konkrétne opravy:
-
-| Teraz | Zmena |
-| --- | --- |
-| „O úspešnom prenose ťa informujeme SMS správou.“ | „O úspešnom prenose ťa operátor informuje SMS správou.“ |
-| „Ak preukaz stratí platnosť, upozorníme ťa…“ | „…operátor ťa upozorní…“ |
-| „Pri najvyššom paušále ti vrátime 5 €…“ | „…operátor ti vráti 5 €…“ |
-| „Ak si viazaný zmluvou, vykúpime ťa…“ | „…operátor ťa vykúpi z viazanosti…“ |
-| Hero: „prinášame držiteľom… viac dát“ | „S novým operátorom získavajú držitelia… viac dát“ (benefit dodáva operátor, my ho vyjednávame) |
-| Kroky prechodu: „vyplň údaje / doručíme SIM“ | jednotne v tretej osobe za operátora |
-| Pätička / kontakt: „Napíšte nám a pomôžeme…“ | zostáva „my“ — je to naša podpora, správne |
-
-Prejdem takto celý `index.tsx` a `CampaignFaq.tsx` riadok po riadku, vrátane sekcií 100 GB, ITIC paušálov a Junior — všade, kde ide o produkt operátora, sa použije „operátor / O2“, a kde ide o preukaz a členstvo, zostávame „my“.
-
-Otázky a odpovede zostávajú v rovnakej štruktúre a rozsahu, mení sa len subjekt vo vetách.
+## 3. Sticky mini-navigácia (voliteľné, odporúčané)
+Pod headerom tenký biely pás s 3 chip odkazmi „Študent / Učiteľ / Rodič", aby bola segmentácia dostupná odkiaľkoľvek na stránke.
 
 ## Technické detaily
-
-- `src/routes/index.tsx`: prepis sekcie `#preukazy` z 3-kartovej mriežky na tri samostatné `<section>` bloky s logom v `h-16`–`h-20`; úprava `steps` a copy v hero, 100 GB, ITIC, Junior.
-- `src/components/CampaignFaq.tsx`: úprava odpovedí, kde bolo „my“ namiesto operátora.
-- Žiadne nové farby ani tokeny — používajú sa existujúce `card-isic / card-itic / card-euro26`, `shadow-hard-*` a `brand-*`.
+- Súbor: `src/routes/index.tsx` (nová konštanta `segments` + JSX v hero), prípadne drobný doplnok v `src/styles.css` (`html { scroll-behavior: smooth }`).
+- Žiadne nové závislosti, žiadna zmena textov mimo segmentových kariet.
