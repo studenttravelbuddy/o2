@@ -392,7 +392,7 @@ function Index() {
 
           <div className="mt-8 flex flex-col gap-4 rounded-lg border-2 border-foreground bg-brand-pink p-6 text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-lg font-black">
-              Vykúpime ťa z viazanosti u pôvodného operátora až do 120 €.
+              Viazanosť? 02 vykúpi z viazanosti u pôvodného operátora až do 120 €.
             </p>
             {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="white" size="lg" asChild>
@@ -628,7 +628,7 @@ function Index() {
             </div>
             <PartnerEndorsement className="mt-6" />
             <p className="mt-6 text-xs">
-              © 2026 CKM SYTS. Ďakujeme spoločnosti Orange za 15 rokov spolupráce.
+              © 2026 CKM SYTS. 
             </p>
           </div>
         </div>
