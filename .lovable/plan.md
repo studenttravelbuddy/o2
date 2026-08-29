@@ -1,22 +1,15 @@
-# Plán: Vrátiť segmentovú logiku (Študent / Učiteľ / Rodič)
+# Plán: Pridať segmentové dlaždice hore na stránku
 
-Cieľ: vrátiť na stránku jasné „kto si?" rozdelenie návštevníkov, ktoré ich pekne prepojí s relevantnou ponukou — v súčasnom neo-brutalist dizajne.
+Nič existujúce nemeníme — len pridáme hore na stránku rozdeľovač „Kto si?".
 
-## 1. Segmentové dlaždice v hero sekcii
-Pod CTA tlačidlá v hero pridáme 3 veľké klikateľné karty (celá šírka, grid):
-- **Som študent** (ISIC teal, `#40B8B8`) → kotva `#maxx` (O2 Maxx, 100 GB)
-- **Som učiteľ** (ITIC orange, `#FF7314`) → kotva `#pausaly` (zľavnené paušály)
-- **Som rodič** (EURO<26 pink, `#EC0578`) → kotva `#junior` (O2 Junior)
+## Čo pridáme
+Hneď pod hero sekciu (pred žltý kampaňový pás) nový blok s 3 veľkými klikateľnými kartami:
+- **Som študent** (ISIC teal) → scroll na `#maxx` (O2 Maxx, 100 GB)
+- **Som učiteľ** (ITIC orange) → scroll na `#pausaly` (zľavnené paušály)
+- **Som rodič** (EURO<26 pink) → scroll na `#junior` (O2 Junior)
 
-Každá karta: ikona/číslo, nadpis Roboto Slab Black, krátky popis benefitu, šípka „→", hrubý čierny obrys + tvrdý tieň v danej brand farbe (rovnaký vizuálny jazyk ako zvyšok stránky). Klik = smooth scroll na príslušnú sekciu (existujúce `id` kotvy + `scroll-mt-20` už sú, pridáme `scroll-behavior: smooth`).
-
-## 2. Prepojenie sekcií so segmentmi
-- Ku každej produktovej sekcii (Maxx / Paušály / Junior) už existuje eyebrow „Pre študentov / Pre pedagógov / Pre rodičov" — zosúladíme farby eyebrow s farbou segmentu (teal / orange / pink).
-- V sekcii „Na ktorý preukaz máš nárok?" doplníme ku každému preukazu CTA odkaz na jeho ponuku: ISIC → #maxx, ITIC → #pausaly, EURO<26 → #maxx.
-
-## 3. Sticky mini-navigácia (voliteľné, odporúčané)
-Pod headerom tenký biely pás s 3 chip odkazmi „Študent / Učiteľ / Rodič", aby bola segmentácia dostupná odkiaľkoľvek na stránke.
+Štýl kariet zodpovedá zvyšku stránky: Roboto Slab Black nadpis, krátky popis benefitu, hrubý čierny obrys, tvrdý tieň v brand farbe, hover posun. Kliknutie = smooth scroll na existujúcu kotvu (pridáme `scroll-behavior: smooth` do CSS).
 
 ## Technické detaily
-- Súbor: `src/routes/index.tsx` (nová konštanta `segments` + JSX v hero), prípadne drobný doplnok v `src/styles.css` (`html { scroll-behavior: smooth }`).
-- Žiadne nové závislosti, žiadna zmena textov mimo segmentových kariet.
+- Zmena len v `src/routes/index.tsx` (nový blok za `</header>`) a jeden riadok `scroll-behavior` v `src/styles.css`.
+- Žiadne iné texty ani sekcie sa nemenia.
