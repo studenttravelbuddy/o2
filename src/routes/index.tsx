@@ -170,11 +170,11 @@ function Index() {
   return (
     <main className="overflow-hidden bg-background">
       {/* HERO — teal pás */}
-      <header className="relative min-h-[88svh] bg-brand-teal text-foreground">
+      <header className="relative min-h-[720px] bg-brand-teal text-foreground">
         <div className="absolute -right-20 top-24 h-44 w-44 rounded-full border-[28px] border-brand-yellow sm:h-64 sm:w-64" />
         <div className="absolute -left-16 bottom-16 h-32 w-32 rotate-12 bg-brand-pink" />
 
-        <div className="relative mx-auto flex min-h-[88svh] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
+        <div className="relative mx-auto flex min-h-[720px] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
           <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-4 rounded-lg border-2 border-foreground bg-background px-4 py-2">
               <img src={isicLogo.url} alt="ISIC" className="h-6 w-auto" />
@@ -427,7 +427,7 @@ function Index() {
             ].map((item, i) => (
               <li
                 key={item}
-                className="flex min-h-32 items-start gap-4 rounded-lg border-2 border-foreground bg-brand-teal-light p-5"
+                className="flex items-start gap-4 rounded-lg border-2 border-foreground bg-brand-teal-light p-5"
               >
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-foreground bg-brand-yellow font-display font-black">
                   {i + 1}
@@ -463,7 +463,7 @@ function Index() {
             {whyCards.map((card, i) => (
               <li
                 key={card.title}
-                className="flex min-h-32 items-start gap-4 rounded-lg border-2 border-foreground bg-background p-5"
+                className="flex items-start gap-4 rounded-lg border-2 border-foreground bg-background p-5"
               >
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-foreground bg-brand-yellow font-display font-black">
                   {i + 1}
