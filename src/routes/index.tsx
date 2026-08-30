@@ -485,7 +485,7 @@ function Index() {
       </section>
 
       {/* ŽLTÝ/RUŽOVÝ — vykúpenie z viazanosti */}
-      <section className="scroll-mt-20 bg-background py-10">
+      <section className="scroll-mt-20 bg-background pt-2 pb-10">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-lg font-black">
@@ -501,7 +501,7 @@ function Index() {
       </section>
 
       {/* BIELA — Junior pre rodičov */}
-      <section id="junior" className="scroll-mt-20 bg-background pb-20">
+      <section id="junior" className="scroll-mt-20 bg-background pt-14 pb-20">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="eyebrow text-brand-pink">Pre rodičov</p>
