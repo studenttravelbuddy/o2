@@ -11,7 +11,7 @@ import { BrandMark, BrandMarkRow, type BrandId } from "@/components/BrandMark";
 
 // EMBARGO: stránka sa nesmie verejne publikovať ani indexovať pred 1. 9. 2026.
 // TODO: nahradiť finálnym odkazom na isic.sk/ponuka (všetky CTA nižšie sú placeholdery).
-const OFFER_LINK = "#maxx";
+const OFFER_LINK = "https://www.o2.sk";
 
 export const Route = createFileRoute("/")({
   head: () => ({
