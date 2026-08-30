@@ -4,26 +4,24 @@ import eycLogo from "@/assets/eyc-logo.svg.asset.json";
 
 export type BrandId = "isic" | "itic" | "eyc";
 
-const brands: Record<BrandId, { url: string; alt: string; pad: string; w: string }> = {
+const brands: Record<BrandId, { url: string; alt: string }> = {
   isic: {
     url: isicLogo.url,
     alt: "ISIC – International Student Identity Card",
-    pad: "p-2.5",
-    w: "w-28",
   },
   itic: {
     url: iticLogo.url,
     alt: "ITIC – International Teacher Identity Card",
-    pad: "p-2.5",
-    w: "w-28",
   },
   eyc: {
     url: eycLogo.url,
     alt: "EURO<26 / European Youth Card",
-    pad: "px-3 py-2",
-    w: "w-40",
   },
 };
+
+/** Identical frame + padding for every brand so all bubbles match exactly. */
+const FRAME_SIZE = "h-14 w-40 sm:h-16";
+const FRAME_PAD = "px-4 py-2.5";
 
 /** Strict order used everywhere on the page. */
 export const brandOrder: BrandId[] = ["isic", "itic", "eyc"];
