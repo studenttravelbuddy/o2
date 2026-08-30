@@ -333,7 +333,7 @@ function Index() {
               {
                 n: "02",
                 t: "Nové výhody",
-                d: "Viac dát, neobmedzené volania a digitálny obsah v cene.",
+                d: "Väčšia flexibilita, väčší výber a digitálny obsah v cene.",
               },
               {
                 n: "03",
