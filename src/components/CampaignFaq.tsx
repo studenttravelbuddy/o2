@@ -81,8 +81,8 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
         a: "Pri najvyššom paušále ti vrátime 5 € späť, ak si mal paušál aktívny celý mesiac a neminul viac ako 15 GB dát. Automaticky.",
       },
       {
-        q: "Ako funguje bonus na zariadenie?",
-        a: "Ide o mesačný príspevok na zariadenie, ktorý sa odčítava z faktúry.",
+        q: "Ako funguje bonus na zariadenie s preukazom?",
+        a: "Po overení preukazu získaš mesačný príspevok na zariadenie, ktorý sa odčítava priamo z faktúry.",
       },
       {
         q: "Ako funguje vykúpenie z viazanosti?",
