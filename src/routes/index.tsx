@@ -7,9 +7,7 @@ import { CampaignFaq } from "@/components/CampaignFaq";
 import heroImage from "@/assets/o2-hero-full.png.asset.json";
 import isicImage from "@/assets/o2-isic.png.asset.json";
 import partnerLogo from "@/assets/o2-logo.png.asset.json";
-import isicLogo from "@/assets/isic-logo.png.asset.json";
-import iticLogo from "@/assets/itic-logo.png.asset.json";
-import eycaLogo from "@/assets/eyca-logo.svg.asset.json";
+import { BrandMark, BrandMarkRow, type BrandId } from "@/components/BrandMark";
 
 // EMBARGO: stránka sa nesmie verejne publikovať ani indexovať pred 1. 9. 2026.
 // TODO: nahradiť finálnym odkazom na isic.sk/ponuka (všetky CTA nižšie sú placeholdery).
