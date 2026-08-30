@@ -73,7 +73,7 @@ const plans: Plan[] = [
 export function SavingsCalculator() {
   const [open, setOpen] = useState(false);
   const [spend, setSpend] = useState("30");
-  const [selectedId, setSelectedId] = useState<string>(plans[0].id);
+  const [selectedId, setSelectedId] = useState<string>(plans[0]!.id);
 
   const current = Number(spend.replace(",", ".")) || 0;
   const selected = plans.find((p) => p.id === selectedId) ?? plans[0]!;
