@@ -204,7 +204,7 @@ function Index() {
 
         <div className="relative mx-auto flex min-h-[720px] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
           <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-4 rounded-3xl bg-background shadow-soft-teal px-4 py-2">
+            <div className="flex items-center gap-4 rounded-full bg-background shadow-soft-teal px-5 py-2.5">
               <img src={isicLogo.url} alt="ISIC" className="h-6 w-auto" />
               <img src={iticLogo.url} alt="ITIC" className="h-6 w-auto" />
               <img src={eycaLogo.url} alt="EURO<26" className="h-6 w-auto" />
@@ -376,7 +376,7 @@ function Index() {
                   "1 predplatné na 12 mesiacov v cene (Netflix, Voyo, HBO Max a i.), meniteľné každých 30 dní.",
                 ].map((benefit, i) => (
                   <li key={benefit} className="flex items-start gap-4">
-                    <span className="flex size-9 shrink-0 items-center justify-center num-badge">
+                    <span className="num-badge">
                       {i + 1}
                     </span>
                     <span className="pt-1.5 text-sm">{benefit}</span>
@@ -491,7 +491,7 @@ function Index() {
                 key={item}
                 className="flex items-start gap-4 rounded-3xl bg-brand-teal-light shadow-soft-teal p-5"
               >
-                <span className="flex size-9 shrink-0 items-center justify-center num-badge">
+                <span className="num-badge">
                   {i + 1}
                 </span>
                 <span className="pt-1.5 text-sm">{item}</span>
@@ -527,7 +527,7 @@ function Index() {
                 key={card.title}
                 className="flex items-start gap-4 rounded-3xl bg-background shadow-soft-teal p-5"
               >
-                <span className="flex size-9 shrink-0 items-center justify-center num-badge">
+                <span className="num-badge">
                   {i + 1}
                 </span>
                 <div>
@@ -663,7 +663,7 @@ function Index() {
               Kampaň štartuje 1. 9. 2026. Nová spolupráca prináša držiteľom ISIC, ITIC a
               EURO&lt;26 viac dát, volaní a digitálneho obsahu.
             </p>
-            <div className="mt-6 flex items-center gap-4 rounded-3xl bg-background shadow-soft-teal px-4 py-2 w-fit">
+            <div className="mt-6 flex items-center gap-4 rounded-full bg-background shadow-soft-teal px-5 py-2.5 w-fit">
               <img src={isicLogo.url} alt="ISIC" className="h-6 w-auto" loading="lazy" />
               <img src={iticLogo.url} alt="ITIC" className="h-6 w-auto" loading="lazy" />
               <img src={eycaLogo.url} alt="EURO<26" className="h-6 w-auto" loading="lazy" />
