@@ -255,7 +255,7 @@ function Index() {
       <section className="bg-background px-5 py-16 sm:px-8">
         <div className="mx-auto max-w-6xl">
           <p className="eyebrow text-brand-pink">Vyber si svoju výhodu</p>
-          <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl">Kto si?</h2>
+          <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl">Ktorý paušál je pre teba?</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {segments.map((s) => (
               <div
