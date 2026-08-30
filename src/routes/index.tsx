@@ -204,7 +204,7 @@ function Index() {
 
         <div className="relative mx-auto flex min-h-[720px] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
           <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-4 rounded-lg border-2 border-foreground bg-background px-4 py-2">
+            <div className="flex items-center gap-4 rounded-3xl bg-background shadow-soft-teal px-4 py-2">
               <img src={isicLogo.url} alt="ISIC" className="h-6 w-auto" />
               <img src={iticLogo.url} alt="ITIC" className="h-6 w-auto" />
               <img src={eycaLogo.url} alt="EURO<26" className="h-6 w-auto" />
@@ -285,7 +285,7 @@ function Index() {
               Nová spolupráca, nové výhody k tvojmu preukazu. Bez zmeny toho, čo už máš.
             </p>
           </div>
-          <div className="overflow-hidden rounded-lg border-2 border-foreground bg-background">
+          <div className="overflow-hidden rounded-3xl bg-background shadow-soft-teal">
             <img
               src={heroImage.url}
               alt="Kampaňový vizuál 2026 pre držiteľov ISIC, ITIC a EURO<26"
@@ -331,7 +331,7 @@ function Index() {
             ].map((item) => (
               <div
                 key={item.n}
-                className="rounded-lg border-2 border-foreground bg-brand-teal-light p-6"
+                className="rounded-3xl bg-brand-teal-light shadow-soft-teal p-6"
               >
                 <span className="font-display text-sm font-black text-brand-pink">{item.n}</span>
                 <h3 className="mt-2 font-display text-2xl font-black">{item.t}</h3>
@@ -358,7 +358,7 @@ function Index() {
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="flex flex-col justify-between rounded-lg border-2 border-foreground bg-brand-yellow p-7 shadow-hard-pink">
+            <div className="flex flex-col justify-between rounded-3xl bg-brand-yellow p-7 shadow-soft-pink">
               <div>
                 <p className="font-display text-6xl font-black leading-none">100 GB</p>
                 <p className="mt-3 text-sm font-bold">dát v 5G každý mesiac</p>
@@ -369,7 +369,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="rounded-lg border-2 border-foreground bg-background p-7">
+            <div className="rounded-3xl bg-background shadow-soft-teal p-7">
               <ul className="space-y-4">
                 {[
                   "100 GB plnou rýchlosťou — nevyčerpané dáta sa prenášajú do ďalšieho mesiaca, po prečerpaní pokračuješ spomalene bez doplatku.",
@@ -377,7 +377,7 @@ function Index() {
                   "1 predplatné na 12 mesiacov v cene (Netflix, Voyo, HBO Max a i.), meniteľné každých 30 dní.",
                 ].map((benefit, i) => (
                   <li key={benefit} className="flex items-start gap-4">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-foreground bg-brand-yellow font-display font-black">
+                    <span className="flex size-9 shrink-0 items-center justify-center num-badge">
                       {i + 1}
                     </span>
                     <span className="pt-1.5 text-sm">{benefit}</span>
@@ -385,7 +385,7 @@ function Index() {
                 ))}
               </ul>
 
-              <p className="mt-6 border-2 border-foreground bg-brand-teal-light p-4 text-sm">
+              <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
                 Podmienka: platný slovenský preukaz ISIC / ITIC / EURO&lt;26 a vek od 18 rokov.
                 Rodič môže kúpiť na svoje meno so zadaním čísla preukazu dieťaťa.
               </p>
@@ -416,8 +416,8 @@ function Index() {
             {pausaly.map((plan) => (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-lg border-2 border-foreground p-6 ${
-                  plan.popular ? "bg-brand-orange shadow-hard-teal" : "bg-background"
+                className={`relative flex flex-col rounded-3xl shadow-soft-teal p-6 ${
+                  plan.popular ? "bg-brand-orange shadow-soft-orange" : "bg-background"
                 }`}
               >
                 {plan.popular && (
@@ -453,7 +453,7 @@ function Index() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col gap-4 rounded-lg border-2 border-foreground bg-brand-pink p-6 text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-8 flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-lg font-black">
               Viazanosť? 02 vykúpi z viazanosti u pôvodného operátora až do 120 €.
             </p>
@@ -490,9 +490,9 @@ function Index() {
             ].map((item, i) => (
               <li
                 key={item}
-                className="flex items-start gap-4 rounded-lg border-2 border-foreground bg-brand-teal-light p-5"
+                className="flex items-start gap-4 rounded-3xl bg-brand-teal-light shadow-soft-teal p-5"
               >
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-foreground bg-brand-yellow font-display font-black">
+                <span className="flex size-9 shrink-0 items-center justify-center num-badge">
                   {i + 1}
                 </span>
                 <span className="pt-1.5 text-sm">{item}</span>
@@ -515,7 +515,7 @@ function Index() {
             <img
               src={isicImage.url}
               alt="Kampaňový vizuál pre držiteľov ISIC, ITIC a EURO<26"
-              className="hidden w-72 rounded-lg border-2 border-foreground sm:block"
+              className="hidden w-72 rounded-3xl shadow-soft-teal sm:block"
               width={800}
               height={500}
               loading="lazy"
@@ -526,9 +526,9 @@ function Index() {
             {whyCards.map((card, i) => (
               <li
                 key={card.title}
-                className="flex items-start gap-4 rounded-lg border-2 border-foreground bg-background p-5"
+                className="flex items-start gap-4 rounded-3xl bg-background shadow-soft-teal p-5"
               >
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-foreground bg-brand-yellow font-display font-black">
+                <span className="flex size-9 shrink-0 items-center justify-center num-badge">
                   {i + 1}
                 </span>
                 <div>
@@ -558,7 +558,7 @@ function Index() {
             {cards.map((card) => (
               <div
                 key={card.num}
-                className={`${card.accent} rounded-lg border-2 border-foreground bg-background p-6 transition-colors hover:bg-brand-teal-light`}
+                className={`${card.accent} rounded-3xl bg-background shadow-soft-teal p-6 transition-colors hover:bg-brand-teal-light`}
               >
                 <div className="flex items-center justify-between gap-4">
                   <span className="font-display text-xs font-black text-card-accent">
@@ -610,7 +610,7 @@ function Index() {
             {steps.map((step, i) => (
               <li
                 key={step.title}
-                className="rounded-lg border-2 border-foreground bg-background p-6"
+                className="rounded-3xl bg-background shadow-soft-teal p-6"
               >
                 <span className="font-display text-sm font-black text-brand-pink">
                   KROK {String(i + 1).padStart(2, "0")}
@@ -645,7 +645,7 @@ function Index() {
             Napíšte nám a pomôžeme vybrať ponuku podľa vášho preukazu — ISIC, ITIC alebo
             EURO&lt;26.
           </p>
-          <div className="mt-8 rounded-lg border-2 border-foreground bg-card p-6 shadow-hard-pink sm:p-8">
+          <div className="mt-8 rounded-3xl bg-card p-6 shadow-soft-pink sm:p-8">
             <p className="font-display text-lg font-black">Kontakt</p>
             <p className="mt-2 text-sm text-muted-foreground">
               Program a preukazy zastrešuje združenie CKM SYTS, výhradný zástupca preukazov ISIC,
@@ -667,7 +667,7 @@ function Index() {
               Kampaň štartuje 1. 9. 2026. Nová spolupráca prináša držiteľom ISIC, ITIC a
               EURO&lt;26 viac dát, volaní a digitálneho obsahu.
             </p>
-            <div className="mt-6 flex items-center gap-4 rounded-lg border-2 border-foreground bg-background px-4 py-2 w-fit">
+            <div className="mt-6 flex items-center gap-4 rounded-3xl bg-background shadow-soft-teal px-4 py-2 w-fit">
               <img src={isicLogo.url} alt="ISIC" className="h-6 w-auto" loading="lazy" />
               <img src={iticLogo.url} alt="ITIC" className="h-6 w-auto" loading="lazy" />
               <img src={eycaLogo.url} alt="EURO<26" className="h-6 w-auto" loading="lazy" />

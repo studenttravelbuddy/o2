@@ -163,7 +163,7 @@ export function CampaignFaq() {
           ))}
         </div>
 
-        <p className="mt-10 border-2 border-foreground bg-brand-teal-light p-5 text-sm">
+        <p className="mt-10 rounded-2xl bg-brand-teal-light p-5 text-sm">
           Nenašiel si odpoveď?{" "}
           {/* TODO: nahradiť finálnym kontaktom / odkazom na podmienky */}
           <a
