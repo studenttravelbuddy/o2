@@ -152,7 +152,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
     items: [
       {
         q: "Kto si môže aktivovať paušál so 100 GB?",
-        a: "Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku starší ako 18 rokov. Rodič môže paušál kúpiť na svoje meno; pri overovaní zadá priezvisko dieťaťa a číslo jeho platného preukazu.",
+        a: "Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku. Držiteľ si paušál môže aktivovať od 18 rokov. Pre mladších držiteľov môže paušál aktivovať rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko dieťaťa a číslo jeho platného preukazu.",
       },
       {
         q: "Čo ak neminiem svojich 100 GB dát?",
