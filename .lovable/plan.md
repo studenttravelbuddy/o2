@@ -1,0 +1,60 @@
+# Zapracovanie komentárov z preview (10 vlákien, Michal Bucko)
+
+Komentáre sa týkajú výlučne textov a logiky obsahu — dizajn sa nemení.
+
+## 1. Paušály nie sú viazané na cieľové skupiny (hero + celá stránka)
+
+Komentár: „paušály od O2 nebudeme komunikovať tak, že každý je určený pre inú cieľovú skupinu… potrebujeme osloviť všetkých a dať vedieť, že máme niečo pre každého."
+
+- Do hero podtitulu pridať vetu v zmysle: **„Všetky paušály sú dostupné každému držiteľovi platného preukazu — vyber si to, čo ti najviac vyhovuje."**
+- Sekcia „Kto si?" ostáva ako navigačný vstup, ale texty kariet preformulujem tak, aby nepriraďovali produkt k skupine (napr. „Som študent" → „zistím, čo mi preukaz prinesie"), alebo pod ne doplním spoločný riadok: „Platí pre všetkých držiteľov ISIC, ITIC aj EURO<26."
+- Podnadpis sekcie Paušály zmením z „Pre pedagógov s ITIC" na neutrálne „Paušály so zľavou vďaka preukazu — pre každého držiteľa".
+
+## 2. Karta „Je to benefit" (sekcia Nová spolupráca)
+
+Komentár: „voľba operátora už nie je na držiteľovi, od 1/9/26 má k dispozícii paušály na preukaz len v O2."
+
+- Preformulujem text karty 03: „Benefit, nie povinnosť. Ak chceš paušál s výhodami na svoj preukaz, od 1. 9. 2026 ho získaš u O2."
+- *(Pozn.: nahrádza tým skoršiu editáciu „Voľba operátora je vždy na tebe…" — prosím o potvrdenie, že takto je to správne.)*
+
+## 3. „Slovenský preukaz" → „preukaz vydaný na Slovensku" (2 komentáre)
+
+- V `#maxx` podmienke: „platný slovenský preukaz ISIC / ITIC / EURO<26" → **„platný preukaz ISIC / ITIC / EURO<26 vydaný na Slovensku"**.
+- Vo FAQ (otázka „Kto si môže aktivovať paušál so 100 GB?"): „platných slovenských preukazov" → **„platných preukazov vydaných na Slovensku"**.
+- Prejdem celú stránku a FAQ, či sa „slovenský preukaz" nevyskytuje inde.
+
+## 4. Bonus vykúpenia z viazanosti pri Maxx
+
+- Do sekcie `#maxx` pridám riadok/box: **„Máš u pôvodného operátora viazanosť? O2 ťa vykúpi až do 120 €."**
+
+## 5. Vykúpenie z viazanosti platí pri každom paušále
+
+- Ružový banner „Viazanosť? …" rozšírim o explicitné **„platí pri každom paušále"** a opravím preklep „02" → „O2". Banner presuniem hneď pod mriežku paušálov (už tam je), text upravím tak, aby bolo jasné, že sa vzťahuje na všetky tri paušály aj Maxx.
+
+## 6. „Plný úväzok" → „hlavný pracovný pomer"
+
+- ITIC karta v `#preukazy`: „Pedagogický zamestnanec na plný úväzok" → **„Pedagogický zamestnanec v hlavnom pracovnom pomere"**.
+- Prehľadám celý web (aj FAQ), či sa „plný úväzok / plný paušál" nevyskytuje inde a zjednotím terminológiu na „hlavný".
+
+## 7. Kalkulačka úspory — vysvetliť výpočet
+
+- Pod výsledok doplním viditeľnú poznámku s metodikou: **„Ako to počítame: (tvoja súčasná mesačná platba − 18 € za najlacnejší paušál s preukazom) × 12 mesiacov = odhad ročnej úspory. Porovnávame len cenu paušálu, nie objem služieb."**
+- Ak je samotný výpočet nesprávny, kalkulačku radšej odstránim — doplniť rozhodnutie do vlákna.
+
+## 8. FAQ „Musím prejsť k novému operátorovi?"
+
+- Odpoveď nahradím: **„Ak chceš využívať nový paušál na svoj preukaz, tak áno. Do O2 potrebuješ prejsť najneskôr na konci platnosti svojho súčasného paušálu. Viac info…"** (link „Viac info" zatiaľ placeholder na `#podmienky`).
+
+## 9. FAQ — premenovanie skupín podľa plných názvov paušálov
+
+Komentár: delenie „100 GB pre študentov / Paušály zľavy / Junior pre rodičov" je nejasné; použiť vždy plné pomenovanie bez prívlastkov, komu sú určené.
+
+- Skupiny FAQ premenujem: „100 GB pre študentov" → **„Maxx — 100 GB"**, „Paušály a zľavy" → **„Paušály so zľavou"** (názvy podľa produktov), „Junior pre rodičov" → **„Junior"**.
+- Z textov odpovedí odstránim prívlastky typu „pre študentov / pre rodičov" tam, kde naznačujú, že produkt je len pre jednu skupinu.
+
+## Technické detaily
+
+- Súbory: `src/routes/index.tsx` (body, hero, maxx, pausaly, preukazy), `src/components/CampaignFaq.tsx` (skupiny + odpovede), `src/components/SavingsCalculator.tsx` (poznámka k výpočtu).
+- Žiadne zmeny dizajnu, farieb ani layoutu.
+- Po implementácii odpoviem do každého z 10 vlákien, čo bolo zapracované.
+- Otvorené body na potvrdenie: karta „Je to benefit" (bod 2) a či výpočet kalkulačky ponechať s vysvetlením alebo kalkulačku zrušiť (bod 7).
