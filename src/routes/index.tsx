@@ -369,6 +369,22 @@ function Index() {
         </div>
       </section>
 
+      {/* ŽLTÝ/RUŽOVÝ — vykúpenie z viazanosti */}
+      <section className="scroll-mt-20 bg-background py-10">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-display text-lg font-black">
+              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pri každom
+              paušále.
+            </p>
+            {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
+            <Button variant="white" size="lg" asChild>
+              <a href="#prechod">Ako prejsť</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* TEAL — hlavná ponuka 100 GB */}
       <section id="maxx" className="scroll-mt-20 bg-brand-teal py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -480,16 +496,6 @@ function Index() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
-            <p className="font-display text-lg font-black">
-              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pri každom
-              paušále.
-            </p>
-            {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
-            <Button variant="white" size="lg" asChild>
-              <a href="#prechod">Ako prejsť</a>
-            </Button>
-          </div>
         </div>
       </section>
 
