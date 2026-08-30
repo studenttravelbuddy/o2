@@ -221,15 +221,15 @@ function Index() {
 
         <div className="relative mx-auto flex min-h-[720px] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
           <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-3">
-              <div className="rounded-3xl bg-background px-5 py-3">
-                <img src={isicLogo.url} alt="ISIC" className="h-10 w-auto" />
+            <div className="flex flex-wrap items-center gap-4">
+              <div className="rounded-3xl bg-background px-6 py-4 sm:px-8 sm:py-5">
+                <img src={eycaLogo.url} alt="EURO<26" className="h-14 w-auto sm:h-16" />
               </div>
-              <div className="rounded-3xl bg-background px-5 py-3">
-                <img src={iticLogo.url} alt="ITIC" className="h-10 w-auto" />
+              <div className="rounded-3xl bg-background px-6 py-4 sm:px-8 sm:py-5">
+                <img src={isicLogo.url} alt="ISIC" className="h-14 w-auto sm:h-16" />
               </div>
-              <div className="rounded-3xl bg-background px-5 py-3">
-                <img src={eycaLogo.url} alt="EURO<26" className="h-10 w-auto" />
+              <div className="rounded-3xl bg-background px-6 py-4 sm:px-8 sm:py-5">
+                <img src={iticLogo.url} alt="ITIC" className="h-14 w-auto sm:h-16" />
               </div>
             </div>
             <PartnerEndorsement />
