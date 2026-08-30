@@ -218,8 +218,10 @@ function Index() {
               Ready for more?
             </h1>
             <p className="relative z-10 mt-6 max-w-2xl text-lg">
-              Tento rok štartujeme kampaň vo veľkom. S novým operátorom prinášame držiteľom ISIC,
-              ITIC a EURO&lt;26 viac dát, viac volaní a viac digitálneho obsahu.
+              Tento rok štartujeme kampaň vo veľkom.{" "}
+              <span className="font-black text-brand-yellow">S novým operátorom</span>{" "}
+              prinášame držiteľom ISIC, ITIC a EURO&lt;26 viac dát, viac volaní a viac digitálneho
+              obsahu.
             </p>
             <p className="relative z-10 mt-4 font-display text-xl font-black">1. 9. 2026</p>
 
