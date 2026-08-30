@@ -284,14 +284,7 @@ function Index() {
 
       {/* ŽLTÝ PÁS — kampaňový vizuál */}
       <section className="bg-brand-yellow px-5 py-12 sm:px-8 sm:py-16">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[0.9fr_1.6fr]">
-          <div>
-            <p className="eyebrow">Kampaň 1. 9. – 17. 11. 2026</p>
-            <p className="mt-3 font-display text-3xl font-black">Ready for more?</p>
-            <p className="mt-3 text-sm">
-              Nová spolupráca, nové výhody k tvojmu preukazu. Bez zmeny toho, čo už máš.
-            </p>
-          </div>
+        <div className="mx-auto max-w-6xl">
           <div className="overflow-hidden rounded-3xl bg-background shadow-soft-teal">
             <img
               src={heroImage.url}
