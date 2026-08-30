@@ -557,12 +557,11 @@ function Index() {
             {cards.map((card) => (
               <div
                 key={card.num}
-                className={`${card.accent} rounded-3xl bg-background shadow-soft-teal p-6 transition-colors hover:bg-brand-teal-light`}
+                className={`${card.accent} relative overflow-hidden rounded-3xl border-2 border-card-accent/50 bg-background p-6 shadow-soft-teal transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-pink`}
               >
+                <span className="absolute right-0 top-0 h-6 w-20 rounded-bl-3xl bg-card-accent" />
                 <div className="flex items-center justify-between gap-4">
-                  <span className="font-display text-xs font-black text-card-accent">
-                    {card.num}
-                  </span>
+                  <span className="num-badge text-sm">{card.num}</span>
                   <img src={card.logo} alt={card.alt} className="h-9 w-auto" loading="lazy" />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-black">{card.title}</h3>
@@ -611,9 +610,7 @@ function Index() {
                 key={step.title}
                 className="rounded-3xl bg-background shadow-soft-teal p-6"
               >
-                <span className="font-display text-sm font-black text-brand-pink">
-                  KROK {String(i + 1).padStart(2, "0")}
-                </span>
+                <span className="num-badge text-sm">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-2 font-display text-2xl font-black">{step.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{step.text}</p>
               </li>
