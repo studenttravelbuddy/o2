@@ -14,6 +14,90 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
     label: "Nová spolupráca",
     items: [
       {
+        q: "Prečo už medzi výhodami ISIC / ITIC / EURO<26 nevidím ponuku Orange?",
+        a: "Po 15 rokoch spolupráce so spoločnosťou Orange sme sa rozhodli posunúť ponuku telekomunikačných benefitov ďalej. S cieľom prinášať držiteľom našich preukazov čo najatraktívnejšie a aktuálne výhody sme spoluprácu s Orange ukončili k 31. 8. 2026. Od 1. 9. 2026 prinášame novú ponuku paušálov v spolupráci s O2.",
+      },
+      {
+        q: "Čo sa mení od 1. septembra 2026?",
+        a: "Od 1. 9. 2026 je pre držiteľov preukazov dostupná nová ponuka paušálov od O2. Je pripravená tak, aby ju mohli využiť všetky skupiny držiteľov ISIC, ITIC a EURO<26 a každý držiteľ si v nej našiel to svoje. Jej súčasťou je aj úplne nový paušál O2 Maxx ktorý je len pre držiteľov a nižšie ceny/rozšírená ponuka na paušál O2 Junior a ostatné O2 Paušály.",
+      },
+      {
+        q: "Čo ponúka O2 Maxx?",
+        a: (
+          <>
+            O2 Maxx zahŕňa 100 GB dát plnou rýchlosťou, prenos nespotrebovaných dát, neobmedzené volania a správy v celej EÚ a 12-mesačné predplatné vybranej digitálnej služby (Netflix, Voyo, HBO max a iné..) ktorú môžete každý mesiac meniť, ako aj možnosť výhodnejšej kúpy zariadenia. Podrobné informácie a zmluvné podmienky nájdete na stránke{" "}
+            <a
+              href="https://www.o2.sk"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.o2.sk
+            </a>
+          </>
+        ),
+      },
+      {
+        q: "Pre koho je určený O2 Maxx a zvýhodnené ponuky na O2 Junior a iné O2 Paušály?",
+        a: "Pre všetkých držiteľov platných preukazov ISIC, ITIC a EURO<26, ktoré boli vydané na Slovensku.",
+      },
+      {
+        q: "Kde si môžem novú ponuku pozrieť?",
+        a: (
+          <>
+            Kompletné podmienky, možnosti aktivácie a aktuálnu ponuku nájdete na stránke{" "}
+            <a
+              href="https://www.o2.sk"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.o2.sk
+            </a>
+          </>
+        ),
+      },
+      {
+        q: "Mám Yoxo. Čo sa s ním stane?",
+        a: (
+          <>
+            Yoxo môžete využívať do konca platnosti vašej aktuálnej zmluvy v Orange a následne si môžete vybrať ktorýkoľvek z paušálov v O2 pripravených pre ISIC, ITIC a EURO&lt;26. Alebo môžete zmluvu v Orange ukončiť hneď a prejsť na výhodnejší paušál v O2. Viac podrobných informácií o nových paušáloch nájdete na stránke{" "}
+            <a
+              href="https://www.o2.sk"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.o2.sk
+            </a>
+          </>
+        ),
+      },
+      {
+        q: "Môžem si ešte aktivovať Yoxo cez ISIC / ITIC / EURO<26?",
+        a: "Od 1. 9. 2026 si môžete nové paušály na ISIC, ITIC a EURO<26 aktivovať len v O2.",
+      },
+      {
+        q: "Som zákazníkom Orange. Prestáva mi platiť paušál na ISIC / ITIC / EURO<26?",
+        a: (
+          <>
+            Yoxo môžete využívať do konca platnosti vašej aktuálnej zmluvy v Orange a následne si môžete vybrať ktorýkoľvek z paušálov v O2 pripravených pre ISIC, ITIC a EURO&lt;26. Alebo môžete zmluvu v Orange ukončiť hneď a prejsť na výhodnejší paušál v O2. Viac podrobných informácií o nových paušáloch nájdete na stránke{" "}
+            <a
+              href="https://www.o2.sk"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.o2.sk
+            </a>
+          </>
+        ),
+      },
+      {
+        q: "Prečo ste sa rozhodli spolupracovať s O2?",
+        a: "Vďaka tomu, že s O2 sme sa dohodli na dlhodobej spolupráci, vďaka ktorej budeme spoločne tvoriť a ponúkať držiteľom preukazov ISIC/ITIC/EURO<26 také paušály, ktoré budú maximálne prispôsobované potrebám a požiadavkám držiteľov ISIC, ITIC a EURO<26.",
+      },
+      {
         q: "Čo znamená nová spolupráca pre môj preukaz?",
         a: "Nič nemusíš riešiť. Preukaz ISIC, ITIC alebo EURO<26 platí ďalej presne tak, ako doteraz — len k nemu pribudli nové telekomunikačné výhody.",
       },
