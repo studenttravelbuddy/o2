@@ -583,7 +583,7 @@ function Index() {
                 <span className="absolute right-0 top-0 h-6 w-20 rounded-bl-3xl bg-card-accent" />
                 <div className="flex items-center justify-between gap-4">
                   <span className="num-badge text-sm">{card.num}</span>
-                  <img src={card.logo} alt={card.alt} className="h-9 w-auto" loading="lazy" />
+                  <BrandMark brand={card.brand} />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-black">{card.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{card.text}</p>
