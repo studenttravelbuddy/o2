@@ -273,30 +273,39 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <p className="eyebrow text-brand-pink">Vyber si svoju výhodu</p>
           <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl">Kto si?</h2>
-          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {segments.map((s) => (
-              <a key={s.href} href={s.href} className="group relative block">
-                <div
-                  className={`relative flex h-full min-h-[220px] flex-col justify-between rounded-3xl p-8 shadow-soft-teal transition-all duration-300 group-hover:-translate-y-2 group-hover:-rotate-1 group-hover:shadow-soft-pink group-active:translate-y-0 ${s.bg}`}
-                >
-                  <div className="space-y-2">
-                    <span className="block text-xs font-bold uppercase tracking-widest text-foreground/60">
-                      {s.eyebrow}
-                    </span>
-                    <h3 className="font-display text-4xl font-black uppercase leading-tight text-background lg:text-5xl">
-                      {s.title}
-                    </h3>
-                    <p className="pt-2 text-sm font-bold text-background/90">{s.text}</p>
-                  </div>
-                  <div className="mt-8 flex justify-end">
-                    <div
-                      className={`flex h-12 w-12 items-center justify-center rounded-full shadow-sm transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110 ${s.arrowBg}`}
-                    >
-                      <ArrowRight className="h-6 w-6" strokeWidth={3} />
-                    </div>
+              <div
+                key={s.title}
+                className={`group relative flex h-full min-h-[240px] flex-col justify-between rounded-3xl p-6 shadow-soft-teal transition-all duration-300 hover:-translate-y-2 hover:-rotate-1 hover:shadow-soft-pink ${s.bg}`}
+              >
+                <div className="space-y-2">
+                  <span className="block text-xs font-bold uppercase tracking-widest text-foreground/60">
+                    {s.eyebrow}
+                  </span>
+                  <h3 className="font-display text-3xl font-black uppercase leading-tight text-background lg:text-4xl">
+                    {s.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {s.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        className="rounded-full bg-background/90 px-3 py-1 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-background"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
                   </div>
                 </div>
-              </a>
+                <div className="mt-6 flex justify-end">
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110 ${s.arrowBg}`}
+                  >
+                    <ArrowRight className="h-5 w-5" strokeWidth={3} />
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
