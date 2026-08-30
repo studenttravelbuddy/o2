@@ -229,7 +229,7 @@ function Index() {
               prinášame držiteľom ISIC, ITIC a EURO&lt;26 viac dát, viac volaní a viac digitálneho
               obsahu.
             </p>
-            <p className="relative z-10 mt-4 font-display text-xl font-black">1. 9. 2026</p>
+            <p className="relative z-10 mt-4 font-display text-xl font-black">od 1. 9. 2026</p>
 
             <div className="relative z-10 mt-8 flex flex-wrap items-center gap-4">
               <Button variant="yellow" size="xl" asChild>
