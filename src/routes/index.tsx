@@ -136,30 +136,27 @@ const segments = [
   },
 ];
 
-const cards = [
+const cards: { num: string; accent: string; brand: BrandId; title: string; text: string }[] = [
   {
     num: "01",
-    accent: "card-euro26",
-    logo: eycaLogo.url,
-    alt: "EURO<26 / European Youth Card",
-    title: "Pre mladých do 26 rokov",
-    text: "Vek do 26 rokov (vrátane).",
-  },
-  {
-    num: "02",
     accent: "card-isic",
-    logo: isicLogo.url,
-    alt: "ISIC – International Student Identity Card",
+    brand: "isic",
     title: "Pre študentov ZŠ, SŠ a VŠ",
     text: "Denné štúdium na základnej, strednej alebo vysokej škole.",
   },
   {
-    num: "03",
+    num: "02",
     accent: "card-itic",
-    logo: iticLogo.url,
-    alt: "ITIC – International Teacher Identity Card",
+    brand: "itic",
     title: "Pre učiteľov a pedagógov",
     text: "Pedagogický zamestnanec v hlavnom pracovnom pomere.",
+  },
+  {
+    num: "03",
+    accent: "card-euro26",
+    brand: "eyc",
+    title: "Pre mladých do 26 rokov",
+    text: "Vek do 26 rokov (vrátane).",
   },
 ];
 
