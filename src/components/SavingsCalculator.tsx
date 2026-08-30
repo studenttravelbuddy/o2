@@ -76,7 +76,7 @@ export function SavingsCalculator() {
   const [selectedId, setSelectedId] = useState<string>(plans[0].id);
 
   const current = Number(spend.replace(",", ".")) || 0;
-  const selected = plans.find((p) => p.id === selectedId) ?? plans[0];
+  const selected = plans.find((p) => p.id === selectedId) ?? plans[0]!;
   const monthlySaving = Math.max(0, current - selected.price);
   const yearlySaving = monthlySaving * 12;
 
