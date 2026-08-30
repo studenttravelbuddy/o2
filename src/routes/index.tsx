@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SavingsCalculator } from "@/components/SavingsCalculator";
 import { CampaignFaq } from "@/components/CampaignFaq";
-import heroImage from "@/assets/o2-hero.png.asset.json";
+import heroImage from "@/assets/o2-hero-full.png.asset.json";
 import isicImage from "@/assets/o2-isic.png.asset.json";
 import partnerLogo from "@/assets/o2-logo.png.asset.json";
 import isicLogo from "@/assets/isic-logo.png.asset.json";
@@ -289,7 +289,7 @@ function Index() {
             <img
               src={heroImage.url}
               alt="Kampaňový vizuál 2026 pre držiteľov ISIC, ITIC a EURO<26"
-              className="aspect-[16/7] w-full object-cover"
+              className="h-auto w-full"
               width={1920}
               height={700}
             />
