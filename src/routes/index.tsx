@@ -10,7 +10,6 @@ import partnerLogo from "@/assets/o2-logo.png.asset.json";
 import { BrandMark, BrandMarkRow, type BrandId } from "@/components/BrandMark";
 
 // EMBARGO: stránka sa nesmie verejne publikovať ani indexovať pred 1. 9. 2026.
-// TODO: nahradiť finálnym odkazom na isic.sk/ponuka (všetky CTA nižšie sú placeholdery).
 const OFFER_LINK = "https://www.o2.sk";
 
 export const Route = createFileRoute("/")({
@@ -408,7 +407,6 @@ function Index() {
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
                 <Button variant="pink" size="xl" asChild>
                   <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Chcem 100 GB</a>
                 </Button>
@@ -457,7 +455,6 @@ function Index() {
                   ))}
                 </ul>
 
-                {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
                 <Button
                   variant={plan.popular ? "teal" : "outline"}
                   size="lg"
@@ -481,7 +478,6 @@ function Index() {
               Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pri každom O2
               paušále.
             </p>
-            {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="white" size="lg" asChild>
               <a href="#prechod">Ako prejsť</a>
             </Button>
@@ -499,7 +495,6 @@ function Index() {
             </h2>
             <p className="mt-4 font-display text-4xl font-black">10,25 €</p>
             <p className="text-sm font-bold">mesačne — rovnaká cena, výhodnejší obsah</p>
-            {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="teal" size="lg" className="mt-6" asChild>
               <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Zistiť viac</a>
             </Button>
@@ -646,7 +641,6 @@ function Index() {
           </ol>
 
           <div className="mt-10">
-            {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="pink" size="xl" asChild>
               <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
             </Button>

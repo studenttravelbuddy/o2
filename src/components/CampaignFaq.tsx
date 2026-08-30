@@ -281,7 +281,6 @@ export function CampaignFaq() {
 
         <p className="mt-10 rounded-2xl bg-brand-teal-light p-5 text-sm">
           Nenašiel si odpoveď?{" "}
-          {/* TODO: nahradiť finálnym kontaktom / odkazom na podmienky */}
           <a
             href="mailto:info@ckm.sk"
             className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
