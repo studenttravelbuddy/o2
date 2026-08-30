@@ -7,9 +7,7 @@ import { CampaignFaq } from "@/components/CampaignFaq";
 import heroImage from "@/assets/o2-hero-full.png.asset.json";
 import isicImage from "@/assets/o2-isic.png.asset.json";
 import partnerLogo from "@/assets/o2-logo.png.asset.json";
-import isicLogo from "@/assets/isic-logo.png.asset.json";
-import iticLogo from "@/assets/itic-logo.png.asset.json";
-import eycaLogo from "@/assets/eyca-logo.svg.asset.json";
+import { BrandMark, BrandMarkRow, type BrandId } from "@/components/BrandMark";
 
 // EMBARGO: stránka sa nesmie verejne publikovať ani indexovať pred 1. 9. 2026.
 // TODO: nahradiť finálnym odkazom na isic.sk/ponuka (všetky CTA nižšie sú placeholdery).
@@ -136,30 +134,27 @@ const segments = [
   },
 ];
 
-const cards = [
+const cards: { num: string; accent: string; brand: BrandId; title: string; text: string }[] = [
   {
     num: "01",
-    accent: "card-euro26",
-    logo: eycaLogo.url,
-    alt: "EURO<26 / European Youth Card",
-    title: "Pre mladých do 26 rokov",
-    text: "Vek do 26 rokov (vrátane).",
-  },
-  {
-    num: "02",
     accent: "card-isic",
-    logo: isicLogo.url,
-    alt: "ISIC – International Student Identity Card",
+    brand: "isic",
     title: "Pre študentov ZŠ, SŠ a VŠ",
     text: "Denné štúdium na základnej, strednej alebo vysokej škole.",
   },
   {
-    num: "03",
+    num: "02",
     accent: "card-itic",
-    logo: iticLogo.url,
-    alt: "ITIC – International Teacher Identity Card",
+    brand: "itic",
     title: "Pre učiteľov a pedagógov",
     text: "Pedagogický zamestnanec v hlavnom pracovnom pomere.",
+  },
+  {
+    num: "03",
+    accent: "card-euro26",
+    brand: "eyc",
+    title: "Pre mladých do 26 rokov",
+    text: "Vek do 26 rokov (vrátane).",
   },
 ];
 
@@ -221,17 +216,7 @@ function Index() {
 
         <div className="relative mx-auto flex min-h-[720px] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
           <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-4">
-              <div className="rounded-3xl bg-background px-5 py-3 sm:px-6 sm:py-4">
-                <img src={eycaLogo.url} alt="EURO<26" className="h-12 w-auto sm:h-14" />
-              </div>
-              <div className="rounded-3xl bg-background px-5 py-3 sm:px-6 sm:py-4">
-                <img src={isicLogo.url} alt="ISIC" className="h-12 w-auto sm:h-14" />
-              </div>
-              <div className="rounded-3xl bg-background px-5 py-3 sm:px-6 sm:py-4">
-                <img src={iticLogo.url} alt="ITIC" className="h-12 w-auto sm:h-14" />
-              </div>
-            </div>
+            <BrandMarkRow variant="card" />
             <PartnerEndorsement />
           </div>
 
@@ -598,7 +583,7 @@ function Index() {
                 <span className="absolute right-0 top-0 h-6 w-20 rounded-bl-3xl bg-card-accent" />
                 <div className="flex items-center justify-between gap-4">
                   <span className="num-badge text-sm">{card.num}</span>
-                  <img src={card.logo} alt={card.alt} className="h-9 w-auto" loading="lazy" />
+                  <BrandMark brand={card.brand} />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-black">{card.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{card.text}</p>
@@ -699,17 +684,7 @@ function Index() {
               Kampaň štartuje 1. 9. 2026. Nová spolupráca prináša držiteľom ISIC, ITIC a
               EURO&lt;26 viac dát, volaní a digitálneho obsahu.
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-4 w-fit">
-              <div className="rounded-3xl bg-background px-5 py-3 sm:px-6 sm:py-4">
-                <img src={eycaLogo.url} alt="EURO<26" className="h-12 w-auto sm:h-14" loading="lazy" />
-              </div>
-              <div className="rounded-3xl bg-background px-5 py-3 sm:px-6 sm:py-4">
-                <img src={isicLogo.url} alt="ISIC" className="h-12 w-auto sm:h-14" loading="lazy" />
-              </div>
-              <div className="rounded-3xl bg-background px-5 py-3 sm:px-6 sm:py-4">
-                <img src={iticLogo.url} alt="ITIC" className="h-12 w-auto sm:h-14" loading="lazy" />
-              </div>
-            </div>
+            <BrandMarkRow variant="onDark" className="mt-6 w-fit" />
           </div>
 
           <div>
