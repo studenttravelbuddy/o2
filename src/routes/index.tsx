@@ -652,30 +652,6 @@ function Index() {
       <SavingsCalculator />
       <CampaignFaq />
 
-      {/* ŽLTÝ PÁS — kontakt */}
-      <section id="podmienky" className="scroll-mt-20 bg-brand-yellow py-20">
-        <div className="mx-auto max-w-3xl px-5">
-          <p className="eyebrow">Poradíme ti</p>
-          <h2 className="mt-2 font-display text-3xl font-black sm:text-4xl">
-            Neviete si vybrať?
-          </h2>
-          <p className="mt-3 text-sm">
-            Napíšte nám a pomôžeme vybrať ponuku podľa vášho preukazu — ISIC, ITIC alebo
-            EURO&lt;26.
-          </p>
-          <div className="mt-8 rounded-3xl bg-card p-6 shadow-soft-pink sm:p-8">
-            <p className="font-display text-lg font-black">Kontakt</p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Program a preukazy zastrešuje združenie CKM SYTS, výhradný zástupca preukazov ISIC,
-              ITIC a EURO&lt;26 na Slovensku.
-            </p>
-            <Button variant="teal" size="lg" className="mt-6" asChild>
-              <a href="mailto:info@ckm.sk">Napísať nám</a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* FOOTER — teal */}
       <footer className="bg-brand-teal py-12 text-foreground">
         <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 sm:px-8 md:flex-row md:items-end md:justify-between">
