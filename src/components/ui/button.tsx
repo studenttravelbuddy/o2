@@ -12,18 +12,18 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border-2 border-foreground bg-background text-foreground font-bold rounded-lg hover:bg-brand-teal-light",
+          "border-2 border-foreground/25 bg-background text-foreground font-bold rounded-full hover:border-foreground/60 hover:bg-brand-teal-light",
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        teal: "bg-brand-teal-deep text-primary-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-teal hover:text-foreground",
+        teal: "bg-brand-teal-deep text-primary-foreground font-bold rounded-full shadow-soft-teal hover:bg-brand-teal hover:text-foreground",
         yellow:
-          "bg-brand-yellow text-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-yellow/85",
-        pink: "bg-brand-pink text-primary-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-pink-dark",
+          "bg-brand-yellow text-foreground font-bold rounded-full shadow-soft-yellow hover:bg-brand-yellow/85",
+        pink: "bg-brand-pink text-primary-foreground font-bold rounded-full shadow-soft-pink hover:bg-brand-pink-dark",
         orange:
-          "bg-brand-orange text-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-orange/85",
+          "bg-brand-orange text-foreground font-bold rounded-full shadow-soft-orange hover:bg-brand-orange/85",
         white:
-          "bg-background text-foreground font-bold rounded-lg border-2 border-foreground hover:bg-brand-teal-light",
+          "bg-background text-foreground font-bold rounded-full shadow-sm hover:bg-brand-teal-light",
       },
       size: {
         default: "h-10 px-4 py-2",

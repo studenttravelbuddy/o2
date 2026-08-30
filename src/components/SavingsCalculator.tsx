@@ -16,7 +16,7 @@ export function SavingsCalculator() {
   return (
     <section className="bg-background py-20">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <div className="rounded-lg border-2 border-foreground bg-card p-6 shadow-hard-pink sm:p-8">
+        <div className="rounded-3xl bg-card p-6 shadow-soft-pink sm:p-8">
           <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
               <p className="eyebrow text-brand-pink">Spočítaj si to</p>
@@ -38,7 +38,7 @@ export function SavingsCalculator() {
                 <span className="text-sm font-bold">
                   Koľko dnes platíš mesačne za paušál?
                 </span>
-                <div className="mt-2 flex items-center gap-2 rounded-lg border-2 border-foreground bg-background px-4">
+                <div className="mt-2 flex items-center gap-2 rounded-3xl bg-background shadow-soft-teal px-4">
                   <input
                     type="number"
                     inputMode="decimal"
@@ -52,7 +52,7 @@ export function SavingsCalculator() {
                 </div>
               </label>
 
-              <div className="rounded-lg border-2 border-foreground bg-brand-teal p-5">
+              <div className="rounded-3xl shadow-soft-teal bg-brand-teal p-5">
                 <p className="eyebrow">Odhadovaná ročná úspora</p>
                 <p className="font-display text-5xl font-black">{yearlySaving.toFixed(0)} €</p>
                 <p className="mt-2 text-xs">
