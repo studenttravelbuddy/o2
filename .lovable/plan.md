@@ -30,6 +30,7 @@ Doplniť zoznamy `benefits` v poli `plans` o všetky známe výhody, ktoré sú 
   - Neobmedzené správy
   - Bonus na zariadenie
   - Zľava vďaka preukazu ISIC/ITIC/EURO<26
+  - Vykúpenie z viazanosti u pôvodného operátora až do 120 €
 
 - **Pohodový**
   - 15 GB dát
@@ -37,6 +38,7 @@ Doplniť zoznamy `benefits` v poli `plans` o všetky známe výhody, ktoré sú 
   - Bonus na zariadenie
   - 1 predplatné v cene
   - Zľava vďaka preukazu ISIC/ITIC/EURO<26
+  - Vykúpenie z viazanosti u pôvodného operátora až do 120 €
 
 - **Bezstarostný**
   - Neobmedzené dáta, volania a správy
@@ -46,6 +48,7 @@ Doplniť zoznamy `benefits` v poli `plans` o všetky známe výhody, ktoré sú 
   - 1 SIM navyše zdarma
   - Najobľúbenejší paušál
   - Zľava vďaka preukazu ISIC/ITIC/EURO<26
+  - Vykúpenie z viazanosti u pôvodného operátora až do 120 €
 
 - **Junior**
   - 10 GB dát s preukazom dieťaťa (namiesto 4 GB)
