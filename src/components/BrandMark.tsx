@@ -19,9 +19,15 @@ const brands: Record<BrandId, { url: string; alt: string }> = {
   },
 };
 
-/** Identical frame + padding for every brand so all bubbles match exactly. */
-const FRAME_SIZE = "h-14 w-40 sm:h-16";
-const FRAME_PAD = "px-4 py-2.5";
+/** Keep the original ISIC/ITIC frame size for every brand. */
+const FRAME_SIZE = "h-14 w-28 sm:h-16";
+
+/** The wider EYC wordmark needs less horizontal padding to match visually. */
+const framePad: Record<BrandId, string> = {
+  isic: "p-2.5",
+  itic: "p-2.5",
+  eyc: "px-1.5 py-2.5",
+};
 
 /** Strict order used everywhere on the page. */
 export const brandOrder: BrandId[] = ["isic", "itic", "eyc"];
@@ -49,7 +55,7 @@ export function BrandMark({ brand, variant = "plain", className = "" }: BrandMar
         src={url}
         alt={alt}
         loading="lazy"
-        className={`h-full w-full object-contain ${FRAME_PAD}`}
+        className={`h-full w-full object-contain ${framePad[brand]}`}
       />
     </div>
   );
