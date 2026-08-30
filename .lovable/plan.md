@@ -34,10 +34,11 @@ Komentár: „voľba operátora už nie je na držiteľovi, od 1/9/26 má k disp
 - ITIC karta v `#preukazy`: „Pedagogický zamestnanec na plný úväzok" → **„Pedagogický zamestnanec v hlavnom pracovnom pomere"**.
 - Prehľadám celý web (aj FAQ), či sa „plný úväzok / plný paušál" nevyskytuje inde a zjednotím terminológiu na „hlavný".
 
-## 6. Kalkulačka úspory — vysvetliť výpočet
+## 6. Kalkulačka úspory — upraviť výpočet
 
-- Pod výsledok doplním viditeľnú poznámku s metodikou: **„Ako to počítame: (tvoja súčasná mesačná platba − 18 € za najlacnejší paušál s preukazom) × 12 mesiacov = odhad ročnej úspory. Porovnávame len cenu paušálu, nie objem služieb."**
-- Ak je samotný výpočet nesprávny, kalkulačku radšej odstránim — doplniť rozhodnutie do vlákna.
+- Používateľ zadá **svoju aktuálnu mesačnú cenu paušálu**.
+- Kalkulačka porovná túto sumu s **18 €/mesiac** a vypočíta ročnú úsporu: **(moja cena − 18 €) × 12 mesiacov**.
+- Pod výsledkom doplníme vysvetlenie: **„Porovnávame tvoju aktuálnu mesačnú platbu s paušálom za 18 €/mesiac. Výsledok je orientačný a nezahŕňa rozdiely v objeme služieb."**
 
 ## 7. FAQ „Musím prejsť k novému operátorovi?"
 
