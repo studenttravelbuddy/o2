@@ -671,10 +671,16 @@ function Index() {
               Kampaň štartuje 1. 9. 2026. Nová spolupráca prináša držiteľom ISIC, ITIC a
               EURO&lt;26 viac dát, volaní a digitálneho obsahu.
             </p>
-            <div className="mt-6 flex items-center gap-4 rounded-full bg-background shadow-soft-teal px-5 py-2.5 w-fit">
-              <img src={isicLogo.url} alt="ISIC" className="h-6 w-auto" loading="lazy" />
-              <img src={iticLogo.url} alt="ITIC" className="h-6 w-auto" loading="lazy" />
-              <img src={eycaLogo.url} alt="EURO<26" className="h-6 w-auto" loading="lazy" />
+            <div className="mt-6 flex flex-wrap items-center gap-3 w-fit">
+              <div className="rounded-full bg-background shadow-soft-teal px-4 py-2">
+                <img src={isicLogo.url} alt="ISIC" className="h-6 w-auto" loading="lazy" />
+              </div>
+              <div className="rounded-full bg-background shadow-soft-orange px-4 py-2">
+                <img src={iticLogo.url} alt="ITIC" className="h-6 w-auto" loading="lazy" />
+              </div>
+              <div className="rounded-full bg-background shadow-soft-pink px-4 py-2">
+                <img src={eycaLogo.url} alt="EURO<26" className="h-6 w-auto" loading="lazy" />
+              </div>
             </div>
           </div>
 
