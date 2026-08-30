@@ -7,8 +7,10 @@ Komentáre sa týkajú výlučne textov a logiky obsahu — dizajn sa nemení.
 Komentár: „paušály od O2 nebudeme komunikovať tak, že každý je určený pre inú cieľovú skupinu… potrebujeme osloviť všetkých a dať vedieť, že máme niečo pre každého."
 
 - Do hero podtitulu pridať vetu v zmysle: **„Všetky paušály sú dostupné každému držiteľovi platného preukazu — vyber si to, čo ti najviac vyhovuje."**
-- Sekcia „Kto si?" ostáva ako navigačný vstup, ale texty kariet preformulujem tak, aby nepriraďovali produkt k skupine (napr. „Som študent" → „zistím, čo mi preukaz prinesie"), alebo pod ne doplním spoločný riadok: „Platí pre všetkých držiteľov ISIC, ITIC aj EURO<26."
-- Podnadpis sekcie Paušály zmením z „Pre pedagógov s ITIC" na neutrálne „Paušály so zľavou vďaka preukazu — pre každého držiteľa".
+- Sekcia „Kto si?" ostáva ako navigačný vstup. Karty budú odkazovať na všetky dostupné paušály v opačnom poradí podľa preukazu:
+  - **ISIC / študent**: najprv **Maxx – 100 GB**, potom **Paušály so zľavou**.
+  - **ITIC / učiteľ**: najprv **Paušály so zľavou**, potom **Maxx – 100 GB**.
+  - **EURO<26 / rodič**: posledná karta sa premenuje na **„Junior pre najmenších"**.
 
 ## 2. Karta „Je to benefit" (sekcia Nová spolupráca)
 
