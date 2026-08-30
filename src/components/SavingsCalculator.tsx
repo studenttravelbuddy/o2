@@ -14,10 +14,14 @@ const plans: Plan[] = [
     name: "Maxx – 100 GB",
     price: 20,
     benefits: [
-      "100 GB dát v 5G",
-      "Neobmedzené volania a SMS/MMS",
-      "1 predplatné na 12 mesiacov v cene",
+      "100 GB dát v 5G plnou rýchlosťou",
+      "Nevyčerpané dáta sa prenášajú do ďalšieho mesiaca",
+      "Po prečerpaní pokračuješ spomalene bez doplatku",
+      "Neobmedzené volania a SMS/MMS na Slovensku a v celej EÚ",
+      "1 predplatné na 12 mesiacov v cene (Netflix, Voyo, HBO Max a i.)",
+      "Predplatné meniteľné každých 30 dní",
       "Bez viazanosti",
+      "Podmienka: platný preukaz ISIC/ITIC/EURO<26 vydaný na Slovensku, vek od 18 rokov",
     ],
   },
   {
@@ -29,6 +33,8 @@ const plans: Plan[] = [
       "200 minút",
       "Neobmedzené správy",
       "Bonus na zariadenie",
+      "Zľava vďaka preukazu ISIC/ITIC/EURO<26",
+      "Vykúpenie z viazanosti u pôvodného operátora až do 120 €",
     ],
   },
   {
@@ -40,6 +46,8 @@ const plans: Plan[] = [
       "Neobmedzené volania a správy",
       "Bonus na zariadenie",
       "1 predplatné v cene",
+      "Zľava vďaka preukazu ISIC/ITIC/EURO<26",
+      "Vykúpenie z viazanosti u pôvodného operátora až do 120 €",
     ],
   },
   {
@@ -48,10 +56,13 @@ const plans: Plan[] = [
     price: 33,
     benefits: [
       "Neobmedzené dáta, volania a správy",
-      "Cashback 5 € mesačne (do 15 GB)",
+      "Cashback 5 € mesačne (do 15 GB dát)",
       "Bonus na zariadenie",
       "1 predplatné v cene",
       "1 SIM navyše zdarma",
+      "Najobľúbenejší paušál",
+      "Zľava vďaka preukazu ISIC/ITIC/EURO<26",
+      "Vykúpenie z viazanosti u pôvodného operátora až do 120 €",
     ],
   },
   {
@@ -59,10 +70,11 @@ const plans: Plan[] = [
     name: "Junior",
     price: 10.25,
     benefits: [
-      "10 GB dát s preukazom dieťaťa",
-      "Donekonečna piatim",
+      "10 GB dát s preukazom dieťaťa (namiesto 4 GB)",
+      "Donekonečna piatim: 5 voľných čísel s neobmedzeným volaním a SMS (namiesto 3)",
       "Rodičovské limity na dáta aj volania",
-      "Podmienka: aktívny hlavný paušál na profile",
+      "Platíš len skutočnú spotrebu",
+      "Podmienka: aspoň jeden aktívny hlavný paušál na rovnakom zákazníckom profile",
     ],
   },
 ];
