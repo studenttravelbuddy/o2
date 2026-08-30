@@ -46,7 +46,7 @@ Komentár: „voľba operátora už nie je na držiteľovi, od 1/9/26 má k disp
 
 ## 7. FAQ „Musím prejsť k novému operátorovi?"
 
-- Odpoveď nahradím: **„Ak chceš využívať nový paušál na svoj preukaz, tak áno. Do O2 potrebuješ prejsť najneskôr na konci platnosti svojho súčasného paušálu. Viac info…"** (link „Viac info" zatiaľ placeholder na `#podmienky`).
+- Odpoveď nahradím: **„Ak chceš využívať nový paušál na svoj preukaz, tak áno."**
 
 ## 8. FAQ — premenovanie skupín podľa plných názvov paušálov
 
