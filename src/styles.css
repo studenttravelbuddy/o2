@@ -141,17 +141,36 @@
   text-transform: uppercase;
 }
 
-/* Tvrdé tiene v štýle kampane */
-@utility shadow-hard-pink {
-  box-shadow: 8px 8px 0 var(--brand-pink);
+/* Mäkké farebné tiene — hravý, voľný štýl */
+@utility shadow-soft-pink {
+  box-shadow: 0 16px 36px -14px color-mix(in srgb, var(--brand-pink) 45%, transparent);
 }
 
-@utility shadow-hard-teal {
-  box-shadow: 8px 8px 0 var(--brand-teal-deep);
+@utility shadow-soft-teal {
+  box-shadow: 0 16px 36px -14px color-mix(in srgb, var(--brand-teal-deep) 35%, transparent);
 }
 
-@utility shadow-hard-yellow {
-  box-shadow: 8px 8px 0 var(--brand-yellow);
+@utility shadow-soft-yellow {
+  box-shadow: 0 16px 36px -14px color-mix(in srgb, var(--brand-yellow) 70%, transparent);
+}
+
+@utility shadow-soft-orange {
+  box-shadow: 0 16px 36px -14px color-mix(in srgb, var(--brand-orange) 55%, transparent);
+}
+
+/* Žltý kruhový číselný odznak */
+@utility num-badge {
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--brand-yellow);
+  font-family: var(--font-display-stack);
+  font-weight: 900;
+  box-shadow: 0 4px 10px -4px rgb(0 0 0 / 0.25);
 }
 
 /* Akcenty jednotlivých preukazov */
