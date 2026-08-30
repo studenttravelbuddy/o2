@@ -400,7 +400,8 @@ function Index() {
 
               <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
                 Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku a vek od 18
-                rokov. Rodič môže kúpiť na svoje meno so zadaním čísla preukazu dieťaťa.
+                rokov. Rodič môže paušál kúpiť na svoje meno; pri overovaní zadá priezvisko dieťaťa a
+                číslo jeho platného preukazu.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
