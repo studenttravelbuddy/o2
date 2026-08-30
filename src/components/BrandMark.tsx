@@ -34,7 +34,7 @@ type BrandMarkProps = {
 };
 
 export function BrandMark({ brand, variant = "plain", className = "" }: BrandMarkProps) {
-  const { url, alt, pad, w } = brands[brand];
+  const { url, alt } = brands[brand];
 
   const frame =
     variant === "card" || variant === "onDark"
@@ -43,13 +43,13 @@ export function BrandMark({ brand, variant = "plain", className = "" }: BrandMar
 
   return (
     <div
-      className={`flex h-14 shrink-0 items-center justify-center sm:h-16 ${w} ${frame} ${className}`}
+      className={`flex shrink-0 items-center justify-center ${FRAME_SIZE} ${frame} ${className}`}
     >
       <img
         src={url}
         alt={alt}
         loading="lazy"
-        className={`h-full w-full object-contain ${pad}`}
+        className={`h-full w-full object-contain ${FRAME_PAD}`}
       />
     </div>
   );
