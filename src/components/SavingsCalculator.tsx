@@ -95,7 +95,7 @@ export function SavingsCalculator() {
               </p>
             </div>
             <Button variant="yellow" size="lg" onClick={() => setOpen(!open)}>
-              {open ? "Skryť" : "Spočítať"}
+              {open ? "Skryť" : "Poďme na to ->"}
             </Button>
           </div>
 
