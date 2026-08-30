@@ -409,7 +409,7 @@ function Index() {
               <div className="mt-7 flex flex-wrap items-center gap-4">
                 {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
                 <Button variant="pink" size="xl" asChild>
-                  <a href={OFFER_LINK}>Chcem 100 GB</a>
+                  <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Chcem 100 GB</a>
                 </Button>
                 <PartnerEndorsement className="text-foreground" />
               </div>
@@ -463,7 +463,7 @@ function Index() {
                   className="mt-6"
                   asChild
                 >
-                  <a href={OFFER_LINK}>Vybrať {plan.name}</a>
+                  <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Vybrať {plan.name}</a>
                 </Button>
               </div>
             ))}
@@ -500,7 +500,7 @@ function Index() {
             <p className="text-sm font-bold">mesačne — rovnaká cena, výhodnejší obsah</p>
             {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="teal" size="lg" className="mt-6" asChild>
-              <a href={OFFER_LINK}>Zistiť viac</a>
+              <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Zistiť viac</a>
             </Button>
           </div>
 
@@ -647,7 +647,7 @@ function Index() {
           <div className="mt-10">
             {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="pink" size="xl" asChild>
-              <a href={OFFER_LINK}>Preniesť si číslo</a>
+              <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
             </Button>
           </div>
         </div>
