@@ -23,11 +23,7 @@ Komentár: „voľba operátora už nie je na držiteľovi, od 1/9/26 má k disp
 - Vo FAQ (otázka „Kto si môže aktivovať paušál so 100 GB?"): „platných slovenských preukazov" → **„platných preukazov vydaných na Slovensku"**.
 - Prejdem celú stránku a FAQ, či sa „slovenský preukaz" nevyskytuje inde.
 
-## 4. Bonus vykúpenia z viazanosti pri Maxx
-
-- Do sekcie `#maxx` pridám riadok/box: **„Máš u pôvodného operátora viazanosť? O2 ťa vykúpi až do 120 €."**
-
-## 5. Vykúpenie z viazanosti platí pri každom paušále
+## 4. Vykúpenie z viazanosti platí pri každom paušále
 
 - Ružový banner „Viazanosť? …" rozšírim o explicitné **„platí pri každom paušále"** a opravím preklep „02" → „O2". Banner presuniem hneď pod mriežku paušálov (už tam je), text upravím tak, aby bolo jasné, že sa vzťahuje na všetky tri paušály aj Maxx.
 
