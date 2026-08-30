@@ -225,7 +225,7 @@ function Index() {
             </h1>
             <p className="relative z-10 mt-6 max-w-2xl text-lg">
               Tento rok štartujeme kampaň vo veľkom.{" "}
-              <span className="font-black text-brand-yellow">S novým operátorom</span>{" "}
+              <span className="font-black text-brand-yellow">S novým partnerom, operátorom O2</span>{" "}
               prinášame držiteľom ISIC, ITIC a EURO&lt;26 viac dát, viac volaní a viac digitálneho
               obsahu.
             </p>
