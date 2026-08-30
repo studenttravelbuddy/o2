@@ -315,7 +315,7 @@ function Index() {
           <div className="max-w-2xl">
             <p className="eyebrow text-brand-pink">Nová spolupráca</p>
             <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
-              Čo to znamená pre tvoj preukaz
+              Čo to znamená pre Teba?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Od 1. septembra 2026 pribúda k preukazom ISIC, ITIC a EURO&lt;26 nová generácia
