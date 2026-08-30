@@ -94,28 +94,48 @@ const whyCards = [
 
 const segments = [
   {
-    href: "#maxx",
     bg: "bg-brand-teal",
     arrowBg: "bg-background",
-    eyebrow: "ISIC · EURO<26",
+    eyebrow: "ISIC",
     title: "Som študent",
-    text: "100 GB dát a výhody na Maxx.",
+    links: [
+      { label: "Maxx – 100 GB", href: "#maxx" },
+      { label: "Paušály so zľavou", href: "#pausaly" },
+      { label: "Junior", href: "#junior" },
+    ],
   },
   {
-    href: "#pausaly",
     bg: "bg-brand-orange",
     arrowBg: "bg-brand-yellow",
     eyebrow: "ITIC",
     title: "Som učiteľ",
-    text: "Zľavnené paušály pre pedagógov.",
+    links: [
+      { label: "Paušály so zľavou", href: "#pausaly" },
+      { label: "Maxx – 100 GB", href: "#maxx" },
+      { label: "Junior", href: "#junior" },
+    ],
   },
   {
-    href: "#junior",
     bg: "bg-brand-pink",
     arrowBg: "bg-background",
-    eyebrow: "Pre rodičov",
-    title: "Som rodič",
-    text: "Donekonečna piatim pre deti.",
+    eyebrow: "EURO<26",
+    title: "Som mladý do 26 rokov",
+    links: [
+      { label: "Maxx – 100 GB", href: "#maxx" },
+      { label: "Paušály so zľavou", href: "#pausaly" },
+      { label: "Junior", href: "#junior" },
+    ],
+  },
+  {
+    bg: "bg-brand-yellow",
+    arrowBg: "bg-background",
+    eyebrow: "Pre najmenších",
+    title: "Pre všetkých do 15 rokov",
+    links: [
+      { label: "Junior", href: "#junior" },
+      { label: "Maxx – 100 GB", href: "#maxx" },
+      { label: "Paušály so zľavou", href: "#pausaly" },
+    ],
   },
 ];
 
@@ -142,7 +162,7 @@ const cards = [
     logo: iticLogo.url,
     alt: "ITIC – International Teacher Identity Card",
     title: "Pre učiteľov a pedagógov",
-    text: "Pedagogický zamestnanec na plný úväzok.",
+    text: "Pedagogický zamestnanec v hlavnom pracovnom pomere.",
   },
 ];
 
@@ -227,7 +247,8 @@ function Index() {
               Tento rok štartujeme kampaň vo veľkom.{" "}
               <span className="font-black text-brand-yellow">S novým partnerom, operátorom O2</span>{" "}
               prinášame držiteľom ISIC, ITIC a EURO&lt;26 viac dát, viac volaní a viac digitálneho
-              obsahu.
+              obsahu. Všetky paušály sú dostupné každému držiteľovi platného preukazu — vyber si to,
+              čo ti najviac vyhovuje.
             </p>
             <p className="relative z-10 mt-4 font-display text-xl font-black">od 1. 9. 2026</p>
 
@@ -253,30 +274,39 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <p className="eyebrow text-brand-pink">Vyber si svoju výhodu</p>
           <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl">Kto si?</h2>
-          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {segments.map((s) => (
-              <a key={s.href} href={s.href} className="group relative block">
-                <div
-                  className={`relative flex h-full min-h-[220px] flex-col justify-between rounded-3xl p-8 shadow-soft-teal transition-all duration-300 group-hover:-translate-y-2 group-hover:-rotate-1 group-hover:shadow-soft-pink group-active:translate-y-0 ${s.bg}`}
-                >
-                  <div className="space-y-2">
-                    <span className="block text-xs font-bold uppercase tracking-widest text-foreground/60">
-                      {s.eyebrow}
-                    </span>
-                    <h3 className="font-display text-4xl font-black uppercase leading-tight text-background lg:text-5xl">
-                      {s.title}
-                    </h3>
-                    <p className="pt-2 text-sm font-bold text-background/90">{s.text}</p>
-                  </div>
-                  <div className="mt-8 flex justify-end">
-                    <div
-                      className={`flex h-12 w-12 items-center justify-center rounded-full shadow-sm transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110 ${s.arrowBg}`}
-                    >
-                      <ArrowRight className="h-6 w-6" strokeWidth={3} />
-                    </div>
+              <div
+                key={s.title}
+                className={`group relative flex h-full min-h-[240px] flex-col justify-between rounded-3xl p-6 shadow-soft-teal transition-all duration-300 hover:-translate-y-2 hover:-rotate-1 hover:shadow-soft-pink ${s.bg}`}
+              >
+                <div className="space-y-2">
+                  <span className="block text-xs font-bold uppercase tracking-widest text-foreground/60">
+                    {s.eyebrow}
+                  </span>
+                  <h3 className="font-display text-3xl font-black uppercase leading-tight text-background lg:text-4xl">
+                    {s.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {s.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        className="rounded-full bg-background/90 px-3 py-1 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-background"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
                   </div>
                 </div>
-              </a>
+                <div className="mt-6 flex justify-end">
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110 ${s.arrowBg}`}
+                  >
+                    <ArrowRight className="h-5 w-5" strokeWidth={3} />
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -326,7 +356,7 @@ function Index() {
               {
                 n: "03",
                 t: "Je to benefit",
-                d: "Voľba operátora je vždy na tebe, s O2 prinášame to najlepšie pre našich držiteľov. ",
+                d: "Ak chceš paušál s výhodami na svoj preukaz, od 1. 9. 2026 ho získaš u O2.",
               },
             ].map((item) => (
               <div
@@ -386,8 +416,8 @@ function Index() {
               </ul>
 
               <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
-                Podmienka: platný slovenský preukaz ISIC / ITIC / EURO&lt;26 a vek od 18 rokov.
-                Rodič môže kúpiť na svoje meno so zadaním čísla preukazu dieťaťa.
+                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku a vek od 18
+                rokov. Rodič môže kúpiť na svoje meno so zadaním čísla preukazu dieťaťa.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -406,7 +436,7 @@ function Index() {
       <section id="pausaly" className="scroll-mt-20 bg-background py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-2xl">
-            <p className="eyebrow text-brand-orange-dark">Pre pedagógov s ITIC</p>
+            <p className="eyebrow text-brand-orange-dark">Paušály so zľavou vďaka preukazu</p>
             <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
               Paušály so zľavou vďaka preukazu
             </h2>
@@ -455,7 +485,8 @@ function Index() {
 
           <div className="mt-8 flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-lg font-black">
-              Viazanosť? 02 vykúpi z viazanosti u pôvodného operátora až do 120 €.
+              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pri každom
+              paušále.
             </p>
             {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="white" size="lg" asChild>

@@ -18,7 +18,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Musím prejsť k novému operátorovi?",
-        a: "Nie, je to benefit, nie povinnosť. Voľba operátora je vždy na tebe.",
+        a: "Ak chceš využívať nový paušál na svoj preukaz, tak áno.",
       },
       {
         q: "Ako môžem získať preukaz ISIC, ITIC alebo EURO<26?",
@@ -32,11 +32,11 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
   },
   {
     id: "maxx",
-    label: "100 GB pre študentov",
+    label: "Maxx — 100 GB",
     items: [
       {
         q: "Kto si môže aktivovať paušál so 100 GB?",
-        a: "Všetci držitelia platných slovenských preukazov ISIC, ITIC alebo EURO<26 starší ako 18 rokov. Rodič môže paušál kúpiť na svoje meno a pri overovaní zadá číslo preukazu dieťaťa.",
+        a: "Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku starší ako 18 rokov. Rodič môže paušál kúpiť na svoje meno a pri overovaní zadá číslo preukazu dieťaťa.",
       },
       {
         q: "Čo ak neminiem svojich 100 GB dát?",
@@ -66,7 +66,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
   },
   {
     id: "pausaly",
-    label: "Paušály a zľavy",
+    label: "Paušály so zľavou",
     items: [
       {
         q: "Majú paušály viazanosť?",
@@ -96,7 +96,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
   },
   {
     id: "junior",
-    label: "Junior pre rodičov",
+    label: "Junior",
     items: [
       {
         q: "Kedy si môžem aktivovať Junior?",
