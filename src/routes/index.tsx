@@ -11,7 +11,7 @@ import { BrandMark, BrandMarkRow, type BrandId } from "@/components/BrandMark";
 
 // EMBARGO: stránka sa nesmie verejne publikovať ani indexovať pred 1. 9. 2026.
 // TODO: nahradiť finálnym odkazom na isic.sk/ponuka (všetky CTA nižšie sú placeholdery).
-const OFFER_LINK = "#maxx";
+const OFFER_LINK = "https://www.o2.sk";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -409,7 +409,7 @@ function Index() {
               <div className="mt-7 flex flex-wrap items-center gap-4">
                 {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
                 <Button variant="pink" size="xl" asChild>
-                  <a href={OFFER_LINK}>Chcem 100 GB</a>
+                  <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Chcem 100 GB</a>
                 </Button>
                 <PartnerEndorsement className="text-foreground" />
               </div>
@@ -463,7 +463,7 @@ function Index() {
                   className="mt-6"
                   asChild
                 >
-                  <a href={OFFER_LINK}>Vybrať {plan.name}</a>
+                  <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Vybrať {plan.name}</a>
                 </Button>
               </div>
             ))}
@@ -500,7 +500,7 @@ function Index() {
             <p className="text-sm font-bold">mesačne — rovnaká cena, výhodnejší obsah</p>
             {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="teal" size="lg" className="mt-6" asChild>
-              <a href={OFFER_LINK}>Zistiť viac</a>
+              <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Zistiť viac</a>
             </Button>
           </div>
 
@@ -595,15 +595,18 @@ function Index() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            {/* TODO: nahradiť finálnym odkazom na podmienky */}
             <a
-              href="#podmienky"
+              href="https://www.o2.sk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
             >
               Pozrieť podmienky
             </a>
             <a
               href="https://objednaj-preukaz.sk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
             >
               Objednať preukaz
@@ -644,7 +647,7 @@ function Index() {
           <div className="mt-10">
             {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="pink" size="xl" asChild>
-              <a href={OFFER_LINK}>Preniesť si číslo</a>
+              <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
             </Button>
           </div>
         </div>
@@ -677,7 +680,12 @@ function Index() {
               <a href="https://euro26.sk" className="underline decoration-brand-pink decoration-2 underline-offset-4">
                 euro26.sk
               </a>
-              <a href="#podmienky" className="underline decoration-brand-pink decoration-2 underline-offset-4">
+              <a
+                href="https://www.o2.sk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-brand-pink decoration-2 underline-offset-4"
+              >
                 Podmienky
               </a>
             </div>
