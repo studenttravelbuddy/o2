@@ -282,11 +282,13 @@ function Index() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <div
-                    className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110 ${s.arrowBg}`}
+                  <a
+                    href="#kalkulacka"
+                    className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm transition-transform duration-300 hover:rotate-45 hover:scale-110 ${s.arrowBg}`}
+                    aria-label="Prejsť na kalkulačku úspor"
                   >
                     <ArrowRight className="h-5 w-5" strokeWidth={3} />
-                  </div>
+                  </a>
                 </div>
               </div>
             ))}
