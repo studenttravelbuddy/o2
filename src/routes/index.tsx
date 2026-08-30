@@ -436,7 +436,7 @@ function Index() {
       <section id="pausaly" className="scroll-mt-20 bg-background py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-2xl">
-            <p className="eyebrow text-brand-orange-dark">Pre pedagógov s ITIC</p>
+            <p className="eyebrow text-brand-orange-dark">Paušály so zľavou vďaka preukazu</p>
             <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
               Paušály so zľavou vďaka preukazu
             </h2>
