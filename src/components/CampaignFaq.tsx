@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -5,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-type FaqItem = { q: string; a: string };
+type FaqItem = { q: string; a: ReactNode };
 
 const groups: { id: string; label: string; items: FaqItem[] }[] = [
   {
@@ -22,7 +23,38 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Ako môžem získať preukaz ISIC, ITIC alebo EURO<26?",
-        a: "Preukazy si objednáš podľa podmienok dodávateľov na isic.sk, itic.sk a euro26.sk. Platnosť preukazu si vieš jednoducho overiť online.",
+        a: (
+          <>
+            Preukazy si objednáš podľa podmienok dodávateľov na{" "}
+            <a
+              href="https://isic.sk"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              isic.sk
+            </a>
+            ,{" "}
+            <a
+              href="https://itic.sk"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              itic.sk
+            </a>{" "}
+            a{" "}
+            <a
+              href="https://euro26.sk"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              euro26.sk
+            </a>
+            . Platnosť preukazu si vieš jednoducho overiť online.
+          </>
+        ),
       },
       {
         q: "Môžem mať viac paušálov so zľavou?",
