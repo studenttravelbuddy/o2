@@ -34,11 +34,13 @@ Komentár: „voľba operátora už nie je na držiteľovi, od 1/9/26 má k disp
 - ITIC karta v `#preukazy`: „Pedagogický zamestnanec na plný úväzok" → **„Pedagogický zamestnanec v hlavnom pracovnom pomere"**.
 - Prehľadám celý web (aj FAQ), či sa „plný úväzok / plný paušál" nevyskytuje inde a zjednotím terminológiu na „hlavný".
 
-## 6. Kalkulačka úspory — upraviť výpočet
+## 6. Kalkulačka — „Čo môžeš získať s novými paušálmi?"
 
-- Používateľ zadá **svoju aktuálnu mesačnú cenu paušálu**.
-- Kalkulačka porovná túto sumu s **18 €/mesiac** a vypočíta ročnú úsporu: **(moja cena − 18 €) × 12 mesiacov**.
-- Pod výsledkom doplníme vysvetlenie: **„Porovnávame tvoju aktuálnu mesačnú platbu s paušálom za 18 €/mesiac. Výsledok je orientačný a nezahŕňa rozdiely v objeme služieb."**
+- Používateľ zadá **svoju aktuálnu mesačnú cenu paušálu** a potom si **vyberie nový paušál z ponuky** (Maxx 20 €, Základný 18 €, Pohodový 28 €, Bezstarostný 33 €, Junior 10,25 €).
+- Kalkulačka porovná zadanú sumu s cenou vybraného paušálu a vypočíta ročný rozdiel: **(moja cena − cena nového paušálu) × 12 mesiacov**.
+- Pod výsledkom sa vždy zobrazia **benefity vybraného paušálu** (dáta, volania, predplatné, cashback, SIM navyše…), aby používateľ videl, čo za tú cenu získa.
+- Sekcia sa premenuje na **„Čo môžeš získať s novými paušálmi?"**.
+- Poznámka pod výpočtom: **„Porovnanie je orientačné, nezahŕňa rozdiely v objeme služieb."**
 
 ## 7. FAQ „Musím prejsť k novému operátorovi?"
 
