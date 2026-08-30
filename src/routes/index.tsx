@@ -188,7 +188,7 @@ function PartnerEndorsement({ className = "" }: { className?: string }) {
       <img
         src={partnerLogo.url}
         alt="Logo partnerského operátora"
-        className="h-8 w-8 rounded-md border-2 border-foreground"
+        className="h-8 w-8 rounded-full shadow-soft-teal"
       />
     </div>
   );
@@ -200,7 +200,7 @@ function Index() {
       {/* HERO — teal pás */}
       <header className="relative min-h-[720px] bg-brand-teal text-foreground">
         <div className="absolute -right-20 top-24 h-44 w-44 rounded-full border-[28px] border-brand-yellow sm:h-64 sm:w-64" />
-        <div className="absolute -left-16 bottom-16 h-32 w-32 rotate-12 bg-brand-pink" />
+        <div className="absolute -left-16 bottom-16 h-32 w-32 rotate-12 rounded-3xl bg-brand-pink" />
 
         <div className="relative mx-auto flex min-h-[720px] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
           <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
@@ -248,9 +248,8 @@ function Index() {
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
             {segments.map((s) => (
               <a key={s.href} href={s.href} className="group relative block">
-                <div className="absolute inset-0 translate-x-2 translate-y-2 bg-foreground transition-transform group-hover:translate-x-3 group-hover:translate-y-3" />
                 <div
-                  className={`relative flex h-full min-h-[220px] flex-col justify-between border-4 border-foreground p-8 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 group-active:translate-x-0 group-active:translate-y-0 ${s.bg}`}
+                  className={`relative flex h-full min-h-[220px] flex-col justify-between rounded-3xl p-8 shadow-soft-teal transition-all duration-300 group-hover:-translate-y-2 group-hover:-rotate-1 group-hover:shadow-soft-pink group-active:translate-y-0 ${s.bg}`}
                 >
                   <div className="space-y-2">
                     <span className="block text-xs font-bold uppercase tracking-widest text-foreground/60">
@@ -263,7 +262,7 @@ function Index() {
                   </div>
                   <div className="mt-8 flex justify-end">
                     <div
-                      className={`flex h-12 w-12 items-center justify-center border-4 border-foreground transition-transform group-hover:rotate-45 ${s.arrowBg}`}
+                      className={`flex h-12 w-12 items-center justify-center rounded-full shadow-sm transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110 ${s.arrowBg}`}
                     >
                       <ArrowRight className="h-6 w-6" strokeWidth={3} />
                     </div>
@@ -333,7 +332,7 @@ function Index() {
                 key={item.n}
                 className="rounded-3xl bg-brand-teal-light shadow-soft-teal p-6"
               >
-                <span className="font-display text-sm font-black text-brand-pink">{item.n}</span>
+                <span className="num-badge text-sm">{item.n}</span>
                 <h3 className="mt-2 font-display text-2xl font-black">{item.t}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{item.d}</p>
               </div>
@@ -363,7 +362,7 @@ function Index() {
                 <p className="font-display text-6xl font-black leading-none">100 GB</p>
                 <p className="mt-3 text-sm font-bold">dát v 5G každý mesiac</p>
               </div>
-              <div className="mt-8 border-t-2 border-foreground pt-5">
+              <div className="mt-8 border-t-2 border-foreground/15 pt-5">
                 <p className="font-display text-5xl font-black">20 €</p>
                 <p className="text-sm font-bold">mesačne, bez viazanosti</p>
               </div>
@@ -421,7 +420,7 @@ function Index() {
                 }`}
               >
                 {plan.popular && (
-                  <span className="absolute -top-4 left-6 border-2 border-foreground bg-brand-yellow px-3 py-1 font-display text-xs font-black uppercase tracking-wider">
+                  <span className="absolute -top-4 left-6 rounded-full bg-brand-yellow px-4 py-1 font-display text-xs font-black uppercase tracking-wider shadow-soft-yellow">
                     Najobľúbenejší
                   </span>
                 )}

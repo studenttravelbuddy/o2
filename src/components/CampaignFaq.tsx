@@ -140,7 +140,7 @@ export function CampaignFaq() {
         <div className="mt-12 space-y-12">
           {groups.map((group) => (
             <div key={group.id}>
-              <h3 className="inline-block border-2 border-foreground bg-brand-yellow px-3 py-1 font-display text-sm font-black uppercase tracking-wider">
+              <h3 className="inline-block rounded-full bg-brand-yellow px-4 py-1.5 font-display text-sm font-black uppercase tracking-wider shadow-soft-yellow">
                 {group.label}
               </h3>
               <Accordion type="single" collapsible className="mt-4">
