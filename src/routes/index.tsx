@@ -94,28 +94,48 @@ const whyCards = [
 
 const segments = [
   {
-    href: "#maxx",
     bg: "bg-brand-teal",
     arrowBg: "bg-background",
-    eyebrow: "ISIC · EURO<26",
+    eyebrow: "ISIC",
     title: "Som študent",
-    text: "100 GB dát a výhody na Maxx.",
+    links: [
+      { label: "Maxx – 100 GB", href: "#maxx" },
+      { label: "Paušály so zľavou", href: "#pausaly" },
+      { label: "Junior", href: "#junior" },
+    ],
   },
   {
-    href: "#pausaly",
     bg: "bg-brand-orange",
     arrowBg: "bg-brand-yellow",
     eyebrow: "ITIC",
     title: "Som učiteľ",
-    text: "Zľavnené paušály pre pedagógov.",
+    links: [
+      { label: "Paušály so zľavou", href: "#pausaly" },
+      { label: "Maxx – 100 GB", href: "#maxx" },
+      { label: "Junior", href: "#junior" },
+    ],
   },
   {
-    href: "#junior",
     bg: "bg-brand-pink",
     arrowBg: "bg-background",
-    eyebrow: "Pre rodičov",
-    title: "Som rodič",
-    text: "Donekonečna piatim pre deti.",
+    eyebrow: "EURO<26",
+    title: "Som mladý do 26 rokov",
+    links: [
+      { label: "Maxx – 100 GB", href: "#maxx" },
+      { label: "Paušály so zľavou", href: "#pausaly" },
+      { label: "Junior", href: "#junior" },
+    ],
+  },
+  {
+    bg: "bg-brand-yellow",
+    arrowBg: "bg-background",
+    eyebrow: "Pre najmenších",
+    title: "Pre všetkých do 15 rokov",
+    links: [
+      { label: "Junior", href: "#junior" },
+      { label: "Maxx – 100 GB", href: "#maxx" },
+      { label: "Paušály so zľavou", href: "#pausaly" },
+    ],
   },
 ];
 
