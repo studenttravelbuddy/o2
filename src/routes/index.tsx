@@ -680,7 +680,12 @@ function Index() {
               <a href="https://euro26.sk" className="underline decoration-brand-pink decoration-2 underline-offset-4">
                 euro26.sk
               </a>
-              <a href="#podmienky" className="underline decoration-brand-pink decoration-2 underline-offset-4">
+              <a
+                href="https://www.o2.sk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-brand-pink decoration-2 underline-offset-4"
+              >
                 Podmienky
               </a>
             </div>
