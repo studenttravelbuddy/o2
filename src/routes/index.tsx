@@ -66,27 +66,27 @@ const steps = [
 const whyCards = [
   {
     title: "Denné zľavy",
-    text: "Stravovanie, kultúra, šport, cestovanie, móda, služby. Každodenný nástroj na úsporu.",
+    text: "Po ruke každý deň v roku. Šetri denne a za rok môžeš ušetriť stovky eur.",
   },
   {
     title: "Doprava a cestovanie",
-    text: "Výhody doma aj v zahraničí, kdekoľvek preukaz platí.",
+    text: "Využívaj výhody v doprave a pri cestovaní doma a v zahraničí, kdekoľvek, kde platí tvoj preukaz.",
   },
   {
     title: "Škola a identita",
-    text: "ISIC/ITIC potvrdzuje status študenta alebo učiteľa a zjednodušuje benefity.",
+    text: "Potvrď svoj status študenta alebo učiteľa a zjednoduš si prístup k benefitom.",
   },
   {
     title: "Technológie a voľný čas",
-    text: "Dáta, stream, zariadenia, štúdium a zábava — relevantné pre digitálny život.",
+    text: "Využívaj dostupnejšie dáta, stream a zariadenia pre uľahčenie tvojho štúdia a tvoju zábavu.",
   },
   {
     title: "Komunita",
     text: "Patríš do medzinárodnej komunity študentov, učiteľov a mladých ľudí.",
   },
   {
-    title: "Smart value",
-    text: "Nový telekomunikačný benefit robí preukaz praktickejším a hodnotnejším.",
+    title: "Jeden preukaz, tisíce využití",
+    text: "Potvrdenie štatútu, doprava, tisíce zliav doma aj v zahraničí. Na všetko stačí jeden preukaz — a to aj len v mobile.",
   },
 ];
 
