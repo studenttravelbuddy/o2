@@ -23,29 +23,25 @@ Komentár: „voľba operátora už nie je na držiteľovi, od 1/9/26 má k disp
 - Vo FAQ (otázka „Kto si môže aktivovať paušál so 100 GB?"): „platných slovenských preukazov" → **„platných preukazov vydaných na Slovensku"**.
 - Prejdem celú stránku a FAQ, či sa „slovenský preukaz" nevyskytuje inde.
 
-## 4. Bonus vykúpenia z viazanosti pri Maxx
-
-- Do sekcie `#maxx` pridám riadok/box: **„Máš u pôvodného operátora viazanosť? O2 ťa vykúpi až do 120 €."**
-
-## 5. Vykúpenie z viazanosti platí pri každom paušále
+## 4. Vykúpenie z viazanosti platí pri každom paušále
 
 - Ružový banner „Viazanosť? …" rozšírim o explicitné **„platí pri každom paušále"** a opravím preklep „02" → „O2". Banner presuniem hneď pod mriežku paušálov (už tam je), text upravím tak, aby bolo jasné, že sa vzťahuje na všetky tri paušály aj Maxx.
 
-## 6. „Plný úväzok" → „hlavný pracovný pomer"
+## 5. „Plný úväzok" → „hlavný pracovný pomer"
 
 - ITIC karta v `#preukazy`: „Pedagogický zamestnanec na plný úväzok" → **„Pedagogický zamestnanec v hlavnom pracovnom pomere"**.
 - Prehľadám celý web (aj FAQ), či sa „plný úväzok / plný paušál" nevyskytuje inde a zjednotím terminológiu na „hlavný".
 
-## 7. Kalkulačka úspory — vysvetliť výpočet
+## 6. Kalkulačka úspory — vysvetliť výpočet
 
 - Pod výsledok doplním viditeľnú poznámku s metodikou: **„Ako to počítame: (tvoja súčasná mesačná platba − 18 € za najlacnejší paušál s preukazom) × 12 mesiacov = odhad ročnej úspory. Porovnávame len cenu paušálu, nie objem služieb."**
 - Ak je samotný výpočet nesprávny, kalkulačku radšej odstránim — doplniť rozhodnutie do vlákna.
 
-## 8. FAQ „Musím prejsť k novému operátorovi?"
+## 7. FAQ „Musím prejsť k novému operátorovi?"
 
 - Odpoveď nahradím: **„Ak chceš využívať nový paušál na svoj preukaz, tak áno. Do O2 potrebuješ prejsť najneskôr na konci platnosti svojho súčasného paušálu. Viac info…"** (link „Viac info" zatiaľ placeholder na `#podmienky`).
 
-## 9. FAQ — premenovanie skupín podľa plných názvov paušálov
+## 8. FAQ — premenovanie skupín podľa plných názvov paušálov
 
 Komentár: delenie „100 GB pre študentov / Paušály zľavy / Junior pre rodičov" je nejasné; použiť vždy plné pomenovanie bez prívlastkov, komu sú určené.
 
