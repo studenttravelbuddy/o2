@@ -26,7 +26,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Môžem mať viac paušálov so zľavou?",
-        a: "Jedna osoba môže mať iba jeden produkt so zľavou preukazu. Rodič si môže vziať viac programov pre deti, pri každom novom programe však treba použiť preukaz inej osoby.",
+        a: "Jedna osoba môže mať jeden produkt so zľavou na jeden preukaz. Rodič môže aktivovať toľko programov, koľko má detí — pri aktivácii každého programu však treba použiť priezvisko a platný preukaz daného dieťaťa, pre ktoré program aktivuje.",
       },
     ],
   },
