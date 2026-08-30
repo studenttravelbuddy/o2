@@ -4,21 +4,24 @@ import eycLogo from "@/assets/eyc-logo.svg.asset.json";
 
 export type BrandId = "isic" | "itic" | "eyc";
 
-const brands: Record<BrandId, { url: string; alt: string; pad: string }> = {
+const brands: Record<BrandId, { url: string; alt: string; pad: string; w: string }> = {
   isic: {
     url: isicLogo.url,
     alt: "ISIC – International Student Identity Card",
-    pad: "p-2",
+    pad: "p-2.5",
+    w: "w-28",
   },
   itic: {
     url: iticLogo.url,
     alt: "ITIC – International Teacher Identity Card",
-    pad: "p-2",
+    pad: "p-2.5",
+    w: "w-28",
   },
   eyc: {
     url: eycLogo.url,
     alt: "EURO<26 / European Youth Card",
-    pad: "px-0 py-2",
+    pad: "px-3 py-2",
+    w: "w-40",
   },
 };
 
@@ -27,23 +30,23 @@ export const brandOrder: BrandId[] = ["isic", "itic", "eyc"];
 
 type BrandMarkProps = {
   brand: BrandId;
-  /** "plain" = no frame, "card" = white card w/ hard teal shadow, "onDark" = white plate */
+  /** "plain" = no frame, "card"/"onDark" = white rounded pill, no border */
   variant?: "plain" | "card" | "onDark";
   className?: string;
 };
 
 export function BrandMark({ brand, variant = "plain", className = "" }: BrandMarkProps) {
-  const { url, alt, pad } = brands[brand];
+  const { url, alt, pad, w } = brands[brand];
 
   const frame =
-    variant === "card"
-      ? "rounded-lg border-2 border-foreground bg-white shadow-[8px_8px_0_#40B8B8]"
-      : variant === "onDark"
-        ? "rounded-md bg-white/95"
-        : "";
+    variant === "card" || variant === "onDark"
+      ? "rounded-2xl bg-white shadow-[0_6px_18px_-8px_rgb(0_0_0/0.25)]"
+      : "";
 
   return (
-    <div className={`flex h-16 w-28 shrink-0 items-center justify-center ${frame} ${className}`}>
+    <div
+      className={`flex h-14 shrink-0 items-center justify-center sm:h-16 ${w} ${frame} ${className}`}
+    >
       <img
         src={url}
         alt={alt}
