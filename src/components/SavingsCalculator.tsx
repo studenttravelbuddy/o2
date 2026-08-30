@@ -93,7 +93,7 @@ export function SavingsCalculator() {
   const yearlySaving = monthlySaving * 12;
 
   return (
-    <section className="bg-background py-20">
+    <section id="kalkulacka" className="scroll-mt-20 bg-background py-20">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <div className="rounded-3xl bg-card p-6 shadow-soft-pink sm:p-8">
           <div className="flex flex-wrap items-end justify-between gap-5">
