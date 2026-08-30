@@ -595,15 +595,18 @@ function Index() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            {/* TODO: nahradiť finálnym odkazom na podmienky */}
             <a
-              href="#podmienky"
+              href="https://www.o2.sk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
             >
               Pozrieť podmienky
             </a>
             <a
               href="https://objednaj-preukaz.sk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
             >
               Objednať preukaz
