@@ -21,11 +21,7 @@ Nová odpoveď podľa komentára: **„Jedna osoba môže mať jeden produkt so 
 
 ## 4. Hero podtitul (vlákno 7d9f8fd8)
 
-Nový text podľa komentára vrátane druhej pripomienky (Maxx nemá viac dát ako Yoxo, ale dáta sa prenášajú a je k tomu digitálny obsah):
-
-**„Tento rok štartujeme Back to School kampaň vo veľkom. S novým partnerom, operátorom O2 prinášame držiteľom ISIC, ITIC a EURO<26 viac skvelých možností — dáta, volania a správy na Maxx, nevyčerpané dáta sa prenášajú do ďalšieho mesiaca a k tomu digitálny obsah v hodnote 10 a viac eur. Každý držiteľ preukazu si môže vybrať, čo mu najviac vyhovuje."**
-
-Rovnaký tón prenesiem aj do meta description stránky.
+Hero podtitul a meta description zostávajú v aktuálnom znení (nezmenené).
 
 ## 5. Sekcia „Nová spolupráca" (vlákna 2a4bfb5d, 2296df1d)
 
