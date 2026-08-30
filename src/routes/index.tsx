@@ -101,7 +101,6 @@ const segments = [
     links: [
       { label: "Maxx – 100 GB", href: "#maxx" },
       { label: "Paušály so zľavou", href: "#pausaly" },
-      { label: "Junior", href: "#junior" },
     ],
   },
   {
@@ -112,7 +111,6 @@ const segments = [
     links: [
       { label: "Paušály so zľavou", href: "#pausaly" },
       { label: "Maxx – 100 GB", href: "#maxx" },
-      { label: "Junior", href: "#junior" },
     ],
   },
   {
@@ -123,7 +121,6 @@ const segments = [
     links: [
       { label: "Maxx – 100 GB", href: "#maxx" },
       { label: "Paušály so zľavou", href: "#pausaly" },
-      { label: "Junior", href: "#junior" },
     ],
   },
   {
