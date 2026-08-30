@@ -86,7 +86,7 @@ export function SavingsCalculator() {
         <div className="rounded-3xl bg-card p-6 shadow-soft-pink sm:p-8">
           <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
-              <p className="eyebrow text-brand-pink">Spočítaj si to</p>
+              <p className="eyebrow text-brand-pink">KVANTIFIKOVANÁ METAMORFÓZA - POZRI SA ČO MÔŽEŠ ZÍSKAŤ </p>
               <h2 className="mt-2 font-display text-3xl font-black sm:text-4xl">
                 Čo môžeš získať s novými paušálmi?
               </h2>
