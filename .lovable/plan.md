@@ -17,7 +17,7 @@ Nové znenie:
 ```
 Podmienka: platný preukaz ISIC / ITIC / EURO<26 vydaný na Slovensku. Držiteľ preukazu
 si paušál môže aktivovať od 18 rokov. Pre mladších držiteľov môže paušál aktivovať
-rodič alebo iný zákonný zástupca na svoje meno; pri overovaní zadá priezvisko dieťaťa
+rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko dieťaťa
 a číslo jeho platného preukazu.
 ```
 
@@ -32,7 +32,7 @@ Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slo
 
 Nové znenie:
 ```
-Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku. Držiteľ si paušál môže aktivovať od 18 rokov. Pre mladších držiteľov môže paušál aktivovať rodič alebo iný zákonný zástupca na svoje meno; pri overovaní zadá priezvisko dieťaťa a číslo jeho platného preukazu.
+Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku. Držiteľ si paušál môže aktivovať od 18 rokov. Pre mladších držiteľov môže paušál aktivovať rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko dieťaťa a číslo jeho platného preukazu.
 ```
 
 ## Technické detaily
