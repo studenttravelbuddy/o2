@@ -133,14 +133,27 @@ export function SavingsCalculator() {
                 </label>
 
                 <div className="rounded-3xl bg-brand-teal p-5 shadow-soft-teal">
-                  <p className="eyebrow">Odhadovaná ročná úspora</p>
-                  <p className="font-display text-5xl font-black">
-                    {yearlySaving.toFixed(0)} €
-                  </p>
-                  <p className="mt-2 text-xs">
-                    Pri porovnaní s paušálom {selected.name} za {selected.price} €/mesiac (
-                    {monthlySaving.toFixed(2)} € mesačne).
-                  </p>
+                  {yearlySaving === 0 ? (
+                    <>
+                      <p className="font-display text-xl font-black">
+                        Finančne to vychádza zhruba rovnako, ale pozri si skvelé benefity nižšie.
+                      </p>
+                      <p className="mt-2 text-xs">
+                        Paušál {selected.name} stojí {selected.price} €/mesiac.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="eyebrow">Odhadovaná ročná úspora</p>
+                      <p className="font-display text-5xl font-black">
+                        {yearlySaving.toFixed(0)} €
+                      </p>
+                      <p className="mt-2 text-xs">
+                        Pri porovnaní s paušálom {selected.name} za {selected.price} €/mesiac (
+                        {monthlySaving.toFixed(2)} € mesačne).
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -177,7 +190,7 @@ export function SavingsCalculator() {
               </div>
 
               <p className="text-xs text-muted-foreground">
-                Porovnanie je orientačné, nezahŕňa rozdiely v objeme služieb.
+                Pre všetky detaily a zmluvné podmienky navštív www.o2.sk.
               </p>
             </div>
           )}
