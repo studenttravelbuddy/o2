@@ -221,7 +221,7 @@ function Index() {
           </div>
 
           <div className="flex flex-1 flex-col justify-center py-12 lg:max-w-4xl">
-            <p className="eyebrow relative z-10">Kampaň 2026</p>
+            <p className="eyebrow relative z-10">BACK TO SCHOOL KAMPAŇ 2026</p>
             <h1 className="relative z-10 mt-4 font-display text-5xl font-black leading-[0.98] sm:text-7xl lg:text-8xl">
               Ready for more?
             </h1>
