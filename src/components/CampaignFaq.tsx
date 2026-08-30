@@ -26,7 +26,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Môžem mať viac paušálov so zľavou?",
-        a: "Jedna osoba môže mať iba jeden produkt so zľavou preukazu. Rodič si môže vziať viac programov pre deti, pri každom novom programe však treba použiť preukaz inej osoby.",
+        a: "Jedna osoba môže mať jeden produkt so zľavou na jeden preukaz. Rodič môže aktivovať toľko programov, koľko má detí — pri aktivácii každého programu však treba použiť priezvisko a platný preukaz daného dieťaťa, pre ktoré program aktivuje.",
       },
     ],
   },
@@ -36,7 +36,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
     items: [
       {
         q: "Kto si môže aktivovať paušál so 100 GB?",
-        a: "Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku starší ako 18 rokov. Rodič môže paušál kúpiť na svoje meno a pri overovaní zadá číslo preukazu dieťaťa.",
+        a: "Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku starší ako 18 rokov. Rodič môže paušál kúpiť na svoje meno; pri overovaní zadá priezvisko dieťaťa a číslo jeho platného preukazu.",
       },
       {
         q: "Čo ak neminiem svojich 100 GB dát?",
@@ -81,8 +81,8 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
         a: "Pri najvyššom paušále ti vrátime 5 € späť, ak si mal paušál aktívny celý mesiac a neminul viac ako 15 GB dát. Automaticky.",
       },
       {
-        q: "Ako funguje bonus na zariadenie?",
-        a: "Ide o mesačný príspevok na zariadenie, ktorý sa odčítava z faktúry.",
+        q: "Ako funguje bonus na zariadenie s preukazom?",
+        a: "Po overení preukazu získaš mesačný príspevok na zariadenie, ktorý sa odčítava priamo z faktúry.",
       },
       {
         q: "Ako funguje vykúpenie z viazanosti?",

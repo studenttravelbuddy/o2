@@ -66,27 +66,27 @@ const steps = [
 const whyCards = [
   {
     title: "Denné zľavy",
-    text: "Stravovanie, kultúra, šport, cestovanie, móda, služby. Každodenný nástroj na úsporu.",
+    text: "Po ruke každý deň v roku. Šetri denne a za rok môžeš ušetriť stovky eur.",
   },
   {
     title: "Doprava a cestovanie",
-    text: "Výhody doma aj v zahraničí, kdekoľvek preukaz platí.",
+    text: "Využívaj výhody v doprave a pri cestovaní doma a v zahraničí, kdekoľvek, kde platí tvoj preukaz.",
   },
   {
     title: "Škola a identita",
-    text: "ISIC/ITIC potvrdzuje status študenta alebo učiteľa a zjednodušuje benefity.",
+    text: "Potvrď svoj status študenta alebo učiteľa a zjednoduš si prístup k benefitom.",
   },
   {
     title: "Technológie a voľný čas",
-    text: "Dáta, stream, zariadenia, štúdium a zábava — relevantné pre digitálny život.",
+    text: "Využívaj dostupnejšie dáta, stream a zariadenia pre uľahčenie tvojho štúdia a tvoju zábavu.",
   },
   {
     title: "Komunita",
     text: "Patríš do medzinárodnej komunity študentov, učiteľov a mladých ľudí.",
   },
   {
-    title: "Smart value",
-    text: "Nový telekomunikačný benefit robí preukaz praktickejším a hodnotnejším.",
+    title: "Jeden preukaz, tisíce využití",
+    text: "Potvrdenie štatútu, doprava, tisíce zliav doma aj v zahraničí. Na všetko stačí jeden preukaz — a to aj len v mobile.",
   },
 ];
 
@@ -315,7 +315,7 @@ function Index() {
           <div className="max-w-2xl">
             <p className="eyebrow text-brand-pink">Nová spolupráca</p>
             <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
-              Čo to znamená pre tvoj preukaz
+              Čo to znamená pre Teba?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Od 1. septembra 2026 pribúda k preukazom ISIC, ITIC a EURO&lt;26 nová generácia
@@ -333,7 +333,7 @@ function Index() {
               {
                 n: "02",
                 t: "Nové výhody",
-                d: "Viac dát, neobmedzené volania a digitálny obsah v cene.",
+                d: "Väčšia flexibilita, väčší výber a digitálny obsah v cene.",
               },
               {
                 n: "03",
@@ -400,7 +400,8 @@ function Index() {
 
               <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
                 Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku a vek od 18
-                rokov. Rodič môže kúpiť na svoje meno so zadaním čísla preukazu dieťaťa.
+                rokov. Rodič môže paušál kúpiť na svoje meno; pri overovaní zadá priezvisko dieťaťa a
+                číslo jeho platného preukazu.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
