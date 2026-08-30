@@ -53,7 +53,7 @@ const plans: Plan[] = [
   {
     id: "bezstarostny",
     name: "Bezstarostný",
-    price: 33,
+    price: 38,
     benefits: [
       "Neobmedzené dáta, volania a správy",
       "Cashback 5 € mesačne (do 15 GB dát)",
