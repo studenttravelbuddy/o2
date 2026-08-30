@@ -181,7 +181,7 @@ const pausaly = [
   {
     name: "Bezstarostný",
     oldPrice: "44 €",
-    price: "33 €",
+    price: "38 €",
     popular: true,
     perks: [
       "Neobmedzené dáta, volania a správy",
