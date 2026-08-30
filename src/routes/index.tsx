@@ -162,7 +162,7 @@ const cards = [
     logo: iticLogo.url,
     alt: "ITIC – International Teacher Identity Card",
     title: "Pre učiteľov a pedagógov",
-    text: "Pedagogický zamestnanec na plný úväzok.",
+    text: "Pedagogický zamestnanec v hlavnom pracovnom pomere.",
   },
 ];
 
@@ -247,7 +247,8 @@ function Index() {
               Tento rok štartujeme kampaň vo veľkom.{" "}
               <span className="font-black text-brand-yellow">S novým partnerom, operátorom O2</span>{" "}
               prinášame držiteľom ISIC, ITIC a EURO&lt;26 viac dát, viac volaní a viac digitálneho
-              obsahu.
+              obsahu. Všetky paušály sú dostupné každému držiteľovi platného preukazu — vyber si to,
+              čo ti najviac vyhovuje.
             </p>
             <p className="relative z-10 mt-4 font-display text-xl font-black">od 1. 9. 2026</p>
 
@@ -415,8 +416,8 @@ function Index() {
               </ul>
 
               <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
-                Podmienka: platný slovenský preukaz ISIC / ITIC / EURO&lt;26 a vek od 18 rokov.
-                Rodič môže kúpiť na svoje meno so zadaním čísla preukazu dieťaťa.
+                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku a vek od 18
+                rokov. Rodič môže kúpiť na svoje meno so zadaním čísla preukazu dieťaťa.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -484,7 +485,8 @@ function Index() {
 
           <div className="mt-8 flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-lg font-black">
-              Viazanosť? 02 vykúpi z viazanosti u pôvodného operátora až do 120 €.
+              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pri každom
+              paušále.
             </p>
             {/* TODO: nahradiť finálnym odkazom na isic.sk/ponuka */}
             <Button variant="white" size="lg" asChild>
