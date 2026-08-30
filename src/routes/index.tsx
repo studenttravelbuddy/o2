@@ -222,14 +222,14 @@ function Index() {
         <div className="relative mx-auto flex min-h-[720px] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
           <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-3">
-              <div className="rounded-full bg-background shadow-soft-teal px-4 py-2">
-                <img src={isicLogo.url} alt="ISIC" className="h-6 w-auto" />
+              <div className="rounded-3xl bg-background px-5 py-3">
+                <img src={isicLogo.url} alt="ISIC" className="h-10 w-auto" />
               </div>
-              <div className="rounded-full bg-background shadow-soft-orange px-4 py-2">
-                <img src={iticLogo.url} alt="ITIC" className="h-6 w-auto" />
+              <div className="rounded-3xl bg-background px-5 py-3">
+                <img src={iticLogo.url} alt="ITIC" className="h-10 w-auto" />
               </div>
-              <div className="rounded-full bg-background shadow-soft-pink px-4 py-2">
-                <img src={eycaLogo.url} alt="EURO<26" className="h-6 w-auto" />
+              <div className="rounded-3xl bg-background px-5 py-3">
+                <img src={eycaLogo.url} alt="EURO<26" className="h-10 w-auto" />
               </div>
             </div>
             <PartnerEndorsement />
@@ -699,14 +699,14 @@ function Index() {
               EURO&lt;26 viac dát, volaní a digitálneho obsahu.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3 w-fit">
-              <div className="rounded-full bg-background shadow-soft-teal px-4 py-2">
-                <img src={isicLogo.url} alt="ISIC" className="h-6 w-auto" loading="lazy" />
+              <div className="rounded-3xl bg-background px-5 py-3">
+                <img src={isicLogo.url} alt="ISIC" className="h-10 w-auto" loading="lazy" />
               </div>
-              <div className="rounded-full bg-background shadow-soft-orange px-4 py-2">
-                <img src={iticLogo.url} alt="ITIC" className="h-6 w-auto" loading="lazy" />
+              <div className="rounded-3xl bg-background px-5 py-3">
+                <img src={iticLogo.url} alt="ITIC" className="h-10 w-auto" loading="lazy" />
               </div>
-              <div className="rounded-full bg-background shadow-soft-pink px-4 py-2">
-                <img src={eycaLogo.url} alt="EURO<26" className="h-6 w-auto" loading="lazy" />
+              <div className="rounded-3xl bg-background px-5 py-3">
+                <img src={eycaLogo.url} alt="EURO<26" className="h-10 w-auto" loading="lazy" />
               </div>
             </div>
           </div>
