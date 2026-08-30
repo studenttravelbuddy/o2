@@ -339,7 +339,7 @@ function Index() {
               },
               {
                 n: "03",
-                t: "Je to benefit",
+                t: "Nový školský rok",
                 d: "Ak chceš paušál s výhodami na svoj preukaz, od 1. 9. 2026 ho získaš u O2.",
               },
             ].map((item) => (
