@@ -265,8 +265,10 @@ function Index() {
                   <div className="flex flex-wrap gap-2 pt-2">
                     {s.links.map((link) => (
                       <a
-                        key={link.href}
-                        href={link.href}
+                        key={link.label}
+                        href={MAXX_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="rounded-full bg-background/90 px-3 py-1 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-background"
                       >
                         {link.label}
@@ -276,12 +278,15 @@ function Index() {
                 </div>
                 <div className="mt-6 flex justify-end">
                   <a
-                    href="#kalkulacka"
+                    href={MAXX_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm transition-transform duration-300 hover:rotate-45 hover:scale-110 ${s.arrowBg}`}
-                    aria-label="Prejsť na kalkulačku úspor"
+                    aria-label="Prejsť na ponuku O2"
                   >
                     <ArrowRight className="h-5 w-5" strokeWidth={3} />
                   </a>
+
                 </div>
               </div>
             ))}
