@@ -368,8 +368,9 @@ function Index() {
             <div>
               <p className="eyebrow">Hlavná ponuka</p>
               <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
-                100 GB dát na Maxx
+                100 GB dát na O2 Maxx
               </h2>
+
             </div>
             <p className="max-w-sm text-sm">
               Pre držiteľov ISIC, ITIC a EURO&lt;26. Bez viazanosti, plnou rýchlosťou v 5G.
