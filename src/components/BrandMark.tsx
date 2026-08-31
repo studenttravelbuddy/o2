@@ -20,7 +20,7 @@ const brands: Record<BrandId, { url: string; alt: string }> = {
 };
 
 /** Keep the original ISIC/ITIC frame size for every brand. */
-const FRAME_SIZE = "h-14 w-28 sm:h-16";
+const FRAME_SIZE = "h-11 w-[5.5rem] sm:h-16 sm:w-28";
 
 /** The wider EYC wordmark needs less horizontal padding to match visually. */
 const framePad: Record<BrandId, string> = {
@@ -68,7 +68,7 @@ type BrandMarkRowProps = {
 
 export function BrandMarkRow({ variant = "plain", className = "" }: BrandMarkRowProps) {
   return (
-    <div className={`flex flex-wrap items-center gap-4 ${className}`}>
+    <div className={`flex flex-wrap items-center gap-2 sm:gap-4 ${className}`}>
       {brandOrder.map((brand) => (
         <BrandMark key={brand} brand={brand} variant={variant} />
       ))}

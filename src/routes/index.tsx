@@ -8,6 +8,8 @@ import heroImage from "@/assets/o2-hero-full.png.asset.json";
 import isicImage from "@/assets/o2-isic.png.asset.json";
 import partnerLogo from "@/assets/o2-logo-final.jpg.asset.json";
 import { BrandMark, BrandMarkRow, type BrandId } from "@/components/BrandMark";
+import { MobileActionBar } from "@/components/MobileActionBar";
+import { SectionChips } from "@/components/SectionChips";
 
 // EMBARGO: stránka sa nesmie verejne publikovať ani indexovať pred 1. 9. 2026.
 const MAXX_LINK = "https://www.o2.sk/ponuka/mobilne-sluzby/o2-maxx";
@@ -31,6 +33,8 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { name: "theme-color", content: "#40b8b8" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -207,43 +211,49 @@ function PartnerEndorsement({ className = "" }: { className?: string }) {
 
 function Index() {
   return (
-    <main className="overflow-hidden bg-background">
+    <main className="overflow-hidden bg-background pb-24 md:pb-0">
       {/* HERO — teal pás */}
-      <header className="relative min-h-[720px] bg-brand-teal text-foreground">
-        <div className="absolute -right-20 top-24 h-44 w-44 rounded-full border-[28px] border-brand-yellow sm:h-64 sm:w-64" />
-        <div className="absolute -left-16 bottom-16 h-32 w-32 rotate-12 rounded-3xl bg-brand-pink" />
+      <header className="relative min-h-[100svh] bg-brand-teal text-foreground">
+        <div className="absolute -right-14 top-20 h-28 w-28 rounded-full border-[18px] border-brand-yellow sm:-right-20 sm:h-64 sm:w-64 sm:border-[28px]" />
+        <div className="absolute -left-10 bottom-24 h-20 w-20 rotate-12 rounded-3xl bg-brand-pink sm:-left-16 sm:h-32 sm:w-32" />
 
-        <div className="relative mx-auto flex min-h-[720px] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
-          <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
+        <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col px-5 py-6 sm:px-8 sm:py-10">
+          <div className="relative z-10 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 sm:flex sm:flex-wrap sm:justify-between sm:gap-4">
             <BrandMarkRow variant="card" />
             <PartnerEndorsement />
           </div>
 
-          <div className="flex flex-1 flex-col justify-center py-12 lg:max-w-4xl">
+          <div className="flex flex-1 flex-col justify-center py-10 sm:py-12 lg:max-w-4xl">
             <p className="eyebrow relative z-10">BACK TO SCHOOL KAMPAŇ 2026</p>
-            <h1 className="relative z-10 mt-4 font-display text-5xl font-black leading-[0.98] sm:text-7xl lg:text-8xl">
+            <h1 className="relative z-10 mt-3 font-display text-[13vw] font-black leading-[0.95] sm:mt-4 sm:text-7xl lg:text-8xl">
               Ready for more?
             </h1>
-            <p className="relative z-10 mt-6 max-w-2xl text-lg">
+            <p className="relative z-10 mt-5 max-w-2xl text-base sm:mt-6 sm:text-lg">
               Tento rok štartujeme kampaň vo veľkom.{" "}
               <span className="font-black text-brand-yellow">S novým partnerom, operátorom O2</span>{" "}
               prinášame držiteľom ISIC, ITIC a EURO&lt;26 viac dát, viac volaní a viac digitálneho
-              obsahu. Všetky paušály sú dostupné každému držiteľovi platného preukazu — vyber si to,
-              čo ti najviac vyhovuje.
+              obsahu.
             </p>
+            <ul className="relative z-10 mt-4 space-y-1.5 text-sm font-bold sm:text-base">
+              <li>· 100 GB dát v 5G sieti</li>
+              <li>· Neobmedzené volania a správy</li>
+              <li>· Predplatné v cene paušálu</li>
+            </ul>
             <p className="relative z-10 mt-4 font-display text-xl font-black">od 1. 9. 2026</p>
 
-            <div className="relative z-10 mt-8 flex flex-wrap items-center gap-4">
-              <Button variant="yellow" size="xl" asChild>
+            <div className="relative z-10 mt-7 flex flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+              <Button variant="yellow" size="xl" className="min-h-12 w-full sm:w-auto" asChild>
                 <a href="#maxx">Objaviť výhody</a>
               </Button>
               <a
                 href="#preukazy"
-                className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+                className="flex min-h-12 items-center justify-center text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4 sm:justify-start"
               >
                 Na ktorý preukaz mám nárok?
               </a>
             </div>
+
+            <SectionChips className="relative z-10 mt-7" />
           </div>
 
           <p className="eyebrow relative z-10">ISIC · ITIC · EURO&lt;26</p>
@@ -251,21 +261,22 @@ function Index() {
       </header>
 
       {/* BIELA — segmentový rozdeľovač „Kto si?" */}
-      <section className="bg-background px-5 py-16 sm:px-8">
+      <section className="bg-background px-5 py-12 sm:px-8 sm:py-16">
         <div className="mx-auto max-w-6xl">
           <p className="eyebrow text-brand-pink">Vyber si svoju výhodu</p>
-          <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl">Ktorý paušál je pre teba?</h2>
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <h2 className="mt-3 font-display text-3xl font-black sm:text-5xl">Ktorý paušál je pre teba?</h2>
+          <p className="mt-2 text-sm text-muted-foreground sm:hidden">Potiahni prstom →</p>
+          <div className="no-scrollbar -mx-5 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mt-10 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 lg:grid-cols-4">
             {segments.map((s) => (
               <div
                 key={s.title}
-                className={`group relative flex h-full min-h-[240px] flex-col justify-between rounded-3xl p-6 shadow-soft-teal transition-all duration-300 hover:-translate-y-2 hover:-rotate-1 hover:shadow-soft-pink ${s.bg}`}
+                className={`group relative flex min-h-[220px] w-[78%] shrink-0 snap-start flex-col justify-between rounded-3xl p-5 shadow-soft-teal transition-all duration-300 active:scale-[0.98] sm:h-full sm:min-h-[240px] sm:w-auto sm:p-6 md:hover:-translate-y-2 md:hover:-rotate-1 md:hover:shadow-soft-pink ${s.bg}`}
               >
                 <div className="space-y-2">
                   <span className="block text-xs font-bold uppercase tracking-widest text-foreground/60">
                     {s.eyebrow}
                   </span>
-                  <h3 className="font-display text-3xl font-black uppercase leading-tight text-background lg:text-4xl">
+                  <h3 className="font-display text-2xl font-black uppercase leading-tight text-background sm:text-3xl lg:text-4xl">
                     {s.title}
                   </h3>
                   <div className="flex flex-wrap gap-2 pt-2">
@@ -275,7 +286,7 @@ function Index() {
                         href={MAXX_LINK}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-full bg-background/90 px-3 py-1 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-background"
+                        className="rounded-full bg-background/90 px-3 py-1.5 text-xs font-bold text-foreground shadow-sm transition-colors active:scale-95 md:hover:bg-background"
                       >
                         {link.label}
                       </a>
@@ -287,7 +298,7 @@ function Index() {
                     href={MAXX_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm transition-transform duration-300 hover:rotate-45 hover:scale-110 ${s.arrowBg}`}
+                    className={`flex h-11 w-11 items-center justify-center rounded-full shadow-sm transition-transform duration-300 active:scale-95 md:hover:rotate-45 md:hover:scale-110 ${s.arrowBg}`}
                     aria-label="Prejsť na ponuku O2"
                   >
                     <ArrowRight className="h-5 w-5" strokeWidth={3} />
@@ -301,7 +312,7 @@ function Index() {
       </section>
 
       {/* ŽLTÝ PÁS — kampaňový vizuál */}
-      <section className="bg-brand-yellow px-5 py-12 sm:px-8 sm:py-16">
+      <section className="bg-brand-yellow px-5 py-10 sm:px-8 sm:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="overflow-hidden rounded-3xl bg-background shadow-soft-teal">
             <a
@@ -313,30 +324,33 @@ function Index() {
               <img
                 src={heroImage.url}
                 alt="Kampaňový vizuál 2026 pre držiteľov ISIC, ITIC a EURO<26"
-                className="h-auto w-full transition-transform duration-300 hover:scale-[1.02]"
+                className="h-auto w-full transition-transform duration-300 md:hover:scale-[1.02]"
                 width={1920}
                 height={700}
+                loading="lazy"
+                decoding="async"
               />
             </a>
           </div>
         </div>
       </section>
 
+
       {/* BIELA — čo prináša nová spolupráca */}
-      <section className="bg-background py-20 sm:py-28">
+      <section className="bg-background py-12 sm:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-2xl">
             <p className="eyebrow text-brand-pink">Nová spolupráca</p>
-            <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               Čo to znamená pre Teba?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-3 text-base text-muted-foreground sm:mt-4 sm:text-lg">
               Od 1. septembra 2026 pribúda k preukazom ISIC, ITIC a EURO&lt;26 nová generácia
               telekomunikačných benefitov.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3">
             {[
               {
                 n: "01",
@@ -356,7 +370,7 @@ function Index() {
             ].map((item) => (
               <div
                 key={item.n}
-                className="rounded-3xl bg-brand-teal-light shadow-soft-teal p-6"
+                className="rounded-3xl bg-brand-teal-light shadow-soft-teal p-5 sm:p-6"
               >
                 <span className="num-badge text-sm">{item.n}</span>
                 <h3 className="mt-2 font-display text-2xl font-black">{item.t}</h3>
@@ -369,12 +383,12 @@ function Index() {
 
 
       {/* TEAL — hlavná ponuka 100 GB */}
-      <section id="maxx" className="scroll-mt-20 bg-brand-teal py-20">
+      <section id="maxx" className="scroll-mt-20 bg-brand-teal py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
               <p className="eyebrow">Hlavná ponuka</p>
-              <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+              <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
                 100 GB dát na O2 Maxx
               </h2>
 
@@ -384,10 +398,10 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="flex flex-col justify-between rounded-3xl bg-brand-yellow p-7 shadow-soft-pink">
+          <div className="mt-8 grid gap-5 sm:mt-10 sm:gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="flex flex-col justify-between rounded-3xl bg-brand-yellow p-6 shadow-soft-pink sm:p-7">
               <div>
-                <p className="font-display text-6xl font-black leading-none">100 GB</p>
+                <p className="font-display text-5xl font-black leading-none sm:text-6xl">100 GB</p>
                 <p className="mt-3 text-sm font-bold">dát v 5G sieti každý mesiac</p>
 
               </div>
@@ -397,7 +411,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-background shadow-soft-teal p-7">
+            <div className="rounded-3xl bg-background shadow-soft-teal p-5 sm:p-6 sm:p-7">
               <ul className="space-y-4">
                 {[
                   "100 GB plnou rýchlosťou — nevyčerpané dáta sa prenášajú do ďalšieho mesiaca, po prečerpaní pokračuješ spomalene bez doplatku.",
@@ -421,7 +435,7 @@ function Index() {
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                <Button variant="pink" size="xl" asChild>
+                <Button variant="pink" size="xl" className="min-h-12 w-full sm:w-auto" asChild>
                   <a href={MAXX_LINK} target="_blank" rel="noopener noreferrer">Chcem 100 GB</a>
                 </Button>
 
@@ -433,27 +447,27 @@ function Index() {
       </section>
 
       {/* BIELA — paušály pre pedagógov */}
-      <section id="pausaly" className="scroll-mt-20 bg-background py-20">
+      <section id="pausaly" className="scroll-mt-20 bg-background py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-2xl">
             <p className="eyebrow text-brand-orange-dark">O2 Paušály so zľavou vďaka preukazu</p>
-            <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               O2 Paušály so zľavou vďaka preukazu
             </h2>
-
+            <p className="mt-3 text-sm text-muted-foreground sm:hidden">Potiahni prstom →</p>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="no-scrollbar -mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 pt-5 sm:mx-0 sm:mt-10 sm:grid sm:gap-5 sm:overflow-visible sm:px-0 md:grid-cols-3">
             {pausaly.map((plan) => (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-3xl shadow-soft-teal p-6 ${
+                className={`relative flex w-[82%] shrink-0 snap-start flex-col rounded-3xl p-5 shadow-soft-teal sm:w-auto sm:p-6 ${
                   plan.popular ? "bg-brand-teal-light shadow-soft-teal" : "bg-background"
                 }`}
 
               >
                 {plan.popular && (
-                  <span className="absolute -top-4 left-6 rounded-full bg-brand-yellow px-4 py-1 font-display text-xs font-black uppercase tracking-wider shadow-soft-yellow">
+                  <span className="absolute -top-4 left-5 rounded-full bg-brand-yellow px-4 py-1 font-display text-xs font-black uppercase tracking-wider shadow-soft-yellow sm:left-6">
                     Najobľúbenejší
                   </span>
                 )}
@@ -464,7 +478,7 @@ function Index() {
                 </div>
                 <span className="text-sm font-bold">mesačne s preukazom</span>
 
-                <ul className="mt-6 flex-1 space-y-2 text-sm">
+                <ul className="mt-5 flex-1 space-y-2 text-sm sm:mt-6">
                   {plan.perks.map((perk) => (
                     <li key={perk} className="border-t-2 border-border pt-2">
                       {perk}
@@ -475,11 +489,12 @@ function Index() {
                 <Button
                   variant={plan.popular ? "teal" : "outline"}
                   size="lg"
-                  className="mt-6"
+                  className="mt-6 min-h-12 w-full"
                   asChild
                 >
                   <a href={PAUSAL_LINK} target="_blank" rel="noopener noreferrer">Vybrať {plan.name}</a>
                 </Button>
+
               </div>
             ))}
           </div>
@@ -496,7 +511,7 @@ function Index() {
               Bezstarostný, Pohodový a Základný O2 Paušál.
             </p>
 
-            <Button variant="white" size="lg" asChild>
+            <Button variant="white" size="lg" className="min-h-12 w-full sm:w-auto" asChild>
               <a href="#prechod">Ako prejsť</a>
             </Button>
           </div>
@@ -504,16 +519,16 @@ function Index() {
       </section>
 
       {/* BIELA — Junior pre rodičov */}
-      <section id="junior" className="scroll-mt-20 bg-background pt-14 pb-20">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
+      <section id="junior" className="scroll-mt-20 bg-background pt-10 pb-12 sm:pt-14 sm:pb-20">
+        <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:gap-10 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="eyebrow text-brand-pink">Pre rodičov</p>
-            <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               O2 Junior výhodnejšie s preukazom dieťaťa
             </h2>
             <p className="mt-4 font-display text-4xl font-black">10,25 €</p>
             <p className="text-sm font-bold">mesačne — rovnaká cena, výhodnejší obsah</p>
-            <Button variant="teal" size="lg" className="mt-6" asChild>
+            <Button variant="teal" size="lg" className="mt-6 min-h-12 w-full sm:w-auto" asChild>
               <a href={JUNIOR_LINK} target="_blank" rel="noopener noreferrer">Zistiť viac</a>
             </Button>
 
@@ -541,12 +556,12 @@ function Index() {
       </section>
 
       {/* TEAL — prečo mať preukaz */}
-      <section className="bg-brand-teal py-20">
+      <section className="bg-brand-teal py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
               <p className="eyebrow">Viac než zľava</p>
-              <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+              <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
                 Prečo mať preukaz
               </h2>
             </div>
@@ -559,7 +574,7 @@ function Index() {
               <img
                 src={isicImage.url}
                 alt="Kampaňový vizuál pre držiteľov ISIC, ITIC a EURO<26"
-                className="w-72 rounded-3xl shadow-soft-teal transition-transform duration-300 hover:-translate-y-1"
+                className="w-72 rounded-3xl shadow-soft-teal transition-transform duration-300 md:hover:-translate-y-1"
                 width={800}
                 height={500}
                 loading="lazy"
@@ -568,7 +583,7 @@ function Index() {
 
           </div>
 
-          <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
             {whyCards.map((card, i) => (
               <li
                 key={card.title}
@@ -588,23 +603,23 @@ function Index() {
       </section>
 
       {/* BIELA — na ktorý preukaz máš nárok */}
-      <section id="preukazy" className="scroll-mt-20 bg-background py-20">
+      <section id="preukazy" className="scroll-mt-20 bg-background py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-3xl">
             <p className="eyebrow text-brand-pink">Vyber si správne</p>
-            <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               Na ktorý preukaz máš nárok?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-3 text-base text-muted-foreground sm:mt-4 sm:text-lg">
               Výhody sú naviazané na tvoj preukaz. Vyber si ten, ktorého podmienky spĺňaš.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-3">
             {cards.map((card) => (
               <div
                 key={card.num}
-                className={`${card.accent} relative overflow-hidden rounded-3xl border-2 border-card-accent/50 bg-background p-6 shadow-soft-teal transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-pink`}
+                className={`${card.accent} relative overflow-hidden rounded-3xl border-2 border-card-accent/50 bg-background p-6 shadow-soft-teal transition-all duration-300 md:hover:-translate-y-1 md:hover:shadow-soft-pink`}
               >
                 <span className="absolute right-0 top-0 h-6 w-20 rounded-bl-3xl bg-card-accent" />
                 <div className="flex items-center justify-between gap-4">
@@ -617,12 +632,12 @@ function Index() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <a
               href="https://www.o2.sk"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              className="flex min-h-12 items-center text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
             >
               Pozrieť podmienky
             </a>
@@ -630,7 +645,7 @@ function Index() {
               href="https://objednaj-preukaz.sk"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              className="flex min-h-12 items-center text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
             >
               Objednať preukaz
             </a>
@@ -644,21 +659,21 @@ function Index() {
       </div>
 
       {/* ŽLTÝ PÁS — kroky prechodu */}
-      <section id="prechod" className="scroll-mt-20 bg-brand-yellow py-20">
+      <section id="prechod" className="scroll-mt-20 bg-brand-yellow py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <p className="eyebrow">Jednoduché. Naozaj.</p>
-          <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+          <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
             Ako prejsť k novému operátorovi
           </h2>
           <p className="mt-4 max-w-2xl text-lg">
             Zvládneš to z pohodlia domova a číslo si necháš.
           </p>
 
-          <ol className="mt-12 grid gap-5 md:grid-cols-3">
+          <ol className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3">
             {steps.map((step, i) => (
               <li
                 key={step.title}
-                className="rounded-3xl bg-background shadow-soft-teal p-6"
+                className="rounded-3xl bg-background shadow-soft-teal p-5 sm:p-6"
               >
                 <span className="num-badge text-sm">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-2 font-display text-2xl font-black">{step.title}</h3>
@@ -668,7 +683,7 @@ function Index() {
           </ol>
 
           <div className="mt-10">
-            <Button variant="pink" size="xl" asChild>
+            <Button variant="pink" size="xl" className="min-h-12 w-full sm:w-auto" asChild>
               <a href={MAXX_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
             </Button>
           </div>
@@ -718,6 +733,7 @@ function Index() {
           </div>
         </div>
       </footer>
+      <MobileActionBar offerLink={MAXX_LINK} cardLink="https://objednaj-preukaz.sk" />
     </main>
   );
 }

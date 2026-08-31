@@ -185,3 +185,35 @@
 @utility card-euro26 {
   --card-accent: var(--brand-pink);
 }
+
+/* --- Mobile-first utility --- */
+
+/* Skryté scrollbary pri swipe karusel/chipoch */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Safe-area padding pre fixnú spodnú lištu */
+@utility safe-bottom {
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+}
+
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
