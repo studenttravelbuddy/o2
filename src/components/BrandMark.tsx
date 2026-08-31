@@ -19,14 +19,14 @@ const brands: Record<BrandId, { url: string; alt: string }> = {
   },
 };
 
-/** Keep the original ISIC/ITIC frame size for every brand. */
-const FRAME_SIZE = "h-11 w-[5.5rem] sm:h-16 sm:w-28";
+/** Zmenšené preukazové logá, aby sa tri zmestili vedľa seba aj na úzkom mobile. */
+const FRAME_SIZE = "h-8 w-[4.5rem] sm:h-12 sm:w-24";
 
 /** The wider EYC wordmark needs less horizontal padding to match visually. */
 const framePad: Record<BrandId, string> = {
-  isic: "p-2.5",
-  itic: "p-2.5",
-  eyc: "px-1.5 py-2.5",
+  isic: "p-1.5",
+  itic: "p-1.5",
+  eyc: "px-1 py-1.5",
 };
 
 /** Strict order used everywhere on the page. */
@@ -68,7 +68,7 @@ type BrandMarkRowProps = {
 
 export function BrandMarkRow({ variant = "plain", className = "" }: BrandMarkRowProps) {
   return (
-    <div className={`flex flex-wrap items-center gap-2 sm:gap-4 ${className}`}>
+    <div className={`flex flex-nowrap items-center gap-1.5 sm:gap-3 ${className}`}>
       {brandOrder.map((brand) => (
         <BrandMark key={brand} brand={brand} variant={variant} />
       ))}

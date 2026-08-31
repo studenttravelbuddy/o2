@@ -202,8 +202,8 @@ function PartnerEndorsement({ className = "" }: { className?: string }) {
       <span className="text-xs font-bold uppercase tracking-wider">Spolu s</span>
       <img
         src={partnerLogo.url}
-        alt="Logo partnerského operátora"
-        className="h-8 w-8 rounded-full shadow-soft-teal"
+        alt="Logo partnerského operátora O2"
+        className="h-11 w-11 rounded-full shadow-soft-teal sm:h-14 sm:w-14"
       />
     </div>
   );
