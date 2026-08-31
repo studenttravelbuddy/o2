@@ -298,9 +298,6 @@ export function CampaignFaq() {
             </div>
           ))}
 
-              </Accordion>
-            </div>
-          ))}
         </div>
 
         <p className="mt-10 rounded-2xl bg-brand-teal-light p-5 text-sm">
