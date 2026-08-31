@@ -60,8 +60,9 @@ Celá sekcia kalkulačky sa zo stránky vypustí (komponent prestane byť použi
 
 ## 9. O2 logo a logo EURO<26
 
-- O2 logo v rohu je rozrastrované — vymením ho, keď dodáte finálny súbor (miesto v kóde je pripravené, stačí nahradiť asset).
+- Nahradím rozrastrované O2 logo novým dodaným súborom `O2_Logo_Full_RGB_White.jpg` (biele O2 na modrom podklade) — v hlavičke aj pri „Spolu s“ endorsementoch.
 - Logo EURO<26 bez bieleho pozadia: v projekte máme SVG `eyc-logos-rbg_primary` (European Youth Card, bez dovetku) — pripravím ho na stiahnutie ako PNG s priehľadným pozadím aj SVG.
+
 
 ## Technické detaily
 
