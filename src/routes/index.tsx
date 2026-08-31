@@ -335,20 +335,20 @@ function Index() {
 
 
       {/* BIELA — čo prináša nová spolupráca */}
-      <section className="bg-background py-20 sm:py-28">
+      <section className="bg-background py-12 sm:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-2xl">
             <p className="eyebrow text-brand-pink">Nová spolupráca</p>
-            <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               Čo to znamená pre Teba?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-3 text-base text-muted-foreground sm:mt-4 sm:text-lg">
               Od 1. septembra 2026 pribúda k preukazom ISIC, ITIC a EURO&lt;26 nová generácia
               telekomunikačných benefitov.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3">
             {[
               {
                 n: "01",
@@ -368,7 +368,7 @@ function Index() {
             ].map((item) => (
               <div
                 key={item.n}
-                className="rounded-3xl bg-brand-teal-light shadow-soft-teal p-6"
+                className="rounded-3xl bg-brand-teal-light shadow-soft-teal p-5 sm:p-6"
               >
                 <span className="num-badge text-sm">{item.n}</span>
                 <h3 className="mt-2 font-display text-2xl font-black">{item.t}</h3>
@@ -381,12 +381,12 @@ function Index() {
 
 
       {/* TEAL — hlavná ponuka 100 GB */}
-      <section id="maxx" className="scroll-mt-20 bg-brand-teal py-20">
+      <section id="maxx" className="scroll-mt-20 bg-brand-teal py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
               <p className="eyebrow">Hlavná ponuka</p>
-              <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+              <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
                 100 GB dát na O2 Maxx
               </h2>
 
@@ -396,10 +396,10 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="flex flex-col justify-between rounded-3xl bg-brand-yellow p-7 shadow-soft-pink">
+          <div className="mt-8 grid gap-5 sm:mt-10 sm:gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="flex flex-col justify-between rounded-3xl bg-brand-yellow p-6 shadow-soft-pink sm:p-7">
               <div>
-                <p className="font-display text-6xl font-black leading-none">100 GB</p>
+                <p className="font-display text-5xl font-black leading-none sm:text-6xl">100 GB</p>
                 <p className="mt-3 text-sm font-bold">dát v 5G sieti každý mesiac</p>
 
               </div>
@@ -409,7 +409,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-background shadow-soft-teal p-7">
+            <div className="rounded-3xl bg-background shadow-soft-teal p-5 sm:p-6 sm:p-7">
               <ul className="space-y-4">
                 {[
                   "100 GB plnou rýchlosťou — nevyčerpané dáta sa prenášajú do ďalšieho mesiaca, po prečerpaní pokračuješ spomalene bez doplatku.",
@@ -433,7 +433,7 @@ function Index() {
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                <Button variant="pink" size="xl" asChild>
+                <Button variant="pink" size="xl" className="min-h-12 w-full sm:w-auto" asChild>
                   <a href={MAXX_LINK} target="_blank" rel="noopener noreferrer">Chcem 100 GB</a>
                 </Button>
 
@@ -445,17 +445,17 @@ function Index() {
       </section>
 
       {/* BIELA — paušály pre pedagógov */}
-      <section id="pausaly" className="scroll-mt-20 bg-background py-20">
+      <section id="pausaly" className="scroll-mt-20 bg-background py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-2xl">
             <p className="eyebrow text-brand-orange-dark">O2 Paušály so zľavou vďaka preukazu</p>
-            <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               O2 Paušály so zľavou vďaka preukazu
             </h2>
 
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-3">
             {pausaly.map((plan) => (
               <div
                 key={plan.name}
@@ -516,11 +516,11 @@ function Index() {
       </section>
 
       {/* BIELA — Junior pre rodičov */}
-      <section id="junior" className="scroll-mt-20 bg-background pt-14 pb-20">
+      <section id="junior" className="scroll-mt-20 bg-background pt-10 pb-12 sm:pt-14 sm:pb-20">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="eyebrow text-brand-pink">Pre rodičov</p>
-            <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               O2 Junior výhodnejšie s preukazom dieťaťa
             </h2>
             <p className="mt-4 font-display text-4xl font-black">10,25 €</p>
@@ -553,12 +553,12 @@ function Index() {
       </section>
 
       {/* TEAL — prečo mať preukaz */}
-      <section className="bg-brand-teal py-20">
+      <section className="bg-brand-teal py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
               <p className="eyebrow">Viac než zľava</p>
-              <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+              <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
                 Prečo mať preukaz
               </h2>
             </div>
@@ -571,7 +571,7 @@ function Index() {
               <img
                 src={isicImage.url}
                 alt="Kampaňový vizuál pre držiteľov ISIC, ITIC a EURO<26"
-                className="w-72 rounded-3xl shadow-soft-teal transition-transform duration-300 hover:-translate-y-1"
+                className="w-72 rounded-3xl shadow-soft-teal transition-transform duration-300 md:hover:-translate-y-1"
                 width={800}
                 height={500}
                 loading="lazy"
@@ -580,7 +580,7 @@ function Index() {
 
           </div>
 
-          <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
             {whyCards.map((card, i) => (
               <li
                 key={card.title}
@@ -600,23 +600,23 @@ function Index() {
       </section>
 
       {/* BIELA — na ktorý preukaz máš nárok */}
-      <section id="preukazy" className="scroll-mt-20 bg-background py-20">
+      <section id="preukazy" className="scroll-mt-20 bg-background py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-3xl">
             <p className="eyebrow text-brand-pink">Vyber si správne</p>
-            <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               Na ktorý preukaz máš nárok?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-3 text-base text-muted-foreground sm:mt-4 sm:text-lg">
               Výhody sú naviazané na tvoj preukaz. Vyber si ten, ktorého podmienky spĺňaš.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-3">
             {cards.map((card) => (
               <div
                 key={card.num}
-                className={`${card.accent} relative overflow-hidden rounded-3xl border-2 border-card-accent/50 bg-background p-6 shadow-soft-teal transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-pink`}
+                className={`${card.accent} relative overflow-hidden rounded-3xl border-2 border-card-accent/50 bg-background p-6 shadow-soft-teal transition-all duration-300 md:hover:-translate-y-1 md:hover:shadow-soft-pink`}
               >
                 <span className="absolute right-0 top-0 h-6 w-20 rounded-bl-3xl bg-card-accent" />
                 <div className="flex items-center justify-between gap-4">
@@ -656,21 +656,21 @@ function Index() {
       </div>
 
       {/* ŽLTÝ PÁS — kroky prechodu */}
-      <section id="prechod" className="scroll-mt-20 bg-brand-yellow py-20">
+      <section id="prechod" className="scroll-mt-20 bg-brand-yellow py-12 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <p className="eyebrow">Jednoduché. Naozaj.</p>
-          <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+          <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
             Ako prejsť k novému operátorovi
           </h2>
           <p className="mt-4 max-w-2xl text-lg">
             Zvládneš to z pohodlia domova a číslo si necháš.
           </p>
 
-          <ol className="mt-12 grid gap-5 md:grid-cols-3">
+          <ol className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3">
             {steps.map((step, i) => (
               <li
                 key={step.title}
-                className="rounded-3xl bg-background shadow-soft-teal p-6"
+                className="rounded-3xl bg-background shadow-soft-teal p-5 sm:p-6"
               >
                 <span className="num-badge text-sm">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-2 font-display text-2xl font-black">{step.title}</h3>
@@ -680,7 +680,7 @@ function Index() {
           </ol>
 
           <div className="mt-10">
-            <Button variant="pink" size="xl" asChild>
+            <Button variant="pink" size="xl" className="min-h-12 w-full sm:w-auto" asChild>
               <a href={MAXX_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
             </Button>
           </div>
@@ -730,6 +730,7 @@ function Index() {
           </div>
         </div>
       </footer>
+      <MobileActionBar offerLink={MAXX_LINK} cardLink="https://objednaj-preukaz.sk" />
     </main>
   );
 }
