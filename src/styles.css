@@ -188,7 +188,7 @@
 
 /* --- Mobile-first utility --- */
 
-/* Skryté scrollbary pri swipe карusel/chipoch */
+/* Skryté scrollbary pri swipe karusel/chipoch */
 @utility no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
