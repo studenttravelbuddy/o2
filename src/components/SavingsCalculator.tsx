@@ -11,7 +11,7 @@ type Plan = {
 const plans: Plan[] = [
   {
     id: "maxx",
-    name: "Maxx – 100 GB",
+    name: "O2 Maxx – 100 GB",
     price: 20,
     benefits: [
       "100 GB dát v 5G plnou rýchlosťou",
@@ -67,7 +67,7 @@ const plans: Plan[] = [
   },
   {
     id: "junior",
-    name: "Junior",
+    name: "O2 Junior",
     price: 10.25,
     benefits: [
       "10 GB dát s preukazom dieťaťa (namiesto 4 GB)",

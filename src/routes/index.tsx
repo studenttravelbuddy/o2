@@ -2,15 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { SavingsCalculator } from "@/components/SavingsCalculator";
+
 import { CampaignFaq } from "@/components/CampaignFaq";
 import heroImage from "@/assets/o2-hero-full.png.asset.json";
 import isicImage from "@/assets/o2-isic.png.asset.json";
-import partnerLogo from "@/assets/o2-logo.png.asset.json";
+import partnerLogo from "@/assets/o2-logo-final.jpg.asset.json";
 import { BrandMark, BrandMarkRow, type BrandId } from "@/components/BrandMark";
 
 // EMBARGO: stránka sa nesmie verejne publikovať ani indexovať pred 1. 9. 2026.
-const OFFER_LINK = "https://www.o2.sk";
+const MAXX_LINK = "https://www.o2.sk/ponuka/mobilne-sluzby/o2-maxx";
+const JUNIOR_LINK = "https://www.o2.sk/ponuka/mobilne-sluzby/o2-junior";
+const PAUSAL_LINK = "https://www.o2.sk/mobilne-sluzby/o2-pausal-preukaz";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -95,30 +97,21 @@ const segments = [
     arrowBg: "bg-background",
     eyebrow: "ISIC",
     title: "Som študent",
-    links: [
-      { label: "Maxx – 100 GB", href: "#maxx" },
-      { label: "Paušály so zľavou", href: "#pausaly" },
-    ],
+    links: [{ label: "O2 Maxx – 100 GB" }, { label: "O2 Paušály so zľavou" }],
   },
   {
     bg: "bg-brand-orange",
     arrowBg: "bg-brand-yellow",
     eyebrow: "ITIC",
     title: "Som učiteľ",
-    links: [
-      { label: "Paušály so zľavou", href: "#pausaly" },
-      { label: "Maxx – 100 GB", href: "#maxx" },
-    ],
+    links: [{ label: "O2 Paušály so zľavou" }, { label: "O2 Maxx – 100 GB" }],
   },
   {
     bg: "bg-brand-pink",
     arrowBg: "bg-background",
     eyebrow: "EURO<26",
     title: "Som mladý do 26 rokov",
-    links: [
-      { label: "Maxx – 100 GB", href: "#maxx" },
-      { label: "Paušály so zľavou", href: "#pausaly" },
-    ],
+    links: [{ label: "O2 Maxx – 100 GB" }, { label: "O2 Paušály so zľavou" }],
   },
   {
     bg: "bg-brand-yellow",
@@ -126,12 +119,13 @@ const segments = [
     eyebrow: "Pre najmenších",
     title: "Pre všetkých do 15 rokov",
     links: [
-      { label: "Junior", href: "#junior" },
-      { label: "Maxx – 100 GB", href: "#maxx" },
-      { label: "Paušály so zľavou", href: "#pausaly" },
+      { label: "O2 Junior" },
+      { label: "O2 Maxx – 100 GB" },
+      { label: "O2 Paušály so zľavou" },
     ],
   },
 ];
+
 
 const cards: { num: string; accent: string; brand: BrandId; title: string; text: string }[] = [
   {
@@ -163,7 +157,12 @@ const pausaly = [
     oldPrice: "22 €",
     price: "18 €",
     popular: false,
-    perks: ["10 GB dát", "200 minút", "Neobmedzené správy", "Bonus na zariadenie"],
+    perks: [
+      "10 GB dát",
+      "200 minút",
+      "Neobmedzené správy",
+      "Bonus na zariadenie 48 €",
+    ],
   },
   {
     name: "Pohodový",
@@ -173,8 +172,8 @@ const pausaly = [
     perks: [
       "15 GB dát",
       "Neobmedzené volania a správy",
-      "Bonus na zariadenie",
-      "1 predplatné v cene",
+      "Bonus na zariadenie 96 €",
+      "1 predplatné v cene (Voyo, HBO Max…)",
     ],
   },
   {
@@ -185,12 +184,13 @@ const pausaly = [
     perks: [
       "Neobmedzené dáta, volania a správy",
       "Cashback 5 € mesačne (do 15 GB dát)",
-      "Bonus na zariadenie",
-      "1 predplatné v cene",
-      "1 SIM navyše zdarma",
+      "Bonus na zariadenie 168 €",
+      "1 predplatné v cene (Netflix, Voyo…)",
+      "1 O2 Connect SIM v cene",
     ],
   },
 ];
+
 
 function PartnerEndorsement({ className = "" }: { className?: string }) {
   return (
@@ -271,8 +271,10 @@ function Index() {
                   <div className="flex flex-wrap gap-2 pt-2">
                     {s.links.map((link) => (
                       <a
-                        key={link.href}
-                        href={link.href}
+                        key={link.label}
+                        href={MAXX_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="rounded-full bg-background/90 px-3 py-1 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-background"
                       >
                         {link.label}
@@ -282,12 +284,15 @@ function Index() {
                 </div>
                 <div className="mt-6 flex justify-end">
                   <a
-                    href="#kalkulacka"
+                    href={MAXX_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm transition-transform duration-300 hover:rotate-45 hover:scale-110 ${s.arrowBg}`}
-                    aria-label="Prejsť na kalkulačku úspor"
+                    aria-label="Prejsť na ponuku O2"
                   >
                     <ArrowRight className="h-5 w-5" strokeWidth={3} />
                   </a>
+
                 </div>
               </div>
             ))}
@@ -363,8 +368,9 @@ function Index() {
             <div>
               <p className="eyebrow">Hlavná ponuka</p>
               <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
-                100 GB dát na Maxx
+                100 GB dát na O2 Maxx
               </h2>
+
             </div>
             <p className="max-w-sm text-sm">
               Pre držiteľov ISIC, ITIC a EURO&lt;26. Bez viazanosti, plnou rýchlosťou v 5G.
@@ -375,7 +381,8 @@ function Index() {
             <div className="flex flex-col justify-between rounded-3xl bg-brand-yellow p-7 shadow-soft-pink">
               <div>
                 <p className="font-display text-6xl font-black leading-none">100 GB</p>
-                <p className="mt-3 text-sm font-bold">dát v 5G každý mesiac</p>
+                <p className="mt-3 text-sm font-bold">dát v 5G sieti každý mesiac</p>
+
               </div>
               <div className="mt-8 border-t-2 border-foreground/15 pt-5">
                 <p className="font-display text-5xl font-black">20 €</p>
@@ -388,7 +395,7 @@ function Index() {
                 {[
                   "100 GB plnou rýchlosťou — nevyčerpané dáta sa prenášajú do ďalšieho mesiaca, po prečerpaní pokračuješ spomalene bez doplatku.",
                   "Neobmedzené volania a SMS/MMS na Slovensku a v celej EÚ.",
-                  "1 predplatné na 12 mesiacov v cene (Netflix, Voyo, HBO Max a i.), meniteľné každých 30 dní.",
+                  "1 predplatné na 12 mesiacov v cene (Netflix, Voyo, HBO Max a i.), meniteľné každých 30 dní v O2 Aplikácii.",
                 ].map((benefit, i) => (
                   <li key={benefit} className="flex items-start gap-4">
                     <span className="num-badge">
@@ -400,16 +407,17 @@ function Index() {
               </ul>
 
               <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
-                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Držiteľ preukazu
-                si paušál môže aktivovať od 18 rokov. Pre mladších držiteľov môže paušál aktivovať
-                rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko dieťaťa
-                a číslo jeho platného preukazu.
+                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Držiteľ
+                preukazu si paušál môže aktivovať sám od veku 18 rokov. Pre mladších držiteľov môže
+                paušál aktivovať rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko
+                dieťaťa a číslo jeho platného preukazu.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
                 <Button variant="pink" size="xl" asChild>
-                  <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Chcem 100 GB</a>
+                  <a href={MAXX_LINK} target="_blank" rel="noopener noreferrer">Chcem 100 GB</a>
                 </Button>
+
                 <PartnerEndorsement className="text-foreground" />
               </div>
             </div>
@@ -421,10 +429,11 @@ function Index() {
       <section id="pausaly" className="scroll-mt-20 bg-background py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-2xl">
-            <p className="eyebrow text-brand-orange-dark">Paušály so zľavou vďaka preukazu</p>
+            <p className="eyebrow text-brand-orange-dark">O2 Paušály so zľavou vďaka preukazu</p>
             <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
-              O2 Paušál so zľavou vďaka preukazu
+              O2 Paušály so zľavou vďaka preukazu
             </h2>
+
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -432,8 +441,9 @@ function Index() {
               <div
                 key={plan.name}
                 className={`relative flex flex-col rounded-3xl shadow-soft-teal p-6 ${
-                  plan.popular ? "bg-brand-orange shadow-soft-orange" : "bg-background"
+                  plan.popular ? "bg-brand-teal-light shadow-soft-teal" : "bg-background"
                 }`}
+
               >
                 {plan.popular && (
                   <span className="absolute -top-4 left-6 rounded-full bg-brand-yellow px-4 py-1 font-display text-xs font-black uppercase tracking-wider shadow-soft-yellow">
@@ -461,7 +471,7 @@ function Index() {
                   className="mt-6"
                   asChild
                 >
-                  <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Vybrať {plan.name}</a>
+                  <a href={PAUSAL_LINK} target="_blank" rel="noopener noreferrer">Vybrať {plan.name}</a>
                 </Button>
               </div>
             ))}
@@ -475,9 +485,10 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-lg font-black">
-              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pri každom O2
-              paušále.
+              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pre
+              Bezstarostný, Pohodový a Základný O2 Paušál.
             </p>
+
             <Button variant="white" size="lg" asChild>
               <a href="#prechod">Ako prejsť</a>
             </Button>
@@ -491,20 +502,21 @@ function Index() {
           <div>
             <p className="eyebrow text-brand-pink">Pre rodičov</p>
             <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
-              Junior výhodnejšie s preukazom dieťaťa
+              O2 Junior výhodnejšie s preukazom dieťaťa
             </h2>
             <p className="mt-4 font-display text-4xl font-black">10,25 €</p>
             <p className="text-sm font-bold">mesačne — rovnaká cena, výhodnejší obsah</p>
             <Button variant="teal" size="lg" className="mt-6" asChild>
-              <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Zistiť viac</a>
+              <a href={JUNIOR_LINK} target="_blank" rel="noopener noreferrer">Zistiť viac</a>
             </Button>
+
           </div>
 
           <ul className="grid gap-3 sm:grid-cols-2">
             {[
               "S preukazom bonus 10 GB dát namiesto 4 GB.",
               "Donekonečna piatim: 5 voľných čísel s neobmedzeným volaním a SMS namiesto 3.",
-              "Rodičovské limity na dáta aj volania — platíš len skutočnú spotrebu.",
+              "Rodičovské limity na dáta aj volania — platíš len skutočnú spotrebu. O2 Security v cene.",
               "Podmienka: aspoň jeden aktívny paušál na rovnakom zákazníckom profile.",
             ].map((item, i) => (
               <li
@@ -531,14 +543,22 @@ function Index() {
                 Prečo mať preukaz
               </h2>
             </div>
-            <img
-              src={isicImage.url}
-              alt="Kampaňový vizuál pre držiteľov ISIC, ITIC a EURO<26"
-              className="hidden w-72 rounded-3xl shadow-soft-teal sm:block"
-              width={800}
-              height={500}
-              loading="lazy"
-            />
+            <a
+              href={MAXX_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:block"
+            >
+              <img
+                src={isicImage.url}
+                alt="Kampaňový vizuál pre držiteľov ISIC, ITIC a EURO<26"
+                className="w-72 rounded-3xl shadow-soft-teal transition-transform duration-300 hover:-translate-y-1"
+                width={800}
+                height={500}
+                loading="lazy"
+              />
+            </a>
+
           </div>
 
           <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -642,15 +662,15 @@ function Index() {
 
           <div className="mt-10">
             <Button variant="pink" size="xl" asChild>
-              <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
+              <a href={MAXX_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* KALKULAČKA + FAQ */}
-      <SavingsCalculator />
+      {/* FAQ */}
       <CampaignFaq />
+
 
       {/* FOOTER — teal */}
       <footer className="bg-brand-teal py-12 text-foreground">
