@@ -429,10 +429,11 @@ function Index() {
       <section id="pausaly" className="scroll-mt-20 bg-background py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="max-w-2xl">
-            <p className="eyebrow text-brand-orange-dark">Paušály so zľavou vďaka preukazu</p>
+            <p className="eyebrow text-brand-orange-dark">O2 Paušály so zľavou vďaka preukazu</p>
             <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
-              O2 Paušál so zľavou vďaka preukazu
+              O2 Paušály so zľavou vďaka preukazu
             </h2>
+
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -440,8 +441,9 @@ function Index() {
               <div
                 key={plan.name}
                 className={`relative flex flex-col rounded-3xl shadow-soft-teal p-6 ${
-                  plan.popular ? "bg-brand-orange shadow-soft-orange" : "bg-background"
+                  plan.popular ? "bg-brand-teal-light shadow-soft-teal" : "bg-background"
                 }`}
+
               >
                 {plan.popular && (
                   <span className="absolute -top-4 left-6 rounded-full bg-brand-yellow px-4 py-1 font-display text-xs font-black uppercase tracking-wider shadow-soft-yellow">
@@ -469,7 +471,7 @@ function Index() {
                   className="mt-6"
                   asChild
                 >
-                  <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Vybrať {plan.name}</a>
+                  <a href={PAUSAL_LINK} target="_blank" rel="noopener noreferrer">Vybrať {plan.name}</a>
                 </Button>
               </div>
             ))}
@@ -483,9 +485,10 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-lg font-black">
-              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pri každom O2
-              paušále.
+              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pre
+              Bezstarostný, Pohodový a Základný O2 Paušál.
             </p>
+
             <Button variant="white" size="lg" asChild>
               <a href="#prechod">Ako prejsť</a>
             </Button>
@@ -499,20 +502,21 @@ function Index() {
           <div>
             <p className="eyebrow text-brand-pink">Pre rodičov</p>
             <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
-              Junior výhodnejšie s preukazom dieťaťa
+              O2 Junior výhodnejšie s preukazom dieťaťa
             </h2>
             <p className="mt-4 font-display text-4xl font-black">10,25 €</p>
             <p className="text-sm font-bold">mesačne — rovnaká cena, výhodnejší obsah</p>
             <Button variant="teal" size="lg" className="mt-6" asChild>
-              <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Zistiť viac</a>
+              <a href={JUNIOR_LINK} target="_blank" rel="noopener noreferrer">Zistiť viac</a>
             </Button>
+
           </div>
 
           <ul className="grid gap-3 sm:grid-cols-2">
             {[
               "S preukazom bonus 10 GB dát namiesto 4 GB.",
               "Donekonečna piatim: 5 voľných čísel s neobmedzeným volaním a SMS namiesto 3.",
-              "Rodičovské limity na dáta aj volania — platíš len skutočnú spotrebu.",
+              "Rodičovské limity na dáta aj volania — platíš len skutočnú spotrebu. O2 Security v cene.",
               "Podmienka: aspoň jeden aktívny paušál na rovnakom zákazníckom profile.",
             ].map((item, i) => (
               <li
@@ -539,14 +543,22 @@ function Index() {
                 Prečo mať preukaz
               </h2>
             </div>
-            <img
-              src={isicImage.url}
-              alt="Kampaňový vizuál pre držiteľov ISIC, ITIC a EURO<26"
-              className="hidden w-72 rounded-3xl shadow-soft-teal sm:block"
-              width={800}
-              height={500}
-              loading="lazy"
-            />
+            <a
+              href={MAXX_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:block"
+            >
+              <img
+                src={isicImage.url}
+                alt="Kampaňový vizuál pre držiteľov ISIC, ITIC a EURO<26"
+                className="w-72 rounded-3xl shadow-soft-teal transition-transform duration-300 hover:-translate-y-1"
+                width={800}
+                height={500}
+                loading="lazy"
+              />
+            </a>
+
           </div>
 
           <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
