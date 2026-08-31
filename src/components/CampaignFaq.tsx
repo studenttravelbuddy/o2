@@ -264,16 +264,16 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
 
 export function CampaignFaq() {
   return (
-    <section id="faq" className="scroll-mt-24 bg-background py-20">
+    <section id="faq" className="scroll-mt-24 bg-background py-12 sm:py-20">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <p className="eyebrow text-brand-pink">FAQ</p>
-        <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+        <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
           Pýtaš sa?
           <br />
           Odpovedáme.
         </h2>
 
-        <div className="mt-12 space-y-12">
+        <div className="mt-8 space-y-10 sm:mt-12 sm:space-y-12">
           {groups.map((group) => (
             <div key={group.id}>
               <h3 className="inline-block rounded-full bg-brand-yellow px-4 py-1.5 font-display text-sm font-black uppercase tracking-wider shadow-soft-yellow">
@@ -286,14 +286,18 @@ export function CampaignFaq() {
                     value={item.q}
                     className="border-b-2 border-border"
                   >
-                    <AccordionTrigger className="text-left font-display text-lg font-bold">
+                    <AccordionTrigger className="min-h-12 text-left font-display text-base font-bold sm:text-lg">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="pb-5 text-base text-muted-foreground">
+                    <AccordionContent className="pb-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
+              </Accordion>
+            </div>
+          ))}
+
               </Accordion>
             </div>
           ))}
