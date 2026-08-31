@@ -452,20 +452,20 @@ function Index() {
             <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               O2 Paušály so zľavou vďaka preukazu
             </h2>
-
+            <p className="mt-3 text-sm text-muted-foreground sm:hidden">Potiahni prstom →</p>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-3">
+          <div className="no-scrollbar -mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 pt-5 sm:mx-0 sm:mt-10 sm:grid sm:gap-5 sm:overflow-visible sm:px-0 md:grid-cols-3">
             {pausaly.map((plan) => (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-3xl shadow-soft-teal p-6 ${
+                className={`relative flex w-[82%] shrink-0 snap-start flex-col rounded-3xl p-5 shadow-soft-teal sm:w-auto sm:p-6 ${
                   plan.popular ? "bg-brand-teal-light shadow-soft-teal" : "bg-background"
                 }`}
 
               >
                 {plan.popular && (
-                  <span className="absolute -top-4 left-6 rounded-full bg-brand-yellow px-4 py-1 font-display text-xs font-black uppercase tracking-wider shadow-soft-yellow">
+                  <span className="absolute -top-4 left-5 rounded-full bg-brand-yellow px-4 py-1 font-display text-xs font-black uppercase tracking-wider shadow-soft-yellow sm:left-6">
                     Najobľúbenejší
                   </span>
                 )}
@@ -476,7 +476,7 @@ function Index() {
                 </div>
                 <span className="text-sm font-bold">mesačne s preukazom</span>
 
-                <ul className="mt-6 flex-1 space-y-2 text-sm">
+                <ul className="mt-5 flex-1 space-y-2 text-sm sm:mt-6">
                   {plan.perks.map((perk) => (
                     <li key={perk} className="border-t-2 border-border pt-2">
                       {perk}
@@ -487,11 +487,12 @@ function Index() {
                 <Button
                   variant={plan.popular ? "teal" : "outline"}
                   size="lg"
-                  className="mt-6"
+                  className="mt-6 min-h-12 w-full"
                   asChild
                 >
                   <a href={PAUSAL_LINK} target="_blank" rel="noopener noreferrer">Vybrať {plan.name}</a>
                 </Button>
+
               </div>
             ))}
           </div>
