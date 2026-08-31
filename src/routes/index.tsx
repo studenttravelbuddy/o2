@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { SavingsCalculator } from "@/components/SavingsCalculator";
+
 import { CampaignFaq } from "@/components/CampaignFaq";
 import heroImage from "@/assets/o2-hero-full.png.asset.json";
 import isicImage from "@/assets/o2-isic.png.asset.json";
@@ -662,15 +662,15 @@ function Index() {
 
           <div className="mt-10">
             <Button variant="pink" size="xl" asChild>
-              <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
+              <a href={MAXX_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* KALKULAČKA + FAQ */}
-      <SavingsCalculator />
+      {/* FAQ */}
       <CampaignFaq />
+
 
       {/* FOOTER — teal */}
       <footer className="bg-brand-teal py-12 text-foreground">
