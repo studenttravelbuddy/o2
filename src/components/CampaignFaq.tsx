@@ -103,7 +103,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
           <>
             Yoxo môžete využívať do konca platnosti vašej aktuálnej zmluvy v Orange a následne si môžete vybrať ktorýkoľvek z paušálov v O2 pripravených pre ISIC, ITIC a EURO&lt;26. Alebo môžete zmluvu v Orange ukončiť hneď a prejsť na výhodnejší paušál v O2. Viac podrobných informácií o nových paušáloch nájdete na stránke{" "}
             <a
-              href="https://www.o2.sk"
+              href="https://www.o2.sk/ponuka/mobilne-sluzby/o2-maxx"
               className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
               target="_blank"
               rel="noopener noreferrer"
@@ -115,7 +115,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Prečo ste sa rozhodli spolupracovať s O2?",
-        a: "Vďaka tomu, že s O2 sme sa dohodli na dlhodobej spolupráci, vďaka ktorej budeme spoločne tvoriť a ponúkať držiteľom preukazov ISIC/ITIC/EURO<26 také paušály, ktoré budú maximálne prispôsobované potrebám a požiadavkám držiteľov ISIC, ITIC a EURO<26.",
+        a: "Vďaka tomu, že S O2 sme sa dohodli na dlhodobej spolupráci, vďaka ktorej budeme spoločne tvoriť a ponúkať držiteľom preukazov ISIC/ITIC/EURO<26 také paušály, ktoré budú maximálne prispôsobované potrebám a požiadavkám držiteľov ISIC, ITIC a EURO<26.",
       },
       {
         q: "Čo znamená nová spolupráca pre môj preukaz?",
@@ -168,11 +168,11 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
   },
   {
     id: "maxx",
-    label: "Maxx — 100 GB",
+    label: "O2 Maxx",
     items: [
       {
         q: "Kto si môže aktivovať paušál so 100 GB?",
-        a: "Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku. Držiteľ si paušál môže aktivovať od 18 rokov. Pre mladších držiteľov môže paušál aktivovať rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko dieťaťa a číslo jeho platného preukazu.",
+        a: "Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku. Držiteľ preukazu si paušál môže aktivovať sám od veku 18 rokov. Pre mladších držiteľov môže paušál aktivovať rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko dieťaťa a číslo jeho platného preukazu.",
       },
       {
         q: "Čo ak neminiem svojich 100 GB dát?",
@@ -202,7 +202,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
   },
   {
     id: "pausaly",
-    label: "Paušály so zľavou",
+    label: "O2 Paušály",
     items: [
       {
         q: "Majú paušály viazanosť?",
@@ -232,7 +232,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
   },
   {
     id: "junior",
-    label: "Junior",
+    label: "O2 Junior",
     items: [
       {
         q: "Kedy si môžem aktivovať Junior?",
