@@ -33,6 +33,8 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { name: "theme-color", content: "#40b8b8" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -509,7 +511,7 @@ function Index() {
               Bezstarostný, Pohodový a Základný O2 Paušál.
             </p>
 
-            <Button variant="white" size="lg" asChild>
+            <Button variant="white" size="lg" className="min-h-12 w-full sm:w-auto" asChild>
               <a href="#prechod">Ako prejsť</a>
             </Button>
           </div>
@@ -518,7 +520,7 @@ function Index() {
 
       {/* BIELA — Junior pre rodičov */}
       <section id="junior" className="scroll-mt-20 bg-background pt-10 pb-12 sm:pt-14 sm:pb-20">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:gap-10 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="eyebrow text-brand-pink">Pre rodičov</p>
             <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
@@ -526,7 +528,7 @@ function Index() {
             </h2>
             <p className="mt-4 font-display text-4xl font-black">10,25 €</p>
             <p className="text-sm font-bold">mesačne — rovnaká cena, výhodnejší obsah</p>
-            <Button variant="teal" size="lg" className="mt-6" asChild>
+            <Button variant="teal" size="lg" className="mt-6 min-h-12 w-full sm:w-auto" asChild>
               <a href={JUNIOR_LINK} target="_blank" rel="noopener noreferrer">Zistiť viac</a>
             </Button>
 
@@ -630,12 +632,12 @@ function Index() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <a
               href="https://www.o2.sk"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              className="flex min-h-12 items-center text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
             >
               Pozrieť podmienky
             </a>
@@ -643,7 +645,7 @@ function Index() {
               href="https://objednaj-preukaz.sk"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              className="flex min-h-12 items-center text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
             >
               Objednať preukaz
             </a>
