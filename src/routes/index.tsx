@@ -97,30 +97,21 @@ const segments = [
     arrowBg: "bg-background",
     eyebrow: "ISIC",
     title: "Som študent",
-    links: [
-      { label: "Maxx – 100 GB", href: "#maxx" },
-      { label: "Paušály so zľavou", href: "#pausaly" },
-    ],
+    links: [{ label: "O2 Maxx – 100 GB" }, { label: "O2 Paušály so zľavou" }],
   },
   {
     bg: "bg-brand-orange",
     arrowBg: "bg-brand-yellow",
     eyebrow: "ITIC",
     title: "Som učiteľ",
-    links: [
-      { label: "Paušály so zľavou", href: "#pausaly" },
-      { label: "Maxx – 100 GB", href: "#maxx" },
-    ],
+    links: [{ label: "O2 Paušály so zľavou" }, { label: "O2 Maxx – 100 GB" }],
   },
   {
     bg: "bg-brand-pink",
     arrowBg: "bg-background",
     eyebrow: "EURO<26",
     title: "Som mladý do 26 rokov",
-    links: [
-      { label: "Maxx – 100 GB", href: "#maxx" },
-      { label: "Paušály so zľavou", href: "#pausaly" },
-    ],
+    links: [{ label: "O2 Maxx – 100 GB" }, { label: "O2 Paušály so zľavou" }],
   },
   {
     bg: "bg-brand-yellow",
@@ -128,12 +119,13 @@ const segments = [
     eyebrow: "Pre najmenších",
     title: "Pre všetkých do 15 rokov",
     links: [
-      { label: "Junior", href: "#junior" },
-      { label: "Maxx – 100 GB", href: "#maxx" },
-      { label: "Paušály so zľavou", href: "#pausaly" },
+      { label: "O2 Junior" },
+      { label: "O2 Maxx – 100 GB" },
+      { label: "O2 Paušály so zľavou" },
     ],
   },
 ];
+
 
 const cards: { num: string; accent: string; brand: BrandId; title: string; text: string }[] = [
   {
