@@ -157,7 +157,12 @@ const pausaly = [
     oldPrice: "22 €",
     price: "18 €",
     popular: false,
-    perks: ["10 GB dát", "200 minút", "Neobmedzené správy", "Bonus na zariadenie"],
+    perks: [
+      "10 GB dát",
+      "200 minút",
+      "Neobmedzené správy",
+      "Bonus na zariadenie 48 €",
+    ],
   },
   {
     name: "Pohodový",
@@ -167,8 +172,8 @@ const pausaly = [
     perks: [
       "15 GB dát",
       "Neobmedzené volania a správy",
-      "Bonus na zariadenie",
-      "1 predplatné v cene",
+      "Bonus na zariadenie 96 €",
+      "1 predplatné v cene (Voyo, HBO Max…)",
     ],
   },
   {
@@ -179,12 +184,13 @@ const pausaly = [
     perks: [
       "Neobmedzené dáta, volania a správy",
       "Cashback 5 € mesačne (do 15 GB dát)",
-      "Bonus na zariadenie",
-      "1 predplatné v cene",
-      "1 SIM navyše zdarma",
+      "Bonus na zariadenie 168 €",
+      "1 predplatné v cene (Netflix, Voyo…)",
+      "1 O2 Connect SIM v cene",
     ],
   },
 ];
+
 
 function PartnerEndorsement({ className = "" }: { className?: string }) {
   return (
