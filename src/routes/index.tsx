@@ -8,6 +8,8 @@ import heroImage from "@/assets/o2-hero-full.png.asset.json";
 import isicImage from "@/assets/o2-isic.png.asset.json";
 import partnerLogo from "@/assets/o2-logo-final.jpg.asset.json";
 import { BrandMark, BrandMarkRow, type BrandId } from "@/components/BrandMark";
+import { MobileActionBar } from "@/components/MobileActionBar";
+import { SectionChips } from "@/components/SectionChips";
 
 // EMBARGO: stránka sa nesmie verejne publikovať ani indexovať pred 1. 9. 2026.
 const MAXX_LINK = "https://www.o2.sk/ponuka/mobilne-sluzby/o2-maxx";
