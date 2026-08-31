@@ -207,43 +207,49 @@ function PartnerEndorsement({ className = "" }: { className?: string }) {
 
 function Index() {
   return (
-    <main className="overflow-hidden bg-background">
+    <main className="overflow-hidden bg-background pb-24 md:pb-0">
       {/* HERO — teal pás */}
-      <header className="relative min-h-[720px] bg-brand-teal text-foreground">
-        <div className="absolute -right-20 top-24 h-44 w-44 rounded-full border-[28px] border-brand-yellow sm:h-64 sm:w-64" />
-        <div className="absolute -left-16 bottom-16 h-32 w-32 rotate-12 rounded-3xl bg-brand-pink" />
+      <header className="relative min-h-[100svh] bg-brand-teal text-foreground">
+        <div className="absolute -right-14 top-20 h-28 w-28 rounded-full border-[18px] border-brand-yellow sm:-right-20 sm:h-64 sm:w-64 sm:border-[28px]" />
+        <div className="absolute -left-10 bottom-24 h-20 w-20 rotate-12 rounded-3xl bg-brand-pink sm:-left-16 sm:h-32 sm:w-32" />
 
-        <div className="relative mx-auto flex min-h-[720px] max-w-6xl flex-col px-5 py-8 sm:px-8 sm:py-10">
-          <div className="relative z-10 flex flex-wrap items-center justify-between gap-4">
+        <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col px-5 py-6 sm:px-8 sm:py-10">
+          <div className="relative z-10 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 sm:flex sm:flex-wrap sm:justify-between sm:gap-4">
             <BrandMarkRow variant="card" />
             <PartnerEndorsement />
           </div>
 
-          <div className="flex flex-1 flex-col justify-center py-12 lg:max-w-4xl">
+          <div className="flex flex-1 flex-col justify-center py-10 sm:py-12 lg:max-w-4xl">
             <p className="eyebrow relative z-10">BACK TO SCHOOL KAMPAŇ 2026</p>
-            <h1 className="relative z-10 mt-4 font-display text-5xl font-black leading-[0.98] sm:text-7xl lg:text-8xl">
+            <h1 className="relative z-10 mt-3 font-display text-[13vw] font-black leading-[0.95] sm:mt-4 sm:text-7xl lg:text-8xl">
               Ready for more?
             </h1>
-            <p className="relative z-10 mt-6 max-w-2xl text-lg">
+            <p className="relative z-10 mt-5 max-w-2xl text-base sm:mt-6 sm:text-lg">
               Tento rok štartujeme kampaň vo veľkom.{" "}
               <span className="font-black text-brand-yellow">S novým partnerom, operátorom O2</span>{" "}
               prinášame držiteľom ISIC, ITIC a EURO&lt;26 viac dát, viac volaní a viac digitálneho
-              obsahu. Všetky paušály sú dostupné každému držiteľovi platného preukazu — vyber si to,
-              čo ti najviac vyhovuje.
+              obsahu.
             </p>
+            <ul className="relative z-10 mt-4 space-y-1.5 text-sm font-bold sm:text-base">
+              <li>· 100 GB dát v 5G sieti</li>
+              <li>· Neobmedzené volania a správy</li>
+              <li>· Predplatné v cene paušálu</li>
+            </ul>
             <p className="relative z-10 mt-4 font-display text-xl font-black">od 1. 9. 2026</p>
 
-            <div className="relative z-10 mt-8 flex flex-wrap items-center gap-4">
-              <Button variant="yellow" size="xl" asChild>
+            <div className="relative z-10 mt-7 flex flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+              <Button variant="yellow" size="xl" className="min-h-12 w-full sm:w-auto" asChild>
                 <a href="#maxx">Objaviť výhody</a>
               </Button>
               <a
                 href="#preukazy"
-                className="text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+                className="flex min-h-12 items-center justify-center text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4 sm:justify-start"
               >
                 Na ktorý preukaz mám nárok?
               </a>
             </div>
+
+            <SectionChips className="relative z-10 mt-7" />
           </div>
 
           <p className="eyebrow relative z-10">ISIC · ITIC · EURO&lt;26</p>
@@ -251,21 +257,22 @@ function Index() {
       </header>
 
       {/* BIELA — segmentový rozdeľovač „Kto si?" */}
-      <section className="bg-background px-5 py-16 sm:px-8">
+      <section className="bg-background px-5 py-12 sm:px-8 sm:py-16">
         <div className="mx-auto max-w-6xl">
           <p className="eyebrow text-brand-pink">Vyber si svoju výhodu</p>
-          <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl">Ktorý paušál je pre teba?</h2>
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <h2 className="mt-3 font-display text-3xl font-black sm:text-5xl">Ktorý paušál je pre teba?</h2>
+          <p className="mt-2 text-sm text-muted-foreground sm:hidden">Potiahni prstom →</p>
+          <div className="no-scrollbar -mx-5 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mt-10 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 lg:grid-cols-4">
             {segments.map((s) => (
               <div
                 key={s.title}
-                className={`group relative flex h-full min-h-[240px] flex-col justify-between rounded-3xl p-6 shadow-soft-teal transition-all duration-300 hover:-translate-y-2 hover:-rotate-1 hover:shadow-soft-pink ${s.bg}`}
+                className={`group relative flex min-h-[220px] w-[78%] shrink-0 snap-start flex-col justify-between rounded-3xl p-5 shadow-soft-teal transition-all duration-300 active:scale-[0.98] sm:h-full sm:min-h-[240px] sm:w-auto sm:p-6 md:hover:-translate-y-2 md:hover:-rotate-1 md:hover:shadow-soft-pink ${s.bg}`}
               >
                 <div className="space-y-2">
                   <span className="block text-xs font-bold uppercase tracking-widest text-foreground/60">
                     {s.eyebrow}
                   </span>
-                  <h3 className="font-display text-3xl font-black uppercase leading-tight text-background lg:text-4xl">
+                  <h3 className="font-display text-2xl font-black uppercase leading-tight text-background sm:text-3xl lg:text-4xl">
                     {s.title}
                   </h3>
                   <div className="flex flex-wrap gap-2 pt-2">
@@ -275,7 +282,7 @@ function Index() {
                         href={MAXX_LINK}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-full bg-background/90 px-3 py-1 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-background"
+                        className="rounded-full bg-background/90 px-3 py-1.5 text-xs font-bold text-foreground shadow-sm transition-colors active:scale-95 md:hover:bg-background"
                       >
                         {link.label}
                       </a>
@@ -287,7 +294,7 @@ function Index() {
                     href={MAXX_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm transition-transform duration-300 hover:rotate-45 hover:scale-110 ${s.arrowBg}`}
+                    className={`flex h-11 w-11 items-center justify-center rounded-full shadow-sm transition-transform duration-300 active:scale-95 md:hover:rotate-45 md:hover:scale-110 ${s.arrowBg}`}
                     aria-label="Prejsť na ponuku O2"
                   >
                     <ArrowRight className="h-5 w-5" strokeWidth={3} />
@@ -301,7 +308,7 @@ function Index() {
       </section>
 
       {/* ŽLTÝ PÁS — kampaňový vizuál */}
-      <section className="bg-brand-yellow px-5 py-12 sm:px-8 sm:py-16">
+      <section className="bg-brand-yellow px-5 py-10 sm:px-8 sm:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="overflow-hidden rounded-3xl bg-background shadow-soft-teal">
             <a
@@ -313,14 +320,17 @@ function Index() {
               <img
                 src={heroImage.url}
                 alt="Kampaňový vizuál 2026 pre držiteľov ISIC, ITIC a EURO<26"
-                className="h-auto w-full transition-transform duration-300 hover:scale-[1.02]"
+                className="h-auto w-full transition-transform duration-300 md:hover:scale-[1.02]"
                 width={1920}
                 height={700}
+                loading="lazy"
+                decoding="async"
               />
             </a>
           </div>
         </div>
       </section>
+
 
       {/* BIELA — čo prináša nová spolupráca */}
       <section className="bg-background py-20 sm:py-28">
