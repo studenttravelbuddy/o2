@@ -381,7 +381,8 @@ function Index() {
             <div className="flex flex-col justify-between rounded-3xl bg-brand-yellow p-7 shadow-soft-pink">
               <div>
                 <p className="font-display text-6xl font-black leading-none">100 GB</p>
-                <p className="mt-3 text-sm font-bold">dát v 5G každý mesiac</p>
+                <p className="mt-3 text-sm font-bold">dát v 5G sieti každý mesiac</p>
+
               </div>
               <div className="mt-8 border-t-2 border-foreground/15 pt-5">
                 <p className="font-display text-5xl font-black">20 €</p>
@@ -394,7 +395,7 @@ function Index() {
                 {[
                   "100 GB plnou rýchlosťou — nevyčerpané dáta sa prenášajú do ďalšieho mesiaca, po prečerpaní pokračuješ spomalene bez doplatku.",
                   "Neobmedzené volania a SMS/MMS na Slovensku a v celej EÚ.",
-                  "1 predplatné na 12 mesiacov v cene (Netflix, Voyo, HBO Max a i.), meniteľné každých 30 dní.",
+                  "1 predplatné na 12 mesiacov v cene (Netflix, Voyo, HBO Max a i.), meniteľné každých 30 dní v O2 Aplikácii.",
                 ].map((benefit, i) => (
                   <li key={benefit} className="flex items-start gap-4">
                     <span className="num-badge">
@@ -406,16 +407,17 @@ function Index() {
               </ul>
 
               <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
-                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Držiteľ preukazu
-                si paušál môže aktivovať od 18 rokov. Pre mladších držiteľov môže paušál aktivovať
-                rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko dieťaťa
-                a číslo jeho platného preukazu.
+                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Držiteľ
+                preukazu si paušál môže aktivovať sám od veku 18 rokov. Pre mladších držiteľov môže
+                paušál aktivovať rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko
+                dieťaťa a číslo jeho platného preukazu.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
                 <Button variant="pink" size="xl" asChild>
-                  <a href={OFFER_LINK} target="_blank" rel="noopener noreferrer">Chcem 100 GB</a>
+                  <a href={MAXX_LINK} target="_blank" rel="noopener noreferrer">Chcem 100 GB</a>
                 </Button>
+
                 <PartnerEndorsement className="text-foreground" />
               </div>
             </div>
