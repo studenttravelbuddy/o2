@@ -304,13 +304,20 @@ function Index() {
       <section className="bg-brand-yellow px-5 py-12 sm:px-8 sm:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="overflow-hidden rounded-3xl bg-background shadow-soft-teal">
-            <img
-              src={heroImage.url}
-              alt="Kampaňový vizuál 2026 pre držiteľov ISIC, ITIC a EURO<26"
-              className="h-auto w-full"
-              width={1920}
-              height={700}
-            />
+            <a
+              href="https://www.o2.sk/ponuka/mobilne-sluzby/o2-maxx"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="O2 Maxx – 100 GB dát na Maxx"
+            >
+              <img
+                src={heroImage.url}
+                alt="Kampaňový vizuál 2026 pre držiteľov ISIC, ITIC a EURO<26"
+                className="h-auto w-full transition-transform duration-300 hover:scale-[1.02]"
+                width={1920}
+                height={700}
+              />
+            </a>
           </div>
         </div>
       </section>
