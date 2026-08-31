@@ -6,11 +6,13 @@ import { SavingsCalculator } from "@/components/SavingsCalculator";
 import { CampaignFaq } from "@/components/CampaignFaq";
 import heroImage from "@/assets/o2-hero-full.png.asset.json";
 import isicImage from "@/assets/o2-isic.png.asset.json";
-import partnerLogo from "@/assets/o2-logo.png.asset.json";
+import partnerLogo from "@/assets/o2-logo-final.jpg.asset.json";
 import { BrandMark, BrandMarkRow, type BrandId } from "@/components/BrandMark";
 
 // EMBARGO: stránka sa nesmie verejne publikovať ani indexovať pred 1. 9. 2026.
-const OFFER_LINK = "https://www.o2.sk";
+const MAXX_LINK = "https://www.o2.sk/ponuka/mobilne-sluzby/o2-maxx";
+const JUNIOR_LINK = "https://www.o2.sk/ponuka/mobilne-sluzby/o2-junior";
+const PAUSAL_LINK = "https://www.o2.sk/mobilne-sluzby/o2-pausal-preukaz";
 
 export const Route = createFileRoute("/")({
   head: () => ({
