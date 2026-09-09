@@ -2,13 +2,21 @@
 
 Porovnala som našu stránku so tromi oficiálnymi stránkami O2 (O2 Maxx, O2 Junior, O2 Paušál s preukazom). Toto sú rozdiely, ktoré som našla.
 
-## 1. Cena Bezstarostného paušálu (najdôležitejšie)
+## 1. Prelinkovania (najdôležitejšie)
 
-Na o2.sk je Bezstarostný O2 Paušál s preukazom za **33 €** (pôvodne 44 €). My uvádzame **38 €** — to je podľa staršej požiadavky, ale s O2 stránkou to nesúhlasí.
+Ceny sú v poriadku (Bezstarostný 38 €). Na live stránke však **všetky odkazy v segmentových kartách vedú na O2 Maxx** — aj tie, ktoré sa menujú „O2 Junior“ a „O2 Paušály so zľavou“. Každý odkaz povedie na svoju stránku podľa názvu produktu:
 
-Opravím kartu na 33 € a upravím aj automatickú kontrolu obsahu, ktorá dnes vyžaduje 38 €. **Ak má napriek tomu platiť 38 €, napíš mi to a nechám 38 €.**
+| Odkaz | Cieľ |
+| --- | --- |
+| O2 Maxx – 100 GB | `o2.sk/ponuka/mobilne-sluzby/o2-maxx` |
+| O2 Paušály so zľavou | `o2.sk/mobilne-sluzby/o2-pausal-preukaz` |
+| O2 Junior | `o2.sk/ponuka/mobilne-sluzby/o2-junior` |
 
-Ostatné ceny sú správne: Základný 22 → 18 €, Pohodový 33 → 28 €, O2 Maxx 20 €, O2 Junior 10,25 €.
+Tlačidlo „Prejsť na ponuku O2“ v každej karte povedie na hlavný produkt danej skupiny: študent a EURO&lt;26 → O2 Maxx, učiteľ → O2 Paušály, do 15 rokov → O2 Junior.
+
+Doplním aj dva odkazy, ktoré dnes vedú nesprávne: „Pozrieť podmienky“ (dnes len na `o2.sk`) a „Preniesť si číslo“ (dnes na O2 Maxx) → na stránku O2 Paušál s preukazom.
+
+Kampaňové vizuály zostávajú na O2 Maxx podľa požiadavky O2.
 
 ## 2. Zlé odkazy na O2 Fér
 
