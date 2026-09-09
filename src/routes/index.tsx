@@ -428,9 +428,9 @@ function Index() {
               </ul>
 
               <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
-                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Držiteľ
-                preukazu si paušál môže aktivovať sám od veku 18 rokov. Pre mladších držiteľov môže
-                paušál aktivovať rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko
+                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Paušál je pre
+                držiteľov preukazu v každom veku — aktivovať si ho sám môžeš od 18 rokov, mladším
+                držiteľom ho aktivuje rodič alebo iný zákonný zástupca. Pri overovaní zadá priezvisko
                 dieťaťa a číslo jeho platného preukazu.
               </p>
 
@@ -454,6 +454,10 @@ function Index() {
             <h2 className="mt-2 font-display text-3xl font-black sm:text-5xl">
               O2 Paušály so zľavou vďaka preukazu
             </h2>
+            <p className="mt-4 text-base font-bold">
+              Máš už paušál v O2? Zľavu na preukaz si môžeš uplatniť aj na svoj existujúci paušál —
+              nie je to ponuka len pre nových zákazníkov.
+            </p>
             <p className="mt-3 text-sm text-muted-foreground sm:hidden">Potiahni prstom →</p>
           </div>
 
