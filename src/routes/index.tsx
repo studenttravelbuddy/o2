@@ -176,7 +176,7 @@ const pausaly = [
     popular: false,
     perks: [
       "10 GB dát",
-      "200 minút",
+      "200 minút (neobmedzené volania sa dajú doaktivovať za +5,13 €/mes.)",
       "Neobmedzené správy",
       "Bonus na zariadenie 48 €",
     ],
@@ -199,7 +199,7 @@ const pausaly = [
     price: "38 €",
     popular: true,
     perks: [
-      "Neobmedzené dáta, volania a správy",
+      "Neobmedzené dáta plnou rýchlosťou v 5G sieti, volania a správy",
       "Cashback 5 € mesačne (do 15 GB dát)",
       "Bonus na zariadenie 168 €",
       "1 predplatné v cene (Netflix, Voyo…)",
@@ -441,10 +441,10 @@ function Index() {
               </ul>
 
               <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
-                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Paušál je pre
-                držiteľov preukazu v každom veku — aktivovať si ho sám môžeš od 18 rokov, mladším
-                držiteľom ho aktivuje rodič alebo iný zákonný zástupca. Pri overovaní zadá priezvisko
-                dieťaťa a číslo jeho platného preukazu.
+                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Paušál si môže
+                aktivovať každý držiteľ preukazu od 18 rokov. Pre neplnoleté dieťa ho kupuje rodič
+                alebo iný zákonný zástupca na svoje meno a pri overovaní zadá priezvisko dieťaťa a
+                číslo jeho platného preukazu.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -524,8 +524,8 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-lg font-black">
-              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pre
-              Bezstarostný, Pohodový a Základný O2 Paušál.
+              Viazanosť? Pri prenose čísla od pôvodného operátora ti O2 preplatí zmluvnú pokutu až do
+              120 € — platí pre Bezstarostný, Pohodový a Základný O2 Paušál.
             </p>
 
             <Button variant="white" size="lg" className="min-h-12 w-full sm:w-auto" asChild>
