@@ -172,7 +172,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
     items: [
       {
         q: "Kto si môže aktivovať paušál so 100 GB?",
-        a: "Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku. Držiteľ preukazu si paušál môže aktivovať sám od veku 18 rokov. Pre mladších držiteľov môže paušál aktivovať rodič alebo iný zákonný zástupca; pri overovaní zadá priezvisko dieťaťa a číslo jeho platného preukazu.",
+        a: "Všetci držitelia platných preukazov ISIC, ITIC alebo EURO<26 vydaných na Slovensku. Paušál si môže aktivovať každý držiteľ preukazu od 18 rokov. Pre neplnoleté dieťa ho kupuje rodič alebo iný zákonný zástupca na svoje meno a pri overovaní zadá priezvisko dieťaťa a číslo jeho platného preukazu.",
       },
       {
         q: "Čo ak neminiem svojich 100 GB dát?",
@@ -196,7 +196,20 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Je paušál s viazanosťou? Čo ak stratím status študenta?",
-        a: "Paušál je úplne bez viazanosti. Ak preukaz stratí platnosť, upozorníme ťa a paušál beží do najbližšieho zúčtovacieho obdobia. Ak ho dovtedy neobnovíš, program sa zmení na paušál O2 Fér.",
+        a: (
+          <>
+            Paušál je úplne bez viazanosti. Ak preukaz stratí platnosť, upozorníme ťa a paušál beží do najbližšieho zúčtovacieho obdobia. Ak ho dovtedy neobnovíš, program sa zmení na{" "}
+            <a
+              href="https://www.o2.sk/ponuka/mobilne-sluzby/o2-fer"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              O2 Fér
+            </a>
+            .
+          </>
+        ),
       },
     ],
   },
@@ -210,23 +223,27 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Ako funguje bonus s preukazom ISIC, ITIC a EURO<26?",
-        a: "Bonus získa každý držiteľ platného preukazu. Po uplatnení preukazu sa ti bonus každý mesiac odčíta priamo z faktúry.",
+        a: "Bonus získa každý držiteľ platného preukazu — po overení preukazu platíš zvýhodnenú cenu O2 Paušálu (Základný 18 € namiesto 22 €, Pohodový 28 € namiesto 33 €, Bezstarostný 38 € namiesto 44 €).",
       },
       {
         q: "Čo je Cashback?",
-        a: "Pri najvyššom paušále ti vrátime 5 € späť, ak si mal paušál aktívny celý mesiac a neminul viac ako 15 GB dát. Automaticky.",
+        a: "S Bezstarostným O2 Paušálom ti O2 vráti 5 € späť, ak si mal paušál aktívny celý mesiac a neminul viac ako 15 GB dát. Automaticky.",
       },
       {
         q: "Ako funguje bonus na zariadenie s preukazom?",
-        a: "Po overení preukazu získaš mesačný príspevok na zariadenie, ktorý sa odčítava priamo z faktúry.",
+        a: "Je to bonus, ktorý si uplatníš pri kúpe zariadenia k O2 Paušálu: so Základným 48 €, s Pohodovým 96 € a s Bezstarostným 168 €.",
+      },
+      {
+        q: "Je predplatné aj so Základným O2 Paušálom?",
+        a: "S Pohodovým a Bezstarostným O2 Paušálom máš jedno predplatné v cene. So Základným O2 Paušálom si predplatné môžeš dokúpiť za zvýhodnenú alebo bežnú cenu.",
       },
       {
         q: "Ako funguje vykúpenie z viazanosti?",
-        a: "Ak si u pôvodného operátora viazaný zmluvou, vykúpime ťa z viazanosti až do výšky 120 €.",
+        a: "Pri prenose čísla do O2 ti O2 preplatí zmluvnú pokutu u pôvodného operátora až do výšky 120 €. V košíku označíš možnosť preplatiť zmluvnú pokutu a keď ti pôvodný operátor doručí záverečnú faktúru, pošleš ju O2.",
       },
       {
         q: "Koľko zaplatím po prevolaní predplatených minút?",
-        a: "Pri základnom paušále 10 centov za minútu. Vyššie paušály majú neobmedzené volania, SMS a MMS do všetkých sietí v EÚ v cene.",
+        a: "So Základným O2 Paušálom 10 centov za minútu; neobmedzené volania si k nemu môžeš doaktivovať za 5,13 € mesačne. Pohodový a Bezstarostný O2 Paušál majú neobmedzené volania, SMS a MMS do všetkých sietí v EÚ v cene.",
       },
     ],
   },
@@ -258,14 +275,14 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
         q: "Čo sa stane s Juniorom, ak už nemám hlavný paušál?",
         a: (
           <>
-            Program sa automaticky zmení na paušál{" "}
+            Program sa automaticky zmení na{" "}
             <a
-              href="https://www.o2.sk/mobilne-sluzby/o2-pausal-preukaz"
+              href="https://www.o2.sk/ponuka/mobilne-sluzby/o2-fer"
               className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
               target="_blank"
               rel="noopener noreferrer"
             >
-              O2 Fér
+              O2 Fér na faktúru
             </a>
             . Späť na Junior sa dá vrátiť, keď bude opäť splnená podmienka aktívneho hlavného paušálu na rovnakom fakturačnom profile.
           </>

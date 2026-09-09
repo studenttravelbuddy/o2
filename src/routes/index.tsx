@@ -101,31 +101,44 @@ const segments = [
     arrowBg: "bg-background",
     eyebrow: "ISIC",
     title: "Som študent",
-    links: [{ label: "O2 Maxx – 100 GB" }, { label: "O2 Paušály so zľavou" }],
+    mainLink: MAXX_LINK,
+    links: [
+      { label: "O2 Maxx – 100 GB", href: MAXX_LINK },
+      { label: "O2 Paušály so zľavou", href: PAUSAL_LINK },
+    ],
   },
   {
     bg: "bg-brand-orange",
     arrowBg: "bg-brand-yellow",
     eyebrow: "ITIC",
     title: "Som učiteľ",
-    links: [{ label: "O2 Paušály so zľavou" }, { label: "O2 Maxx – 100 GB" }],
+    mainLink: PAUSAL_LINK,
+    links: [
+      { label: "O2 Paušály so zľavou", href: PAUSAL_LINK },
+      { label: "O2 Maxx – 100 GB", href: MAXX_LINK },
+    ],
   },
   {
     bg: "bg-brand-pink",
     arrowBg: "bg-background",
     eyebrow: "EURO<26",
     title: "Som mladý do 26 rokov",
-    links: [{ label: "O2 Maxx – 100 GB" }, { label: "O2 Paušály so zľavou" }],
+    mainLink: MAXX_LINK,
+    links: [
+      { label: "O2 Maxx – 100 GB", href: MAXX_LINK },
+      { label: "O2 Paušály so zľavou", href: PAUSAL_LINK },
+    ],
   },
   {
     bg: "bg-brand-yellow",
     arrowBg: "bg-background",
     eyebrow: "Pre najmenších",
     title: "Pre všetkých do 15 rokov",
+    mainLink: JUNIOR_LINK,
     links: [
-      { label: "O2 Junior" },
-      { label: "O2 Maxx – 100 GB" },
-      { label: "O2 Paušály so zľavou" },
+      { label: "O2 Junior", href: JUNIOR_LINK },
+      { label: "O2 Maxx – 100 GB", href: MAXX_LINK },
+      { label: "O2 Paušály so zľavou", href: PAUSAL_LINK },
     ],
   },
 ];
@@ -163,7 +176,7 @@ const pausaly = [
     popular: false,
     perks: [
       "10 GB dát",
-      "200 minút",
+      "200 minút (neobmedzené volania sa dajú doaktivovať za +5,13 €/mes.)",
       "Neobmedzené správy",
       "Bonus na zariadenie 48 €",
     ],
@@ -186,7 +199,7 @@ const pausaly = [
     price: "38 €",
     popular: true,
     perks: [
-      "Neobmedzené dáta, volania a správy",
+      "Neobmedzené dáta plnou rýchlosťou v 5G sieti, volania a správy",
       "Cashback 5 € mesačne (do 15 GB dát)",
       "Bonus na zariadenie 168 €",
       "1 predplatné v cene (Netflix, Voyo…)",
@@ -283,7 +296,7 @@ function Index() {
                     {s.links.map((link) => (
                       <a
                         key={link.label}
-                        href={MAXX_LINK}
+                        href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="rounded-full bg-background/90 px-3 py-1.5 text-xs font-bold text-foreground shadow-sm transition-colors active:scale-95 md:hover:bg-background"
@@ -295,7 +308,7 @@ function Index() {
                 </div>
                 <div className="mt-6 flex justify-end">
                   <a
-                    href={MAXX_LINK}
+                    href={s.mainLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`flex h-11 w-11 items-center justify-center rounded-full shadow-sm transition-transform duration-300 active:scale-95 md:hover:rotate-45 md:hover:scale-110 ${s.arrowBg}`}
@@ -428,10 +441,10 @@ function Index() {
               </ul>
 
               <p className="mt-6 rounded-2xl bg-brand-teal-light p-4 text-sm">
-                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Paušál je pre
-                držiteľov preukazu v každom veku — aktivovať si ho sám môžeš od 18 rokov, mladším
-                držiteľom ho aktivuje rodič alebo iný zákonný zástupca. Pri overovaní zadá priezvisko
-                dieťaťa a číslo jeho platného preukazu.
+                Podmienka: platný preukaz ISIC / ITIC / EURO&lt;26 vydaný na Slovensku. Paušál si môže
+                aktivovať každý držiteľ preukazu od 18 rokov. Pre neplnoleté dieťa ho kupuje rodič
+                alebo iný zákonný zástupca na svoje meno a pri overovaní zadá priezvisko dieťaťa a
+                číslo jeho platného preukazu.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -511,8 +524,8 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col gap-4 rounded-3xl bg-brand-pink p-6 shadow-soft-pink text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-lg font-black">
-              Viazanosť? O2 vykúpi z viazanosti u pôvodného operátora až do 120 € — platí pre
-              Bezstarostný, Pohodový a Základný O2 Paušál.
+              Viazanosť? Pri prenose čísla od pôvodného operátora ti O2 preplatí zmluvnú pokutu až do
+              120 € — platí pre Bezstarostný, Pohodový a Základný O2 Paušál.
             </p>
 
             <Button variant="white" size="lg" className="min-h-12 w-full sm:w-auto" asChild>
@@ -638,7 +651,7 @@ function Index() {
 
           <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <a
-              href="https://www.o2.sk"
+              href={PAUSAL_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="flex min-h-12 items-center text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
@@ -688,7 +701,7 @@ function Index() {
 
           <div className="mt-10">
             <Button variant="pink" size="xl" className="min-h-12 w-full sm:w-auto" asChild>
-              <a href={MAXX_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
+              <a href={PAUSAL_LINK} target="_blank" rel="noopener noreferrer">Preniesť si číslo</a>
             </Button>
           </div>
         </div>
