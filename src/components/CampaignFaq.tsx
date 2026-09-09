@@ -275,14 +275,14 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
         q: "Čo sa stane s Juniorom, ak už nemám hlavný paušál?",
         a: (
           <>
-            Program sa automaticky zmení na paušál{" "}
+            Program sa automaticky zmení na{" "}
             <a
-              href="https://www.o2.sk/mobilne-sluzby/o2-pausal-preukaz"
+              href="https://www.o2.sk/ponuka/mobilne-sluzby/o2-fer"
               className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
               target="_blank"
               rel="noopener noreferrer"
             >
-              O2 Fér
+              O2 Fér na faktúru
             </a>
             . Späť na Junior sa dá vrátiť, keď bude opäť splnená podmienka aktívneho hlavného paušálu na rovnakom fakturačnom profile.
           </>
