@@ -44,7 +44,7 @@ export function BrandMark({ brand, variant = "plain", className = "" }: BrandMar
 
   const frame =
     variant === "card" || variant === "onDark"
-      ? "rounded-2xl bg-white shadow-[0_6px_18px_-8px_rgb(0_0_0/0.25)]"
+      ? "rounded-xl bg-white shadow-[0_6px_18px_-8px_rgb(0_0_0/0.25)]"
       : "";
 
   return (
