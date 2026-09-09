@@ -137,8 +137,6 @@ const segments = [
     mainLink: JUNIOR_LINK,
     links: [
       { label: "O2 Junior", href: JUNIOR_LINK },
-      { label: "O2 Maxx – 100 GB", href: MAXX_LINK },
-      { label: "O2 Paušály so zľavou", href: PAUSAL_LINK },
     ],
   },
 ];
