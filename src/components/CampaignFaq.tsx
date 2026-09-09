@@ -25,7 +25,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
         q: "Čo ponúka O2 Maxx?",
         a: (
           <>
-            O2 Maxx zahŕňa 100 GB dát plnou rýchlosťou, prenos nespotrebovaných dát, neobmedzené volania a správy v celej EÚ a 12-mesačné predplatné vybranej digitálnej služby (Netflix, Voyo, HBO max a iné..) ktorú môžete každý mesiac meniť, ako aj možnosť výhodnejšej kúpy zariadenia. Podrobné informácie a zmluvné podmienky nájdete na stránke{" "}
+            O2 Maxx zahŕňa 100 GB dát plnou rýchlosťou, prenos nespotrebovaných dát, neobmedzené volania a správy v celej EÚ a 12-mesačné predplatné vybranej digitálnej služby (Netflix, Voyo, HBO max a iné..) ktorú môžete každý mesiac meniť. Podrobné informácie a zmluvné podmienky nájdete na stránke{" "}
             <a
               href="https://www.o2.sk"
               className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
@@ -80,7 +80,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
         q: "Mám paušál Yoxo. Čo sa s ním stane?",
         a: (
           <>
-            Yoxo môžete využívať do konca platnosti vašej aktuálnej zmluvy v Orange a následne si môžete vybrať ktorýkoľvek z paušálov v O2 pripravených pre ISIC, ITIC a EURO&lt;26. Alebo môžete zmluvu v Orange ukončiť hneď a prejsť na výhodnejší paušál v O2. Viac podrobných informácií o nových paušáloch nájdete na stránke{" "}
+            Yoxo môžete využívať do konca platnosti vašej aktuálnej zmluvy v Orange a následne si môžete vybrať ktorýkoľvek z paušálov v O2 pripravených pre ISIC, ITIC a EURO&lt;26. Zmluvu v Orange môžete ukončiť aj hneď a prejsť na výhodnejší paušál v O2. Viac podrobných informácií o nových paušáloch nájdete na stránke{" "}
             <a
               href="https://www.o2.sk/ponuka/mobilne-sluzby/o2-maxx"
               className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
@@ -101,7 +101,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
         q: "Som zákazníkom Orange. Prestáva mi platiť paušál na ISIC / ITIC / EURO<26?",
         a: (
           <>
-            Yoxo môžete využívať do konca platnosti vašej aktuálnej zmluvy v Orange a následne si môžete vybrať ktorýkoľvek z paušálov v O2 pripravených pre ISIC, ITIC a EURO&lt;26. Alebo môžete zmluvu v Orange ukončiť hneď a prejsť na výhodnejší paušál v O2. Viac podrobných informácií o nových paušáloch nájdete na stránke{" "}
+            Zvýhodnenie na preukaz v Orange platí do konca platnosti vašej aktuálnej zmluvy. Následne si môžete vybrať ktorýkoľvek z paušálov v O2 pripravených pre ISIC, ITIC a EURO&lt;26. Zmluvu v Orange môžete ukončiť aj hneď a prejsť na výhodnejší paušál v O2. Viac podrobných informácií o nových paušáloch nájdete na stránke{" "}
             <a
               href="https://www.o2.sk/ponuka/mobilne-sluzby/o2-maxx"
               className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
@@ -115,7 +115,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Prečo ste sa rozhodli spolupracovať s O2?",
-        a: "Vďaka tomu, že S O2 sme sa dohodli na dlhodobej spolupráci, vďaka ktorej budeme spoločne tvoriť a ponúkať držiteľom preukazov ISIC/ITIC/EURO<26 také paušály, ktoré budú maximálne prispôsobované potrebám a požiadavkám držiteľov ISIC, ITIC a EURO<26.",
+        a: "S O2 sme sa dohodli na dlhodobej spolupráci, vďaka ktorej budeme spoločne tvoriť a ponúkať držiteľom preukazov ISIC/ITIC/EURO<26 také paušály, ktoré budú maximálne prispôsobované potrebám a požiadavkám držiteľov ISIC, ITIC a EURO<26.",
       },
       {
         q: "Čo znamená nová spolupráca pre môj preukaz?",
@@ -196,7 +196,7 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Je paušál s viazanosťou? Čo ak stratím status študenta?",
-        a: "Paušál je úplne bez viazanosti. Ak preukaz stratí platnosť, upozorníme ťa a paušál beží do najbližšieho zúčtovacieho obdobia. Ak ho dovtedy neobnovíš, program sa zmení na základný.",
+        a: "Paušál je úplne bez viazanosti. Ak preukaz stratí platnosť, upozorníme ťa a paušál beží do najbližšieho zúčtovacieho obdobia. Ak ho dovtedy neobnovíš, program sa zmení na paušál O2 Fér.",
       },
     ],
   },
@@ -256,7 +256,20 @@ const groups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Čo sa stane s Juniorom, ak už nemám hlavný paušál?",
-        a: "Program sa automaticky zmení na základný. Späť na Junior sa dá vrátiť, keď bude opäť splnená podmienka aktívneho hlavného paušálu na rovnakom fakturačnom profile.",
+        a: (
+          <>
+            Program sa automaticky zmení na paušál{" "}
+            <a
+              href="https://www.o2.sk/mobilne-sluzby/o2-pausal-preukaz"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              O2 Fér
+            </a>
+            . Späť na Junior sa dá vrátiť, keď bude opäť splnená podmienka aktívneho hlavného paušálu na rovnakom fakturačnom profile.
+          </>
+        ),
       },
     ],
   },
