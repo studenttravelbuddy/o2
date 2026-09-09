@@ -194,7 +194,7 @@ const pausaly = [
   {
     name: "Bezstarostný",
     oldPrice: "44 €",
-    price: "38 €",
+    price: "33 €",
     popular: true,
     perks: [
       "Neobmedzené dáta plnou rýchlosťou v 5G sieti, volania a správy",
