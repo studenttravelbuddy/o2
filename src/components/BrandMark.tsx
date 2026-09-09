@@ -19,14 +19,14 @@ const brands: Record<BrandId, { url: string; alt: string }> = {
   },
 };
 
-/** Zmenšené preukazové logá, aby sa tri zmestili vedľa seba aj na úzkom mobile. */
-const FRAME_SIZE = "h-8 w-[4.5rem] sm:h-12 sm:w-24";
+/** Preukazové logá s väčšou bielou bublinou, ale menej zaoblené. */
+const FRAME_SIZE = "h-9 w-20 sm:h-16 sm:w-32";
 
-/** The wider EYC wordmark needs less horizontal padding to match visually. */
+/** Väčší biely padding okolo loga, aby loga nestrácali. */
 const framePad: Record<BrandId, string> = {
-  isic: "p-1.5",
-  itic: "p-1.5",
-  eyc: "px-1 py-1.5",
+  isic: "p-2",
+  itic: "p-2",
+  eyc: "px-2 py-2",
 };
 
 /** Strict order used everywhere on the page. */
@@ -44,7 +44,7 @@ export function BrandMark({ brand, variant = "plain", className = "" }: BrandMar
 
   const frame =
     variant === "card" || variant === "onDark"
-      ? "rounded-2xl bg-white shadow-[0_6px_18px_-8px_rgb(0_0_0/0.25)]"
+      ? "rounded-xl bg-white shadow-[0_6px_18px_-8px_rgb(0_0_0/0.25)]"
       : "";
 
   return (
